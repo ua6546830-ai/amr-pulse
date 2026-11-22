@@ -85,7 +85,7 @@ git commit -m "feat: AMR PULSE research intelligence platform with synthetic dem
 gh repo create ua6546830-ai/amr-pulse --public --source=. --remote=origin --push
 ```
 
-CI runs automatically:
+The CI workflow is kept at [`ci.workflow.yml`](ci.workflow.yml) because pushing `.github/workflows/*` requires a GitHub token with the `workflow` scope. Copy it to `.github/workflows/ci.yml` in a commit made with such a token, then it runs:
 
 - typecheck
 - ESLint

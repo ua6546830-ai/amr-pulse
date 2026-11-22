@@ -283,7 +283,7 @@ Temporary deployments expire and must be claimed with a Vercel account to become
 
 ### CI
 
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs typecheck, lint, unit tests, production build and Playwright e2e on every push and pull request.
+[`docs/ci.workflow.yml`](docs/ci.workflow.yml) defines typecheck, lint, unit tests, production build and Playwright e2e. Copy it to `.github/workflows/ci.yml` in a commit made with a token that has the GitHub `workflow` scope.
 
 ---
 
