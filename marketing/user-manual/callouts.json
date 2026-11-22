@@ -1,0 +1,2094 @@
+{
+  "01-landing-top": [
+    {
+      "n": 1,
+      "label": "Brand / home link",
+      "rect": {
+        "x": 164,
+        "y": 15,
+        "w": 192,
+        "h": 34
+      }
+    },
+    {
+      "n": 2,
+      "label": "Workflow section link",
+      "rect": {
+        "x": 628,
+        "y": 23,
+        "w": 50,
+        "h": 18
+      }
+    },
+    {
+      "n": 3,
+      "label": "Capabilities section link",
+      "rect": {
+        "x": 702,
+        "y": 23,
+        "w": 61,
+        "h": 18
+      }
+    },
+    {
+      "n": 4,
+      "label": "Scientific boundaries link",
+      "rect": {
+        "x": 787,
+        "y": 23,
+        "w": 110,
+        "h": 18
+      }
+    },
+    {
+      "n": 5,
+      "label": "Open demo button",
+      "rect": {
+        "x": 1168,
+        "y": 17,
+        "w": 108,
+        "h": 30
+      }
+    },
+    {
+      "n": 6,
+      "label": "Headline",
+      "rect": {
+        "x": 164,
+        "y": 187,
+        "w": 576,
+        "h": 141
+      }
+    },
+    {
+      "n": 7,
+      "label": "Primary call to action",
+      "rect": {
+        "x": 164,
+        "y": 437,
+        "w": 214,
+        "h": 35
+      }
+    },
+    {
+      "n": 8,
+      "label": "Methods call to action",
+      "rect": {
+        "x": 388,
+        "y": 436,
+        "w": 137,
+        "h": 37
+      }
+    },
+    {
+      "n": 9,
+      "label": "Live demo headline numbers",
+      "rect": {
+        "x": 811,
+        "y": 224,
+        "w": 216,
+        "h": 16
+      }
+    },
+    {
+      "n": 10,
+      "label": "Trust line",
+      "rect": {
+        "x": 164,
+        "y": 501,
+        "w": 187,
+        "h": 17
+      }
+    }
+  ],
+  "02-landing-capabilities": [
+    {
+      "n": 1,
+      "label": "Capabilities heading",
+      "rect": {
+        "x": 164,
+        "y": 70,
+        "w": 1112,
+        "h": 33
+      }
+    },
+    {
+      "n": 2,
+      "label": "Five-class capability",
+      "rect": {
+        "x": 181,
+        "y": 242,
+        "w": 329,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "Data-quality capability",
+      "rect": {
+        "x": 556,
+        "y": 242,
+        "w": 329,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Adapters capability",
+      "rect": {
+        "x": 930,
+        "y": 242,
+        "w": 329,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "Statistics capability",
+      "rect": {
+        "x": 181,
+        "y": 414,
+        "w": 329,
+        "h": 20
+      }
+    },
+    {
+      "n": 6,
+      "label": "AI capability",
+      "rect": {
+        "x": 556,
+        "y": 414,
+        "w": 329,
+        "h": 20
+      }
+    },
+    {
+      "n": 7,
+      "label": "Reports capability",
+      "rect": {
+        "x": 930,
+        "y": 414,
+        "w": 329,
+        "h": 20
+      }
+    }
+  ],
+  "03-global-chrome": [
+    {
+      "n": 1,
+      "label": "Logo and home",
+      "rect": {
+        "x": 16,
+        "y": 11,
+        "w": 192,
+        "h": 34
+      }
+    },
+    {
+      "n": 2,
+      "label": "Dataset card",
+      "rect": {
+        "x": 16,
+        "y": 95,
+        "w": 215,
+        "h": 17
+      }
+    },
+    {
+      "n": 3,
+      "label": "Navigation group",
+      "rect": {
+        "x": 8,
+        "y": 252,
+        "w": 231,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Discordance tab",
+      "rect": {
+        "x": 8,
+        "y": 438,
+        "w": 231,
+        "h": 31
+      }
+    },
+    {
+      "n": 5,
+      "label": "Safety footer",
+      "rect": {
+        "x": 43,
+        "y": 845,
+        "w": 128,
+        "h": 16
+      }
+    },
+    {
+      "n": 6,
+      "label": "Synthetic badge",
+      "rect": {
+        "x": 963,
+        "y": 17,
+        "w": 101,
+        "h": 23
+      }
+    },
+    {
+      "n": 7,
+      "label": "Notifications",
+      "rect": {
+        "x": 1196,
+        "y": 12,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "n": 8,
+      "label": "Help menu",
+      "rect": {
+        "x": 1240,
+        "y": 16,
+        "w": 28,
+        "h": 24
+      }
+    },
+    {
+      "n": 9,
+      "label": "Account menu",
+      "rect": {
+        "x": 1280,
+        "y": 10,
+        "w": 136,
+        "h": 36
+      }
+    },
+    {
+      "n": 10,
+      "label": "Persistent safety banner",
+      "rect": {
+        "x": 272,
+        "y": 64,
+        "w": 144,
+        "h": 14
+      }
+    }
+  ],
+  "04-dashboard-kpis": [
+    {
+      "n": 1,
+      "label": "Reports shortcut",
+      "rect": {
+        "x": 1183,
+        "y": 155,
+        "w": 94,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Analysis shortcut",
+      "rect": {
+        "x": 1285,
+        "y": 155,
+        "w": 128,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Synthetic warning",
+      "rect": {
+        "x": 321,
+        "y": 245,
+        "w": 1074,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Eligible pairs KPI",
+      "rect": {
+        "x": 293,
+        "y": 339,
+        "w": 202,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "Agreement KPI",
+      "rect": {
+        "x": 580,
+        "y": 339,
+        "w": 131,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "Discordance KPI",
+      "rect": {
+        "x": 867,
+        "y": 339,
+        "w": 149,
+        "h": 17
+      }
+    },
+    {
+      "n": 7,
+      "label": "Exclusions KPI",
+      "rect": {
+        "x": 1154,
+        "y": 339,
+        "w": 177,
+        "h": 17
+      }
+    }
+  ],
+  "05-dashboard-classification": [
+    {
+      "n": 1,
+      "label": "Analysis context",
+      "rect": {
+        "x": 313,
+        "y": 196,
+        "w": 121,
+        "h": 17
+      }
+    },
+    {
+      "n": 2,
+      "label": "Classification panel",
+      "rect": {
+        "x": 293,
+        "y": 283,
+        "w": 269,
+        "h": 19
+      }
+    },
+    {
+      "n": 3,
+      "label": "Concordant resistant",
+      "rect": {
+        "x": 557,
+        "y": 353,
+        "w": 108,
+        "h": 17
+      }
+    },
+    {
+      "n": 4,
+      "label": "Concordant susceptible",
+      "rect": {
+        "x": 557,
+        "y": 402,
+        "w": 122,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "Gene + / phenotype S",
+      "rect": {
+        "x": 557,
+        "y": 451,
+        "w": 200,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "R / no determinant",
+      "rect": {
+        "x": 557,
+        "y": 500,
+        "w": 234,
+        "h": 17
+      }
+    },
+    {
+      "n": 7,
+      "label": "Indeterminate",
+      "rect": {
+        "x": 541,
+        "y": 553,
+        "w": 160,
+        "h": 16
+      }
+    },
+    {
+      "n": 8,
+      "label": "Non-concordant chart",
+      "rect": {
+        "x": 1058,
+        "y": 283,
+        "w": 271,
+        "h": 19
+      }
+    }
+  ],
+  "06-dashboard-charts": [
+    {
+      "n": 1,
+      "label": "Stratified agreement chart",
+      "rect": {
+        "x": 293,
+        "y": 98,
+        "w": 311,
+        "h": 19
+      }
+    },
+    {
+      "n": 2,
+      "label": "Raw category mix",
+      "rect": {
+        "x": 867,
+        "y": 98,
+        "w": 298,
+        "h": 19
+      }
+    },
+    {
+      "n": 3,
+      "label": "Exclusions chart",
+      "rect": {
+        "x": 293,
+        "y": 494,
+        "w": 217,
+        "h": 19
+      }
+    },
+    {
+      "n": 4,
+      "label": "Field completeness",
+      "rect": {
+        "x": 676,
+        "y": 494,
+        "w": 259,
+        "h": 19
+      }
+    },
+    {
+      "n": 5,
+      "label": "Investigation queue",
+      "rect": {
+        "x": 293,
+        "y": 855,
+        "w": 299,
+        "h": 20
+      }
+    },
+    {
+      "n": 6,
+      "label": "Open queue button",
+      "rect": {
+        "x": 932,
+        "y": 867,
+        "w": 80,
+        "h": 17
+      }
+    }
+  ],
+  "07-dashboard-guides": [
+    {
+      "n": 1,
+      "label": "Interpretation guide",
+      "rect": {
+        "x": 293,
+        "y": 648,
+        "w": 254,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Next-step links",
+      "rect": {
+        "x": 1058,
+        "y": 648,
+        "w": 167,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "Provenance snapshot",
+      "rect": {
+        "x": 1058,
+        "y": 333,
+        "w": 337,
+        "h": 19
+      }
+    }
+  ],
+  "08-datasets-top": [
+    {
+      "n": 1,
+      "label": "Import dataset button",
+      "rect": {
+        "x": 1278,
+        "y": 198,
+        "w": 134,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Isolate count",
+      "rect": {
+        "x": 293,
+        "y": 403,
+        "w": 52,
+        "h": 17
+      }
+    },
+    {
+      "n": 3,
+      "label": "Gene-call count",
+      "rect": {
+        "x": 580,
+        "y": 403,
+        "w": 67,
+        "h": 17
+      }
+    },
+    {
+      "n": 4,
+      "label": "AST row count",
+      "rect": {
+        "x": 867,
+        "y": 403,
+        "w": 59,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "Evidence mapping count",
+      "rect": {
+        "x": 1154,
+        "y": 403,
+        "w": 119,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "Active dataset card",
+      "rect": {
+        "x": 293,
+        "y": 538,
+        "w": 284,
+        "h": 21
+      }
+    },
+    {
+      "n": 7,
+      "label": "Open analysis button",
+      "rect": {
+        "x": 853,
+        "y": 537,
+        "w": 80,
+        "h": 32
+      }
+    },
+    {
+      "n": 8,
+      "label": "Synthetic warning",
+      "rect": {
+        "x": 293,
+        "y": 564,
+        "w": 466,
+        "h": 19
+      }
+    }
+  ],
+  "09-datasets-files": [
+    {
+      "n": 1,
+      "label": "Dataset files",
+      "rect": {
+        "x": 293,
+        "y": 476,
+        "w": 282,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Isolate file",
+      "rect": {
+        "x": 332,
+        "y": 536,
+        "w": 454,
+        "h": 17
+      }
+    },
+    {
+      "n": 3,
+      "label": "Evidence-map file",
+      "rect": {
+        "x": 332,
+        "y": 686,
+        "w": 460,
+        "h": 17
+      }
+    },
+    {
+      "n": 4,
+      "label": "Dataset health",
+      "rect": {
+        "x": 979,
+        "y": 157,
+        "w": 227,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "Quality audit link",
+      "rect": {
+        "x": 979,
+        "y": 426,
+        "w": 416,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "Intended use",
+      "rect": {
+        "x": 979,
+        "y": 489,
+        "w": 78,
+        "h": 20
+      }
+    }
+  ],
+  "10-import-top": [
+    {
+      "n": 1,
+      "label": "Privacy boundary",
+      "rect": {
+        "x": 321,
+        "y": 285,
+        "w": 1074,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Stepper",
+      "rect": {
+        "x": 304,
+        "y": 384,
+        "w": 38,
+        "h": 17
+      }
+    },
+    {
+      "n": 3,
+      "label": "Isolate upload slot",
+      "rect": {
+        "x": 293,
+        "y": 539,
+        "w": 462,
+        "h": 19
+      }
+    },
+    {
+      "n": 4,
+      "label": "Gene-call slot",
+      "rect": {
+        "x": 867,
+        "y": 539,
+        "w": 462,
+        "h": 19
+      }
+    },
+    {
+      "n": 5,
+      "label": "AST slot",
+      "rect": {
+        "x": 293,
+        "y": 682,
+        "w": 387,
+        "h": 19
+      }
+    },
+    {
+      "n": 6,
+      "label": "Evidence-map slot",
+      "rect": {
+        "x": 867,
+        "y": 682,
+        "w": 462,
+        "h": 19
+      }
+    },
+    {
+      "n": 7,
+      "label": "Template download",
+      "rect": {
+        "x": 867,
+        "y": 787,
+        "w": 266,
+        "h": 16
+      }
+    },
+    {
+      "n": 8,
+      "label": "Review mappings (disabled until files load)",
+      "rect": {
+        "x": 1246,
+        "y": 849,
+        "w": 149,
+        "h": 32
+      }
+    },
+    {
+      "n": 9,
+      "label": "Public-data guides",
+      "rect": {
+        "x": 276,
+        "y": 914,
+        "w": 493,
+        "h": 20
+      }
+    }
+  ],
+  "11-import-mapping": [
+    {
+      "n": 1,
+      "label": "Mapping step",
+      "rect": {
+        "x": 425,
+        "y": 384,
+        "w": 71,
+        "h": 17
+      }
+    },
+    {
+      "n": 2,
+      "label": "Validation badge",
+      "rect": {
+        "x": 1295,
+        "y": 541,
+        "w": 100,
+        "h": 23
+      }
+    },
+    {
+      "n": 3,
+      "label": "Mapping rule",
+      "rect": {
+        "x": 321,
+        "y": 456,
+        "w": 1074,
+        "h": 41
+      }
+    },
+    {
+      "n": 4,
+      "label": "Column mapping selector",
+      "rect": {
+        "x": 461,
+        "y": 599,
+        "w": 324,
+        "h": 28
+      }
+    }
+  ],
+  "12-import-confirm": [
+    {
+      "n": 1,
+      "label": "Confirm and analyse",
+      "rect": {
+        "x": 1178,
+        "y": 769,
+        "w": 217,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Back to uploads",
+      "rect": {
+        "x": 293,
+        "y": 769,
+        "w": 76,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "File section",
+      "rect": {
+        "x": 1056,
+        "y": 922,
+        "w": 341,
+        "h": 17
+      }
+    }
+  ],
+  "13-quality-top": [
+    {
+      "n": 1,
+      "label": "Issue export",
+      "rect": {
+        "x": 1129,
+        "y": 198,
+        "w": 110,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Continue to analysis",
+      "rect": {
+        "x": 1247,
+        "y": 198,
+        "w": 165,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Recorded issues KPI",
+      "rect": {
+        "x": 293,
+        "y": 292,
+        "w": 102,
+        "h": 17
+      }
+    },
+    {
+      "n": 4,
+      "label": "Warnings KPI",
+      "rect": {
+        "x": 867,
+        "y": 292,
+        "w": 63,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "Match rate KPI",
+      "rect": {
+        "x": 1154,
+        "y": 292,
+        "w": 117,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "Issue search",
+      "rect": {
+        "x": 289,
+        "y": 585,
+        "w": 320,
+        "h": 32
+      }
+    },
+    {
+      "n": 7,
+      "label": "Issue register",
+      "rect": {
+        "x": 276,
+        "y": 520,
+        "w": 484,
+        "h": 20
+      }
+    }
+  ],
+  "14-quality-detail": [
+    {
+      "n": 1,
+      "label": "Identifier matching review",
+      "rect": {
+        "x": 293,
+        "y": 159,
+        "w": 531,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Completeness detail",
+      "rect": {
+        "x": 961,
+        "y": 477,
+        "w": 178,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "Duplicates and conflicts",
+      "rect": {
+        "x": 961,
+        "y": 777,
+        "w": 142,
+        "h": 20
+      }
+    }
+  ],
+  "14b-quality-issues": [
+    {
+      "n": 1,
+      "label": "Top issue codes",
+      "rect": {
+        "x": 961,
+        "y": 667,
+        "w": 94,
+        "h": 20
+      }
+    }
+  ],
+  "15-analysis-top": [
+    {
+      "n": 1,
+      "label": "Pair export",
+      "rect": {
+        "x": 1051,
+        "y": 195,
+        "w": 103,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Machine-readable results",
+      "rect": {
+        "x": 1162,
+        "y": 195,
+        "w": 125,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Build report",
+      "rect": {
+        "x": 1295,
+        "y": 195,
+        "w": 117,
+        "h": 32
+      }
+    },
+    {
+      "n": 4,
+      "label": "Organism stratum",
+      "rect": {
+        "x": 289,
+        "y": 311,
+        "w": 434,
+        "h": 32
+      }
+    },
+    {
+      "n": 5,
+      "label": "Antibiotic stratum",
+      "rect": {
+        "x": 735,
+        "y": 311,
+        "w": 434,
+        "h": 32
+      }
+    },
+    {
+      "n": 6,
+      "label": "Apply strata",
+      "rect": {
+        "x": 1181,
+        "y": 311,
+        "w": 119,
+        "h": 32
+      }
+    },
+    {
+      "n": 7,
+      "label": "Reset to primary pairing",
+      "rect": {
+        "x": 1308,
+        "y": 311,
+        "w": 91,
+        "h": 32
+      }
+    },
+    {
+      "n": 8,
+      "label": "Eligible pairs KPI",
+      "rect": {
+        "x": 661,
+        "y": 412,
+        "w": 61,
+        "h": 15
+      }
+    },
+    {
+      "n": 9,
+      "label": "Agreement KPI",
+      "rect": {
+        "x": 580,
+        "y": 476,
+        "w": 68,
+        "h": 17
+      }
+    },
+    {
+      "n": 10,
+      "label": "Determinant-positive PPV",
+      "rect": {
+        "x": 867,
+        "y": 476,
+        "w": 162,
+        "h": 17
+      }
+    },
+    {
+      "n": 11,
+      "label": "Excluded pairs KPI",
+      "rect": {
+        "x": 1154,
+        "y": 476,
+        "w": 94,
+        "h": 17
+      }
+    }
+  ],
+  "16-analysis-contingency": [
+    {
+      "n": 1,
+      "label": "Contingency table",
+      "rect": {
+        "x": 293,
+        "y": 158,
+        "w": 361,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Evidence-positive row",
+      "rect": {
+        "x": 293,
+        "y": 248,
+        "w": 160,
+        "h": 39
+      }
+    },
+    {
+      "n": 3,
+      "label": "Evidence-negative row",
+      "rect": {
+        "x": 293,
+        "y": 287,
+        "w": 160,
+        "h": 56
+      }
+    },
+    {
+      "n": 4,
+      "label": "Concordant-resistant card",
+      "rect": {
+        "x": 892,
+        "y": 156,
+        "w": 104,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "Candidate gene+/S card",
+      "rect": {
+        "x": 892,
+        "y": 312,
+        "w": 185,
+        "h": 33
+      }
+    },
+    {
+      "n": 6,
+      "label": "Full pair table",
+      "rect": {
+        "x": 276,
+        "y": 612,
+        "w": 569,
+        "h": 20
+      }
+    }
+  ],
+  "17-analysis-exclusions": [
+    {
+      "n": 1,
+      "label": "Exclusions register",
+      "rect": {
+        "x": 293,
+        "y": 278,
+        "w": 503,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Exclusions export",
+      "rect": {
+        "x": 816,
+        "y": 291,
+        "w": 56,
+        "h": 17
+      }
+    },
+    {
+      "n": 3,
+      "label": "By-antibiotic agreement",
+      "rect": {
+        "x": 918,
+        "y": 278,
+        "w": 302,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Run provenance",
+      "rect": {
+        "x": 918,
+        "y": 448,
+        "w": 232,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "Guardrails",
+      "rect": {
+        "x": 321,
+        "y": 785,
+        "w": 1074,
+        "h": 20
+      }
+    }
+  ],
+  "18-isolates": [
+    {
+      "n": 1,
+      "label": "Search isolates",
+      "rect": {
+        "x": 289,
+        "y": 375,
+        "w": 320,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Discordant only",
+      "rect": {
+        "x": 1087,
+        "y": 384,
+        "w": 14,
+        "h": 14
+      }
+    },
+    {
+      "n": 3,
+      "label": "Organism filter",
+      "rect": {
+        "x": 1191,
+        "y": 375,
+        "w": 152,
+        "h": 32
+      }
+    },
+    {
+      "n": 4,
+      "label": "Ceftriaxone column",
+      "rect": {
+        "x": 964,
+        "y": 420,
+        "w": 133,
+        "h": 36
+      }
+    },
+    {
+      "n": 5,
+      "label": "Per-isolate call",
+      "rect": {
+        "x": 1113,
+        "y": 467,
+        "w": 103,
+        "h": 23
+      }
+    }
+  ],
+  "19-isolate-detail-top": [
+    {
+      "n": 1,
+      "label": "Back link",
+      "rect": {
+        "x": 276,
+        "y": 117,
+        "w": 140,
+        "h": 17
+      }
+    },
+    {
+      "n": 2,
+      "label": "Ask assistant",
+      "rect": {
+        "x": 1180,
+        "y": 218,
+        "w": 124,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Methods",
+      "rect": {
+        "x": 1312,
+        "y": 218,
+        "w": 100,
+        "h": 32
+      }
+    },
+    {
+      "n": 4,
+      "label": "Isolate metadata",
+      "rect": {
+        "x": 293,
+        "y": 312,
+        "w": 211,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "BioSample accession",
+      "rect": {
+        "x": 293,
+        "y": 369,
+        "w": 54,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "Ceftriaxone comparison",
+      "rect": {
+        "x": 867,
+        "y": 312,
+        "w": 241,
+        "h": 20
+      }
+    },
+    {
+      "n": 7,
+      "label": "Submitted phenotype",
+      "rect": {
+        "x": 878,
+        "y": 376,
+        "w": 238,
+        "h": 15
+      }
+    },
+    {
+      "n": 8,
+      "label": "Determinant status",
+      "rect": {
+        "x": 1146,
+        "y": 376,
+        "w": 238,
+        "h": 15
+      }
+    }
+  ],
+  "20-isolate-detail-evidence": [
+    {
+      "n": 1,
+      "label": "Curated gene calls",
+      "rect": {
+        "x": 293,
+        "y": 196,
+        "w": 199,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Evidence-map rows",
+      "rect": {
+        "x": 1172,
+        "y": 196,
+        "w": 242,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "All AST rows",
+      "rect": {
+        "x": 293,
+        "y": 827,
+        "w": 388,
+        "h": 20
+      }
+    }
+  ],
+  "21-investigations-top": [
+    {
+      "n": 1,
+      "label": "Queue export",
+      "rect": {
+        "x": 1146,
+        "y": 195,
+        "w": 114,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Ask the assistant",
+      "rect": {
+        "x": 1268,
+        "y": 195,
+        "w": 144,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Candidate count",
+      "rect": {
+        "x": 293,
+        "y": 289,
+        "w": 178,
+        "h": 17
+      }
+    },
+    {
+      "n": 4,
+      "label": "Gene+/S count",
+      "rect": {
+        "x": 580,
+        "y": 289,
+        "w": 172,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "R/no-determinant count",
+      "rect": {
+        "x": 867,
+        "y": 289,
+        "w": 193,
+        "h": 17
+      }
+    },
+    {
+      "n": 6,
+      "label": "Indeterminate count",
+      "rect": {
+        "x": 1154,
+        "y": 289,
+        "w": 127,
+        "h": 17
+      }
+    },
+    {
+      "n": 7,
+      "label": "Caveat",
+      "rect": {
+        "x": 321,
+        "y": 437,
+        "w": 1074,
+        "h": 20
+      }
+    }
+  ],
+  "22-investigations-review": [
+    {
+      "n": 1,
+      "label": "Selected pair",
+      "rect": {
+        "x": 293,
+        "y": 444,
+        "w": 139,
+        "h": 15
+      }
+    },
+    {
+      "n": 2,
+      "label": "Checklist panel",
+      "rect": {
+        "x": 701,
+        "y": 444,
+        "w": 362,
+        "h": 19
+      }
+    },
+    {
+      "n": 3,
+      "label": "Review note",
+      "rect": {
+        "x": 701,
+        "y": 709,
+        "w": 362,
+        "h": 88
+      }
+    },
+    {
+      "n": 4,
+      "label": "Save note",
+      "rect": {
+        "x": 701,
+        "y": 811,
+        "w": 104,
+        "h": 32
+      }
+    },
+    {
+      "n": 5,
+      "label": "Export note",
+      "rect": {
+        "x": 813,
+        "y": 811,
+        "w": 117,
+        "h": 32
+      }
+    },
+    {
+      "n": 6,
+      "label": "Storage boundary",
+      "rect": {
+        "x": 701,
+        "y": 851,
+        "w": 176,
+        "h": 15
+      }
+    }
+  ],
+  "23-ai-top": [
+    {
+      "n": 1,
+      "label": "Methods",
+      "rect": {
+        "x": 1347,
+        "y": 194,
+        "w": 52,
+        "h": 34
+      }
+    },
+    {
+      "n": 2,
+      "label": "Question composer",
+      "rect": {
+        "x": 297,
+        "y": 289,
+        "w": 612,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "Mode card",
+      "rect": {
+        "x": 342,
+        "y": 395,
+        "w": 672,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Suggested prompt",
+      "rect": {
+        "x": 297,
+        "y": 624,
+        "w": 454,
+        "h": 27
+      }
+    },
+    {
+      "n": 5,
+      "label": "Question box",
+      "rect": {
+        "x": 297,
+        "y": 485,
+        "w": 734,
+        "h": 77
+      }
+    },
+    {
+      "n": 6,
+      "label": "Ask button",
+      "rect": {
+        "x": 964,
+        "y": 580,
+        "w": 67,
+        "h": 32
+      }
+    }
+  ],
+  "24-ai-roster": [
+    {
+      "n": 1,
+      "label": "Agent roster",
+      "rect": {
+        "x": 297,
+        "y": 359,
+        "w": 489,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Data-mapping agent",
+      "rect": {
+        "x": 310,
+        "y": 443,
+        "w": 335,
+        "h": 18
+      }
+    },
+    {
+      "n": 3,
+      "label": "Quality-auditor agent",
+      "rect": {
+        "x": 683,
+        "y": 443,
+        "w": 335,
+        "h": 18
+      }
+    },
+    {
+      "n": 4,
+      "label": "Citation library",
+      "rect": {
+        "x": 1093,
+        "y": 582,
+        "w": 105,
+        "h": 20
+      }
+    }
+  ],
+  "25-ai-answer": [
+    {
+      "n": 1,
+      "label": "Your question",
+      "rect": {
+        "x": 297,
+        "y": 230,
+        "w": 522,
+        "h": 15
+      }
+    },
+    {
+      "n": 2,
+      "label": "Tool calls",
+      "rect": {
+        "x": 297,
+        "y": 302,
+        "w": 734,
+        "h": 15
+      }
+    },
+    {
+      "n": 3,
+      "label": "Tool-derived answer",
+      "rect": {
+        "x": 314,
+        "y": 535,
+        "w": 128,
+        "h": 23
+      }
+    },
+    {
+      "n": 4,
+      "label": "Verified citations",
+      "rect": {
+        "x": 297,
+        "y": 914,
+        "w": 734,
+        "h": 15
+      }
+    }
+  ],
+  "26-ai-answer-actions": [
+    {
+      "n": 1,
+      "label": "Limitations",
+      "rect": {
+        "x": 310,
+        "y": 424,
+        "w": 708,
+        "h": 17
+      }
+    },
+    {
+      "n": 2,
+      "label": "Copy answer",
+      "rect": {
+        "x": 297,
+        "y": 529,
+        "w": 123,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Save draft to Reports",
+      "rect": {
+        "x": 428,
+        "y": 529,
+        "w": 173,
+        "h": 32
+      }
+    },
+    {
+      "n": 4,
+      "label": "Regenerate",
+      "rect": {
+        "x": 609,
+        "y": 529,
+        "w": 113,
+        "h": 32
+      }
+    },
+    {
+      "n": 5,
+      "label": "Scope guard",
+      "rect": {
+        "x": 833,
+        "y": 538,
+        "w": 198,
+        "h": 15
+      }
+    }
+  ],
+  "27-reports-config": [
+    {
+      "n": 1,
+      "label": "Manifest export",
+      "rect": {
+        "x": 1180,
+        "y": 194,
+        "w": 87,
+        "h": 34
+      }
+    },
+    {
+      "n": 2,
+      "label": "Ask assistant",
+      "rect": {
+        "x": 1301,
+        "y": 194,
+        "w": 98,
+        "h": 34
+      }
+    },
+    {
+      "n": 3,
+      "label": "Builder boundaries",
+      "rect": {
+        "x": 321,
+        "y": 281,
+        "w": 1074,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Report title",
+      "rect": {
+        "x": 297,
+        "y": 469,
+        "w": 278,
+        "h": 32
+      }
+    },
+    {
+      "n": 5,
+      "label": "Build date",
+      "rect": {
+        "x": 297,
+        "y": 533,
+        "w": 278,
+        "h": 32
+      }
+    },
+    {
+      "n": 6,
+      "label": "Section toggles",
+      "rect": {
+        "x": 323,
+        "y": 603,
+        "w": 80,
+        "h": 15
+      }
+    },
+    {
+      "n": 7,
+      "label": "Limitations section",
+      "rect": {
+        "x": 323,
+        "y": 909,
+        "w": 58,
+        "h": 15
+      }
+    }
+  ],
+  "28-reports-actions": [
+    {
+      "n": 1,
+      "label": "Export buttons (Markdown, Copy, Print/PDF, JSON, Save)",
+      "rect": {
+        "x": 297,
+        "y": 762,
+        "w": 109,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Saved drafts",
+      "rect": {
+        "x": 297,
+        "y": 882,
+        "w": 242,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "Live preview",
+      "rect": {
+        "x": 637,
+        "y": 146,
+        "w": 316,
+        "h": 20
+      }
+    }
+  ],
+  "29-methods-top": [
+    {
+      "n": 1,
+      "label": "Manifest export",
+      "rect": {
+        "x": 1137,
+        "y": 198,
+        "w": 135,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Report builder",
+      "rect": {
+        "x": 1281,
+        "y": 198,
+        "w": 131,
+        "h": 32
+      }
+    },
+    {
+      "n": 3,
+      "label": "Scope statement",
+      "rect": {
+        "x": 321,
+        "y": 288,
+        "w": 1074,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Dataset provenance",
+      "rect": {
+        "x": 293,
+        "y": 403,
+        "w": 120,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "Analysis provenance",
+      "rect": {
+        "x": 676,
+        "y": 403,
+        "w": 123,
+        "h": 20
+      }
+    },
+    {
+      "n": 6,
+      "label": "Primary denominators",
+      "rect": {
+        "x": 1058,
+        "y": 403,
+        "w": 172,
+        "h": 20
+      }
+    }
+  ],
+  "30-methods-pipeline": [
+    {
+      "n": 1,
+      "label": "Seven-stage pipeline",
+      "rect": {
+        "x": 293,
+        "y": 147,
+        "w": 513,
+        "h": 20
+      }
+    },
+    {
+      "n": 2,
+      "label": "Classification rules",
+      "rect": {
+        "x": 293,
+        "y": 452,
+        "w": 286,
+        "h": 20
+      }
+    }
+  ],
+  "31-settings-top": [
+    {
+      "n": 1,
+      "label": "Manifest export",
+      "rect": {
+        "x": 1312,
+        "y": 197,
+        "w": 87,
+        "h": 34
+      }
+    },
+    {
+      "n": 2,
+      "label": "Mode A card",
+      "rect": {
+        "x": 297,
+        "y": 292,
+        "w": 385,
+        "h": 20
+      }
+    },
+    {
+      "n": 3,
+      "label": "Review datasets",
+      "rect": {
+        "x": 310,
+        "y": 823,
+        "w": 94,
+        "h": 35
+      }
+    },
+    {
+      "n": 4,
+      "label": "AI provider card",
+      "rect": {
+        "x": 873,
+        "y": 292,
+        "w": 400,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "Open AI workspace",
+      "rect": {
+        "x": 886,
+        "y": 780,
+        "w": 114,
+        "h": 34
+      }
+    }
+  ],
+  "32-settings-limits": [
+    {
+      "n": 1,
+      "label": "Limits heading",
+      "rect": {
+        "x": 297,
+        "y": 154,
+        "w": 378,
+        "h": 16
+      }
+    },
+    {
+      "n": 2,
+      "label": "Upload limit",
+      "rect": {
+        "x": 277,
+        "y": 223,
+        "w": 173,
+        "h": 40
+      }
+    },
+    {
+      "n": 3,
+      "label": "Question limit",
+      "rect": {
+        "x": 277,
+        "y": 380,
+        "w": 173,
+        "h": 59
+      }
+    },
+    {
+      "n": 4,
+      "label": "Environment variables",
+      "rect": {
+        "x": 873,
+        "y": 132,
+        "w": 406,
+        "h": 20
+      }
+    },
+    {
+      "n": 5,
+      "label": "Browser-local data",
+      "rect": {
+        "x": 297,
+        "y": 668,
+        "w": 662,
+        "h": 20
+      }
+    }
+  ],
+  "32b-settings-browser": [
+    {
+      "n": 1,
+      "label": "Refresh local-data view",
+      "rect": {
+        "x": 297,
+        "y": 582,
+        "w": 92,
+        "h": 32
+      }
+    },
+    {
+      "n": 2,
+      "label": "Clear browser data",
+      "rect": {
+        "x": 527,
+        "y": 582,
+        "w": 157,
+        "h": 32
+      }
+    }
+  ],
+  "33-mobile-dashboard": [
+    {
+      "n": 1,
+      "label": "Open navigation",
+      "rect": {
+        "x": 12,
+        "y": 12,
+        "w": 34,
+        "h": 34
+      }
+    },
+    {
+      "n": 2,
+      "label": "Safety banner",
+      "rect": {
+        "x": 16,
+        "y": 64,
+        "w": 144,
+        "h": 14
+      }
+    },
+    {
+      "n": 3,
+      "label": "Eligible pairs KPI",
+      "rect": {
+        "x": 33,
+        "y": 560,
+        "w": 202,
+        "h": 17
+      }
+    },
+    {
+      "n": 4,
+      "label": "Agreement KPI",
+      "rect": {
+        "x": 33,
+        "y": 704,
+        "w": 131,
+        "h": 17
+      }
+    },
+    {
+      "n": 5,
+      "label": "Discordance KPI",
+      "rect": {
+        "x": 33,
+        "y": 831,
+        "w": 149,
+        "h": 17
+      }
+    }
+  ],
+  "34-mobile-nav": [
+    {
+      "n": 1,
+      "label": "Close navigation",
+      "rect": {
+        "x": 226,
+        "y": 14,
+        "w": 28,
+        "h": 28
+      }
+    },
+    {
+      "n": 2,
+      "label": "Dashboard",
+      "rect": {
+        "x": 8,
+        "y": 173,
+        "w": 254,
+        "h": 31
+      }
+    },
+    {
+      "n": 3,
+      "label": "Navigation group",
+      "rect": {
+        "x": 8,
+        "y": 252,
+        "w": 254,
+        "h": 20
+      }
+    },
+    {
+      "n": 4,
+      "label": "Discordance",
+      "rect": {
+        "x": 8,
+        "y": 438,
+        "w": 254,
+        "h": 31
+      }
+    },
+    {
+      "n": 5,
+      "label": "Dataset card",
+      "rect": {
+        "x": 16,
+        "y": 95,
+        "w": 238,
+        "h": 17
+      }
+    }
+  ]
+}

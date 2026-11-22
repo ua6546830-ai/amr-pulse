@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader, SectionHeader, KeyValue } from "@/components/ui/page-header";
 import { Table, TBody, TD, TH, THead, TR } from "@/components/ui/table";
 import { getDemoDataset } from "@/server/demo/load";
+import { runAnalysis } from "@/lib/analysis/pipeline";
 import { CITATIONS } from "@/lib/citations/library";
 import { formatCi } from "@/lib/utils";
 
@@ -32,7 +33,14 @@ const CLASS_RULES = [
 
 export default async function MethodsPage() {
   const demo = await getDemoDataset();
-  const summary = demo.analysis.summary;
+  const primary = runAnalysis({
+    isolates: demo.isolates,
+    geneCalls: demo.geneCalls,
+    astResults: demo.ast,
+    evidence: demo.evidence,
+    options: { requirePanel: true, organism: "Escherichia coli", antibiotic: "ceftriaxone" },
+  });
+  const summary = primary.summary;
 
   return (
     <div className="space-y-5">

@@ -352,6 +352,8 @@ To report a security issue, open a private security advisory on GitHub rather th
 | Poster (1080×1350, SVG + PNG) | [`marketing/assets/poster.svg`](marketing/assets/poster.svg) · [`poster.png`](marketing/assets/poster.png) |
 | Open Graph image | [`amr-pulse/public/og.png`](amr-pulse/public/og.png) |
 | Product screenshots | [`marketing/screenshots/`](marketing/screenshots) |
+| Beginner's user manual (54 pages, 36 annotated figures) | [`marketing/user-manual/AMR-PULSE-Beginner-User-Manual.pdf`](marketing/user-manual/AMR-PULSE-Beginner-User-Manual.pdf) · [`manual.html`](marketing/user-manual/manual.html) |
+| Pitch deck (15 slides) | [`marketing/AMR-PULSE-Pitch-Deck.pptx`](marketing/AMR-PULSE-Pitch-Deck.pptx) · [`PDF`](marketing/AMR-PULSE-Pitch-Deck.pdf) |
 | Descriptions, taglines, social copy | [`marketing/README.md`](marketing/README.md) |
 
 Suggested tagline: **Genotype–phenotype discordance, investigated properly.**

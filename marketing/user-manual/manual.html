@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AMR PULSE — Beginner's User Manual</title>
+<style>
+  @page { size: A4; margin: 15mm 13mm 16mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Inter, Arial, sans-serif; color: #16202e; font-size: 10.4pt; line-height: 1.55; background: #fff; }
+  .page { padding: 0; }
+  h1, h2, h3, h4 { font-family: "Segoe UI", Inter, Arial, sans-serif; line-height: 1.2; }
+  h2 { font-size: 21pt; margin: 0 0 4mm; color: #0b2540; border-bottom: 2px solid #1d4ed8; padding-bottom: 2.5mm; page-break-before: always; }
+  h2.nobreak { page-break-before: auto; }
+  h3 { font-size: 13.5pt; margin: 7mm 0 2mm; color: #0b2540; }
+  h4 { font-size: 11pt; margin: 4mm 0 1mm; color: #12395f; }
+  p { margin: 0 0 2.4mm; }
+  ul, ol { margin: 0 0 2.6mm 5mm; padding: 0; }
+  li { margin-bottom: 1.2mm; }
+  code { background: #eef2f8; padding: 0.4mm 1.4mm; border-radius: 2px; font-family: Consolas, monospace; font-size: 9.2pt; }
+  a { color: #1d4ed8; text-decoration: none; }
+  .cover { height: 256mm; display: flex; flex-direction: column; justify-content: space-between; background: #071a2f; color: #eaf2ff; margin: 0; padding: 30mm 16mm 16mm; }
+  .cover .brand { font-size: 11pt; letter-spacing: 3px; color: #7fb3ff; }
+  .cover h1 { font-size: 46pt; margin: 8mm 0 4mm; color: #fff; letter-spacing: -1px; }
+  .cover .sub { font-size: 16pt; color: #cfe1ff; max-width: 150mm; line-height: 1.4; }
+  .cover .tags { margin-top: 10mm; display: flex; gap: 3mm; flex-wrap: wrap; }
+  .cover .tag { border: 1px solid #3b6ea8; border-radius: 99px; padding: 1.6mm 4mm; font-size: 9pt; color: #cfe1ff; }
+  .cover .meta { font-size: 9.5pt; color: #9dbbdd; border-top: 1px solid #24425f; padding-top: 5mm; }
+  .cover .meta strong { color: #eaf2ff; }
+  .strip { display: flex; gap: 4mm; margin: 4mm 0 6mm; }
+  .strip .box { flex: 1; border: 1px solid #d7e0ec; border-radius: 4px; padding: 3mm 4mm; background: #f7fafd; font-size: 9pt; }
+  .strip .box b { display: block; color: #0b2540; margin-bottom: 1mm; }
+  .note { border-left: 4px solid #1d4ed8; background: #eef5ff; padding: 3mm 4mm; margin: 3mm 0 4mm; font-size: 9.6pt; }
+  .warn { border-left: 4px solid #b45309; background: #fff7e8; padding: 3mm 4mm; margin: 3mm 0 4mm; font-size: 9.6pt; }
+  .danger { border-left: 4px solid #b91c1c; background: #fef2f2; padding: 3mm 4mm; margin: 3mm 0 4mm; font-size: 9.6pt; }
+  .ok { border-left: 4px solid #0f766e; background: #ecfdf8; padding: 3mm 4mm; margin: 3mm 0 4mm; font-size: 9.6pt; }
+  figure { margin: 4mm 0 6mm; page-break-inside: avoid; }
+  figure img { width: 100%; border: 1px solid #c9d4e2; border-radius: 3px; display: block; }
+  figcaption { font-size: 9pt; color: #5c6b7f; margin-top: 2mm; }
+  table.callouts { width: 100%; border-collapse: collapse; font-size: 9.2pt; margin-top: 3mm; page-break-inside: avoid; }
+  table.callouts td { border-top: 1px solid #e3e9f1; padding: 1.7mm 2mm; vertical-align: top; }
+  table.callouts td.n { width: 9mm; color: #fff; font-weight: 700; text-align: center; }
+  table.callouts td.n span { display: inline-block; width: 5.4mm; height: 5.4mm; line-height: 5.4mm; border-radius: 50%; background: #1d4ed8; font-size: 8.4pt; }
+  table.callouts td.n.amber span { background: #d97706; }
+  table.callouts td.n.teal span { background: #0f9d8a; }
+  table.callouts td.w { width: 58mm; font-weight: 600; color: #12395f; }
+  table.plain { width: 100%; border-collapse: collapse; font-size: 9.4pt; margin: 2mm 0 4mm; }
+  table.plain th, table.plain td { border: 1px solid #d7e0ec; padding: 1.8mm 2.2mm; text-align: left; vertical-align: top; }
+  table.plain th { background: #eef2f8; color: #0b2540; }
+  .toc ol { margin-left: 6mm; }
+  .toc li { margin-bottom: 2mm; }
+  .toc .part { font-weight: 700; color: #0b2540; margin-top: 4mm; }
+  .kbd { display: inline-block; border: 1px solid #b9c5d4; border-bottom-width: 2px; border-radius: 3px; padding: 0 1.4mm; font-size: 8.6pt; background: #f7f9fc; }
+  .two { display: flex; gap: 5mm; }
+  .two > div { flex: 1; }
+  .small { font-size: 9pt; color: #5c6b7f; }
+  .footer-note { margin-top: 8mm; border-top: 1px solid #d7e0ec; padding-top: 3mm; font-size: 8.6pt; color: #6b7a8d; }
+  .legend { display: flex; gap: 5mm; font-size: 9pt; margin: 2mm 0 3mm; }
+  .legend span.dot { display: inline-block; width: 3.4mm; height: 3.4mm; border-radius: 50%; margin-right: 1.6mm; vertical-align: -0.5mm; }
+  .glossary dt { font-weight: 700; color: #0b2540; margin-top: 2.4mm; }
+  .glossary dd { margin: 0.4mm 0 0 0; }
+  .chapter-lead { font-size: 11pt; color: #3a4a5e; margin: -1mm 0 4mm; }
+  @media print { .noprint { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============================ COVER ============================ -->
+<section class="cover">
+  <div>
+    <div class="brand">A M R &nbsp; P U L S E</div>
+    <h1>Beginner's<br>User Manual</h1>
+    <div class="sub">A guided tour of every tab, button and number in the AMR PULSE genotype–phenotype research workspace — with annotated screenshots.</div>
+    <div class="tags">
+      <div class="tag">Research-support software</div>
+      <div class="tag">Synthetic demonstration data</div>
+      <div class="tag">Not a diagnostic device</div>
+      <div class="tag">No patient-level data</div>
+    </div>
+  </div>
+  <div class="meta">
+    <strong>Prepared for:</strong> students, supervisors and first-time reviewers<br>
+    <strong>Author / developer:</strong> Uzair Ahmad &nbsp;·&nbsp; Qoder · CEGA Buildathon 2026<br>
+    <strong>Version:</strong> November 2026 &nbsp;·&nbsp; analysis engine 1.0.0 &nbsp;·&nbsp; evidence map amr-pulse-evidmap-2026.11.1
+  </div>
+</section>
+
+<!-- ============================ READ ME ============================ -->
+<h2 class="nobreak" style="margin-top:0">Read me first — what this software is (and is not)</h2>
+<div class="warn">
+  <b>Everything you will see in this tour is synthetic.</b> The demo workspace contains 220 fictional isolates with identifiers beginning <code>SYN-</code> and a fixed random seed (20261122). They contain no patient, hospital or surveillance records. Do not cite demo numbers as research findings.
+</div>
+<div class="danger">
+  <b>AMR PULSE is research-support software, not a diagnostic device.</b> It does not diagnose infection, choose treatment, recommend dosing or predict resistance for a patient. It has not been clinically validated and no regulatory certification (for example HIPAA, ISO 27001 or GDPR) is claimed. It does not replace laboratory interpretation, clinical judgement or a formal ethics review.
+</div>
+<div class="ok">
+  <b>What it does do:</b> it takes existing isolate metadata, gene calls and antimicrobial susceptibility test (AST) results that you already have; maps the columns; validates the tables; compares curated genomic determinants with submitted susceptibility categories using a transparent, deterministic set of rules; and produces an auditable report and reproducibility manifest.
+</div>
+<div class="note">
+  <b>Privacy rule for real use:</b> never upload identifiable patient data — no names, medical record numbers, dates of birth, admission dates, addresses or clinical notes. The platform is designed for isolate-level surveillance and genomic records. In the public demo, uploaded files are processed in memory for validation and are not persisted.
+</div>
+
+<h3>How to use this manual</h3>
+<ul>
+  <li><b>Work in order</b> the first time: Landing → Dashboard → Datasets → Import → Quality → Analysis → Isolates → Investigation → AI → Reports → Methods → Settings.</li>
+  <li>Every screenshot uses the same marking system (below). Read the numbered list underneath each figure; the number on the image matches the row in the table.</li>
+  <li>Blue numbers mark normal controls. <b>Amber</b> numbers mark a safety warning, a caveat or a destructive action. <b>Teal</b> numbers mark tool-derived, verified output.</li>
+  <li>Words in <b>bold</b> are also defined in the glossary at the end.</li>
+</ul>
+<div class="legend">
+  <span><span class="dot" style="background:#1d4ed8"></span>Normal control / information</span>
+  <span><span class="dot" style="background:#d97706"></span>Caution, boundary or irreversible action</span>
+  <span><span class="dot" style="background:#0f9d8a"></span>Verified or tool-derived output</span>
+</div>
+
+<h3>What is inside the demo?</h3>
+<table class="plain">
+  <tr><th>Table</th><th>What it holds</th><th>Demo size</th></tr>
+  <tr><td>Isolates</td><td>One row per fictional isolate: organism, country, year, collection date, source, genome quality.</td><td>220 rows</td></tr>
+  <tr><td>Gene calls</td><td>Curated resistance determinants reported per isolate, with method, database and identity.</td><td>367 rows</td></tr>
+  <tr><td>AST results</td><td>Submitted susceptibility results per isolate and antibiotic: category (S/I/R/SDD/NS), method, standard, measurement.</td><td>1,082 rows</td></tr>
+  <tr><td>Gene–drug evidence map</td><td>Curated, cited links between a gene or mutation and a drug class, with evidence level and source.</td><td>36 rows</td></tr>
+</table>
+<p class="small">The demo dataset is generated by <code>scripts/generate-demo-dataset.ts</code> with seed 20261122. Its manifest is available at <code>/api/manifest</code> and inside <code>public/demo/demo-manifest.json</code>.</p>
+
+<!-- ============================ TOC ============================ -->
+<h2>Contents</h2>
+<div class="toc">
+  <div class="part">Part 1 · Getting in</div>
+  <ol>
+    <li>The landing page — what the product claims</li>
+    <li>Global layout — sidebar, top bar and the synthetic banner</li>
+    <li>Dashboard — your research overview</li>
+  </ol>
+  <div class="part">Part 2 · The research workflow</div>
+  <ol start="4">
+    <li>Research Datasets — the four files behind every number</li>
+    <li>Data Import — upload, map and confirm</li>
+    <li>Data Quality — 938 issues, and why that is good</li>
+    <li>Geno–Pheno Analysis — the primary comparison</li>
+    <li>Isolate Explorer — from cohort to one isolate</li>
+    <li>Discordance Investigation — structured human review</li>
+    <li>AI Research Assistant — four agents, one question box</li>
+    <li>Research Reports — a STROBE-oriented builder</li>
+    <li>Methods &amp; Reproducibility — the audit trail</li>
+    <li>Settings — mode, limits, environment and browser data</li>
+    <li>On a phone — the mobile layout</li>
+  </ol>
+  <div class="part">Part 3 · Understanding the numbers</div>
+  <ol start="15">
+    <li>The five classes, the table and the 147</li>
+    <li>Glossary</li>
+    <li>Safe-use and scientific-honesty rules</li>
+    <li>Demo script, FAQ and troubleshooting</li>
+    <li>Credits and contact</li>
+  </ol>
+</div>
+
+<!-- ============================ 1. LANDING ============================ -->
+<h2>1 · The landing page</h2>
+<p class="chapter-lead">The public page explains the product before you open any data. It is the page you show a supervisor or judge first.</p>
+<figure>
+  <img src="assets/01-landing-top.png" alt="Annotated landing page">
+  <figcaption>Figure 1 — Landing page at 1440 × 960. Numbered markers are explained below.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Brand / home link</td><td>Returns to this page from anywhere.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Workflow link</td><td>Jumps to the seven-stage workflow section.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Capabilities link</td><td>Jumps to the feature grid.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Scientific boundaries link</td><td>Jumps to the section that says what the platform will not do.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Open demo</td><td>Opens the demo workspace immediately. No account, database or AI key is required.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Headline</td><td>The promise in one line: turn genomic determinants and submitted susceptibility results into auditable genotype–phenotype comparisons.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Primary call to action</td><td>“Launch the demo workspace” — the same destination as Open demo.</td></tr>
+  <tr><td class="n"><span>8</span></td><td class="w">Methods call to action</td><td>Opens Methods &amp; Reproducibility, where every rule and denominator is written down.</td></tr>
+  <tr><td class="n"><span>9</span></td><td class="w">Live demo numbers</td><td>A small preview of the synthetic benchmark (147 eligible pairs, 70.7% agreement). Labelled as demo data.</td></tr>
+  <tr><td class="n"><span>10</span></td><td class="w">Trust line</td><td>“No account required · Deterministic analysis engine · Synthetic cohort included.”</td></tr>
+</table>
+<figure>
+  <img src="assets/02-landing-capabilities.png" alt="Annotated capabilities grid">
+  <figcaption>Figure 2 — The capabilities grid, scrolled down.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Capabilities heading</td><td>Sets up the seven things the workspace does.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Five-class comparison</td><td>Concordant resistant, concordant susceptible, gene-positive/phenotype-susceptible, phenotype-resistant/no determinant, indeterminate.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Data-quality audit</td><td>Every rejected or ambiguous record is kept with a reason.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Adapters</td><td>Column-mapping step for isolate, gene-call, AST and evidence-map tables.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Statistics</td><td>Wilson 95% confidence intervals, explicit denominators, no silent averaging.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">AI assistant</td><td>Read-only tools, verified citations, deterministic fallback.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Reports</td><td>STROBE-oriented builder, Markdown/JSON/PDF export, saved drafts.</td></tr>
+</table>
+
+<!-- ============================ 2. CHROME ============================ -->
+<h2>2 · Global layout — sidebar, top bar and the synthetic banner</h2>
+<p class="chapter-lead">These elements stay visible on every workspace page. Learn them once and the rest of the tour becomes easier.</p>
+<figure>
+  <img src="assets/03-global-chrome.png" alt="Annotated global chrome on the dashboard">
+  <figcaption>Figure 3 — The persistent frame: dataset card, navigation groups, safety footer, top-bar badges and banner.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Logo and home</td><td>Returns to the dashboard.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Dataset card</td><td>Shows the active dataset (“Demo workspace”), its size (220 isolates) and seed (20261122). Click to open Research Datasets.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Navigation group</td><td>Pages are grouped: Overview, Research workflow, Investigation, Output. You always know where you are.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Discordance tab</td><td>The human-review workbench for candidate discordant pairs.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Safety footer</td><td>Always visible: “Research-support platform. Not a diagnostic device. No patient-level data.”</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">SYNTHETIC DATA badge</td><td>Top-bar reminder that the loaded cohort is fictional. It changes when a real validated dataset is loaded.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Notifications</td><td>System notices (for example completed analyses or saved drafts).</td></tr>
+  <tr><td class="n"><span>8</span></td><td class="w">Help menu</td><td>Short explanations and links to methods.</td></tr>
+  <tr><td class="n"><span>9</span></td><td class="w">Account menu</td><td>“Demo visitor · Local workspace”. The public demo needs no account.</td></tr>
+  <tr><td class="n amber"><span>10</span></td><td class="w">Persistent safety banner</td><td>Repeats the synthetic/not-a-device statement and stays pinned while you scroll.</td></tr>
+</table>
+
+<!-- ============================ 3. DASHBOARD ============================ -->
+<h2>3 · Dashboard — your research overview</h2>
+<p class="chapter-lead">The dashboard is the “front page” of the analysis: four headline numbers, then the classification that produced them, then charts, the investigation queue and guidance.</p>
+
+<h3>3.1 The four KPI cards</h3>
+<figure>
+  <img src="assets/04-dashboard-kpis.png" alt="Dashboard KPI row annotated">
+  <figcaption>Figure 4 — Top of the dashboard: shortcuts, synthetic warning and the four headline numbers.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Reports shortcut</td><td>Opens Research Reports with the current analysis context.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Analysis shortcut</td><td>Opens Geno–Pheno Analysis for the primary pairing.</td></tr>
+  <tr><td class="n amber"><span>3</span></td><td class="w">Synthetic warning</td><td>States that the cohort is fictional and must not be cited as evidence.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Eligible pairs — 147</td><td>One matched isolate–antibiotic pair per organism/drug, passing every rule. Pairs, not patients, are the unit.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Agreement — 70.7%</td><td>104 of 147 eligible pairs are concordant. The 95% Wilson confidence interval is 62.9–77.5%.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Discordance — 43</td><td>Candidate non-concordant pairs: 5 gene-positive/phenotype-susceptible plus 38 resistant/no-known-determinant. Candidates for review, not verdicts.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Exclusions — 29</td><td>Pairs excluded with a recorded reason; 9 of them are indeterminate and held outside the binary comparison.</td></tr>
+</table>
+<div class="warn"><b>Do not call 70.7% “accuracy” or “diagnostic performance”.</b> It is the proportion of this synthetic cohort’s eligible pairs whose submitted category agrees with the curated determinant status. It says nothing about a laboratory’s real-world sensitivity or specificity.</div>
+
+<h3>3.2 What the classification is made of</h3>
+<figure>
+  <img src="assets/05-dashboard-classification.png" alt="Classification panel annotated">
+  <figcaption>Figure 5 — Analysis context, the five classification rows and the non-concordant chart.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Analysis context</td><td>Confirms the pairing the numbers belong to: <i>Escherichia coli</i> × ceftriaxone.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Classification panel</td><td>Lists the five classes and how many eligible pairs fall in each.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Concordant resistant — 34</td><td>Submitted R and a curated determinant was detected.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Concordant susceptible — 70</td><td>Submitted S and no curated determinant was detected, with documented screening provenance.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Gene + / phenotype S — 5</td><td>Candidate discordance: a determinant was detected but the submitted category is susceptible.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">R / no known determinant — 38</td><td>Candidate discordance: submitted resistant but no curated determinant was detected.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Indeterminate — 9</td><td>Intermediate, SDD, non-susceptible or unresolved determinant. Excluded from the binary denominator.</td></tr>
+  <tr><td class="n"><span>8</span></td><td class="w">Non-concordant chart</td><td>Visual split of the two candidate-discordance directions; the same 43 as KPI 6.</td></tr>
+</table>
+
+<h3>3.3 Charts, queue and guidance</h3>
+<figure>
+  <img src="assets/06-dashboard-charts.png" alt="Dashboard charts annotated">
+  <figcaption>Figure 6 — Agreement by antibiotic, raw submitted mix, exclusions by reason, completeness and the investigation queue.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Agreement by antibiotic</td><td>Stratified agreement within the selected organism, with denominators.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Submitted category mix</td><td>Raw S/I/R/SDD/NS counts before any pairing rule. Useful for spotting missing categories.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Exclusions by reason</td><td>Every excluded record carries one primary reason, e.g. conflicting submitted categories, unresolved variant, no exact isolate match.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Field completeness</td><td>Share of records with a usable value for each field. Numeric measurement is deliberately the weakest in the demo (54.8%).</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Investigation queue</td><td>Preview of the 43 candidate pairs awaiting human review.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Open queue</td><td>Opens the Discordance Investigation workbench.</td></tr>
+</table>
+<figure>
+  <img src="assets/07-dashboard-guides.png" alt="Dashboard guidance annotated">
+  <figcaption>Figure 7 — The bottom of the dashboard: how to read the numbers, what to do next, and the reproducibility snapshot.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">How to read these numbers</td><td>The built-in interpretation guide. Read this before quoting any figure.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Continue the workflow</td><td>Suggested next pages (for example investigation or reports) for the current analysis.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Reproducibility snapshot</td><td>Engine version, evidence-map version, seed and timestamp attached to this exact run.</td></tr>
+</table>
+
+<!-- ============================ 4. DATASETS ============================ -->
+<h2>4 · Research Datasets — the four files behind every number</h2>
+<p class="chapter-lead">Every figure in the app is derived from four tables. This page shows counts, file names, dataset health, the dataset ID and an evidence-map status.</p>
+<figure>
+  <img src="assets/08-datasets-top.png" alt="Datasets overview annotated">
+  <figcaption>Figure 8 — Dataset summary, counts, active dataset card and the import action.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Import dataset</td><td>Starts the Data Import wizard. Also available from the sidebar.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Isolate count — 220</td><td>Rows in the isolate metadata table.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Gene-call count — 367</td><td>Curated determinant calls across those isolates.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">AST row count — 1,082</td><td>Submitted susceptibility rows; several per isolate are normal.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Evidence-map count — 36</td><td>Curated gene/mutation → drug links with citations.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Active dataset card</td><td>Dataset ID <code>ds_demo_synthetic_v1</code>, type SYNTHETIC, seed and generation time.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Open analysis</td><td>Jumps straight to the primary analysis.</td></tr>
+  <tr><td class="n amber"><span>8</span></td><td class="w">Synthetic warning</td><td>Repeats that the dataset is fictional.</td></tr>
+</table>
+<figure>
+  <img src="assets/09-datasets-files.png" alt="Dataset files and health annotated">
+  <figcaption>Figure 9 — File list, dataset health and intended-use statement.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Dataset files</td><td>The four files that make the dataset; each links to what it contributes.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Isolate file</td><td><code>demo-isolates.csv</code> — metadata and cohort composition.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Evidence-map file</td><td><code>gene-drug-evidence.csv</code> — the rules that decide whether a determinant is “established” for a drug.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Dataset health</td><td>Matched/unmatched counts and whether required fields are present.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Quality audit link</td><td>Opens Data Quality for the full issue register.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Intended use</td><td>The intended-use statement: research support, isolate-level data, no patient data.</td></tr>
+</table>
+
+<!-- ============================ 5. IMPORT ============================ -->
+<h2>5 · Data Import — upload, map, confirm</h2>
+<p class="chapter-lead">The wizard has four steps: Upload → Map → Validate → Analyse. Nothing is analysed until you explicitly confirm the column mappings.</p>
+<figure>
+  <img src="assets/10-import-top.png" alt="Import wizard step 1 annotated">
+  <figcaption>Figure 10 — Step 1 (Upload): privacy boundary, stepper and the four upload slots.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n amber"><span>1</span></td><td class="w">Privacy boundary</td><td>Read this before uploading anything real: no identifiable patient data.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Stepper</td><td>Shows where you are: Upload → Map → Validate → Analyse.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Isolate slot</td><td>One row per isolate; identifier is the join key.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Gene-call slot</td><td>Curated determinants with method/database provenance.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">AST slot</td><td>Submitted categories and measurements per isolate and drug.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Evidence-map slot</td><td>Curated gene/mutation → drug links for the relevant organisms.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Template download</td><td>An evidence-map template showing required headers.</td></tr>
+  <tr><td class="n"><span>8</span></td><td class="w">Review mappings</td><td>Disabled until all required files load. Then advances to the mapping step.</td></tr>
+  <tr><td class="n"><span>9</span></td><td class="w">Public-data guides</td><td>Where the underlying tables normally come from (NCBI Pathogen Detection, NCBI AST Browser, AMRFinderPlus).</td></tr>
+</table>
+<div class="note">The demo files are already in <code>public/demo/</code>. You can download them from the landing page or use the slots to re-upload them — the guided screenshots do exactly that to demonstrate the mapping step.</div>
+
+<h3>5.1 Mapping columns</h3>
+<figure>
+  <img src="assets/11-import-mapping.png" alt="Mapping step annotated">
+  <figcaption>Figure 11 — Step 2 (Map): each source column is matched to a required field.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Mapping step</td><td>Now the wizard shows “Map columns”. Mapping is the contract between your file and the engine.</td></tr>
+  <tr><td class="n amber"><span>2</span></td><td class="w">Validation badge</td><td>“required mapped” means every required field has a source column.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Mapping rule</td><td>“Mapping is a suggestion until you confirm it.” Suggestions are detected, never silently applied.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Column selector</td><td>Choose the source column for each required field; confidence badges show how sure detection is.</td></tr>
+</table>
+<figure>
+  <img src="assets/12-import-confirm.png" alt="Mapping confirmation annotated">
+  <figcaption>Figure 12 — Bottom of the mapping step: go back, confirm, or read the public-data guides.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Confirm mappings &amp; analyse</td><td>Runs validation and the analysis pipeline. This is the only point where data becomes an analysis.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Back</td><td>Returns to uploads; files already loaded are kept for this session.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Public-data guide card</td><td>Example: AMRFinderPlus annotated resistance gene calls. Confirms the platform consumes annotations; it does not sequence or re-call genes.</td></tr>
+</table>
+
+<!-- ============================ 6. QUALITY ============================ -->
+<h2>6 · Data Quality — 938 issues, and why that is good</h2>
+<p class="chapter-lead">The audit never edits, imputes or silently drops a value. Every issue is stored with its record ID, field, original value and a deterministic explanation.</p>
+<figure>
+  <img src="assets/13-quality-top.png" alt="Quality audit top annotated">
+  <figcaption>Figure 13 — Severity KPIs, the severity explainer, the issue register and its search box.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Issues CSV</td><td>Exports the full issue register for your appendix or audit trail.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Continue to analysis</td><td>Moves to the comparison once you have reviewed the issues.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Recorded issues — 938</td><td>One record can carry several issues; this is an issue count, not a row count.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Warnings — 205</td><td>Analysable with a documented caveat.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Exact AST matches — 99.4%</td><td>1,076 of 1,082 AST rows matched an isolate by exact identifier or BioSample accession.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Issue search</td><td>Filter by record, field, code or free text.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Issue register</td><td>Severity / issue / record / field / problem / original value / explanation / suggested action. Nothing is auto-corrected.</td></tr>
+</table>
+<div class="warn"><b>Critical</b> issues (17 in the demo) block only the affected pair, not the dataset. <b>Warnings</b> allow analysis with a stated limitation. <b>Info</b> records document context that does not change a classification.</div>
+<figure>
+  <img src="assets/14-quality-detail.png" alt="Identifier matching and completeness annotated">
+  <figcaption>Figure 14 — Identifier matching review, field completeness and duplicate/conflict accounting.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Identifier matching review</td><td>1,076 matched, 6 unmatched, 0 ambiguous. Unmatched AST rows are never joined by organism name; suggestions are edit-distance proposals requiring human confirmation.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Completeness detail</td><td>The denominator for each field is stated (AST rows vs isolates), so percentages cannot be misread.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Duplicates and conflicts</td><td>14 duplicate AST rows, 0 duplicate isolates, 1,068 unique isolate–drug pairs. A representative row is chosen by a fixed preference rule; disagreeing duplicates are excluded, never averaged.</td></tr>
+</table>
+<figure>
+  <img src="assets/14b-quality-issues.png" alt="Top issue codes panel">
+  <figcaption>Figure 15 — Top issue codes. The largest bucket is “No numeric measurement” (489), which is why numeric completeness is only 54.8%.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Top issue codes</td><td>Ranked issue codes with counts; click “Quality rules and versions” for the rule catalogue.</td></tr>
+</table>
+
+<!-- ============================ 7. ANALYSIS ============================ -->
+<h2>7 · Geno–Pheno Analysis — the primary comparison</h2>
+<p class="chapter-lead">This is the scientific centre of the product. Pick an organism and antibiotic stratum, run the deterministic engine, and read the five-class comparison with explicit denominators.</p>
+<figure>
+  <img src="assets/15-analysis-top.png" alt="Analysis controls and KPIs annotated">
+  <figcaption>Figure 16 — Exports, stratum controls, run/reset buttons and the four result cards.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Pairs CSV</td><td>Every analysed pair with its class, method, standard and measurement.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Results JSON</td><td>Machine-readable results including run provenance.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Build report</td><td>Sends the current context to the report builder.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Organism stratum</td><td>Restrict the comparison to one organism.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Antibiotic stratum</td><td>Restrict to one drug. The demo default is <i>E. coli</i> × ceftriaxone.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Run analysis</td><td>Re-runs the deterministic engine on the server for the chosen strata.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Default</td><td>Returns to the primary pairing.</td></tr>
+  <tr><td class="n"><span>8</span></td><td class="w">Eligible pairs pill</td><td>Context strip: organism, antibiotic, panel-required setting and the eligible-pair count.</td></tr>
+  <tr><td class="n"><span>9</span></td><td class="w">Agreement — 70.7%</td><td>104/147 with 95% CI 62.9–77.5%. A descriptive, cohort-specific proportion.</td></tr>
+  <tr><td class="n"><span>10</span></td><td class="w">Determinant-positive PPV — 87.2%</td><td>34/39 determinant-positive pairs had a resistant submitted category. Data-quality metric; not a clinical predictive value.</td></tr>
+  <tr><td class="n"><span>11</span></td><td class="w">Excluded pairs — 9</td><td>Indeterminate pairs held outside the binary denominator; 33 AST records were excluded overall, each with a reason.</td></tr>
+</table>
+<div class="ok"><b>Read denominators aloud.</b> 147 eligible pairs come from 176 matched pairs. 29 pairs were excluded; 9 of those were indeterminate. The 43 candidates are 5 + 38, not a subset of the 29.</div>
+<figure>
+  <img src="assets/16-analysis-contingency.png" alt="Contingency table and class cards annotated">
+  <figcaption>Figure 17 — The 2 × 2 contingency table and the per-class cards.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Contingency table</td><td>Binary positions only: determinant detected / not detected against phenotype R / S.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Determinant detected row</td><td>34 R + 5 S = 39 determinant-positive pairs.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">No determinant detected row</td><td>38 R + 70 S = 108 determinant-negative pairs.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Concordant resistant card</td><td>34/147 (23.1%), 95% CI 17.0–30.6%.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Gene + / phenotype S card</td><td>5/147 (3.4%) candidate discordant pairs, 95% CI 1.5–7.7%.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Full pair table</td><td>156 analysed pairs including indeterminate and excluded pairs. Search by isolate, gene or drug; filter by classification.</td></tr>
+</table>
+<figure>
+  <img src="assets/17-analysis-exclusions.png" alt="Exclusions and provenance annotated">
+  <figcaption>Figure 18 — The exclusions register, per-drug stratification, run provenance and the interpretation guardrails.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Exclusions register</td><td>Every exclusion with a reason: conflicting submitted categories (8), unresolved variant (6), AST without exact isolate match (6), missing category (5), no screening provenance (5), intermediate/non-binary (3), and so on.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Export CSV</td><td>Exclusions are exportable with example identifiers.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Stratification</td><td>Agreement by antibiotic within the current organism stratum.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Run provenance</td><td>Engine version, evidence-map version, timestamp, panel/organism/antibiotic filters and dataset type.</td></tr>
+  <tr><td class="n amber"><span>5</span></td><td class="w">Interpretation guardrails</td><td>Agreement is descriptive for this synthetic cohort; it is not a validation of AMRFinderPlus, CARD, ResFinder, CLSI or EUCAST and not a measure of laboratory accuracy.</td></tr>
+</table>
+
+<!-- ============================ 8. ISOLATES ============================ -->
+<h2>8 · Isolate Explorer — from cohort to one isolate</h2>
+<p class="chapter-lead">The explorer lists every isolate with its per-drug call. Use it to trace any number in the analysis back to a single record.</p>
+<figure>
+  <img src="assets/18-isolates.png" alt="Isolate explorer annotated">
+  <figcaption>Figure 19 — Search, filters, the Ceftriaxone column and the per-isolate classification.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Search isolates</td><td>Search by isolate identifier or country.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Discordant only</td><td>Filters the list to discordant pairs.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Organism filter</td><td>Restrict to one organism; “All organisms” by default.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Ceftriaxone column</td><td>The demo shows the primary-pairing drug as its own column so the call is visible in the list.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Per-isolate call</td><td>A compact classification badge (for example “R / determinant +”).</td></tr>
+</table>
+<p>Use the <b>Inspect</b> link at the right of any row (seen in the figure) to open the isolate detail page. The row count and the per-drug category chips are also visible without opening a record.</p>
+<figure>
+  <img src="assets/19-isolate-detail-top.png" alt="Isolate detail top annotated">
+  <figcaption>Figure 20 — One isolate: metadata, the submitted-versus-detected comparison and the per-isolate analysis link.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Back to isolate explorer</td><td>Returns to the list with filters preserved.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Ask assistant</td><td>Opens the AI workspace with this isolate in context.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Methods</td><td>Opens Methods &amp; Reproducibility.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Isolate metadata</td><td>Values as submitted; nothing is inferred.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">BioSample accession</td><td>The exact-match join key; in the demo it is a synthetic non-standard accession.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Ceftriaxone comparison</td><td>Submitted phenotype on the left, curated determinant status on the right.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Submitted phenotype</td><td>“R” for this isolate, as submitted.</td></tr>
+  <tr><td class="n"><span>8</span></td><td class="w">Determinant status</td><td>“positive” — a curated determinant was detected.</td></tr>
+</table>
+<figure>
+  <img src="assets/20-isolate-detail-evidence.png" alt="Isolate evidence annotated">
+  <figcaption>Figure 21 — Curated gene calls, relevant evidence-map rows and every submitted AST row for the isolate.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Curated gene calls</td><td>Symbol, class, mechanism, method, database, identity — e.g. blaCTX-M, blaCMY, tet(A).</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Relevant evidence map rows</td><td>Only rows for drugs submitted for this isolate; shows evidence level and verification status. Only verified established/strong rows can produce a positive determinant call.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">All submitted AST rows</td><td>Original values retained, including missing categories and measurements.</td></tr>
+</table>
+
+<!-- ============================ 9. INVESTIGATION ============================ -->
+<h2>9 · Discordance Investigation — structured human review</h2>
+<p class="chapter-lead">Candidate discordance is a review prompt, not a conclusion. This workbench lets a reviewer triage every candidate pair against a checklist and record what was checked.</p>
+<figure>
+  <img src="assets/21-investigations-top.png" alt="Investigation queue annotated">
+  <figcaption>Figure 22 — Investigation KPIs, the “candidate, not confirmed” banner, the queue and the triage order.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Queue CSV</td><td>Exports the candidate queue for off-line review.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Ask the assistant</td><td>Opens the AI workspace for a question about the queue.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Candidate pairs — 43</td><td>Both directions of disagreement.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Gene + / phenotype S — 5</td><td>Determinant detected, submitted susceptible.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">R / no determinant — 38</td><td>Submitted resistant, no curated determinant detected.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Indeterminate — 9</td><td>Held outside the binary comparison.</td></tr>
+  <tr><td class="n amber"><span>7</span></td><td class="w">Candidate, not confirmed</td><td>Lists plausible explanations — gene silencing, inoculum or reading error, breakpoint update, mixed culture, incorrect genome–AST linkage — as hypotheses to test, not conclusions.</td></tr>
+</table>
+<figure>
+  <img src="assets/22-investigations-review.png" alt="Structured review panel annotated">
+  <figcaption>Figure 23 — Selecting “Inspect” opens the reviewing-pair panel and the structured checklist.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Reviewing pair</td><td>The selected isolate and the submitted/detected values for the drug.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Structured review checklist</td><td>AST standard and breakpoint, isolate/BioSample linkage, screening panel and database version, mixed culture or technical failure, gene-symbol resolution, novel mechanism.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Review note</td><td>Free text for what you checked, what you found and what remains unresolved. Do not record patient identifiers.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Save note</td><td>Saves the note in this browser session.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Export note</td><td>Exports the note for your records or appendix.</td></tr>
+  <tr><td class="n amber"><span>6</span></td><td class="w">Storage boundary</td><td>“Session-only · not written to the dataset”. Review notes never change the analysis or the dataset.</td></tr>
+</table>
+<div class="warn"><b>Never write “lab error”, “false result” or “misdiagnosis”</b> in a review note or report. Write what you checked; a discordance can reflect expression, testing conditions, entry errors, an incomplete evidence map or a genuine biological difference. It requires review before interpretation.</div>
+
+<!-- ============================ 10. AI ============================ -->
+<h2>10 · AI Research Assistant — four agents, one question box</h2>
+<p class="chapter-lead">The assistant can only read validated tool outputs. It cannot change mappings, exclusions, classifications or statistical output, and it cannot supply its own references.</p>
+<figure>
+  <img src="assets/23-ai-top.png" alt="AI workspace top annotated">
+  <figcaption>Figure 24 — Composer, mode card, suggested prompts, question box and the Ask button.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Methods</td><td>Links to the same methods page the assistant cites.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Question composer</td><td>Explains the scope: read validated tool outputs only.</td></tr>
+  <tr><td class="n amber"><span>3</span></td><td class="w">No AI provider configured</td><td>When <code>AI_PROVIDER</code> is unset, answers are assembled deterministically from read-only tools. This is a supported mode, not a failure.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Suggested prompt</td><td>One click fills the box with a well-formed research question.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Question box</td><td>Up to 2,000 characters; history capped at the last 10 messages.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Ask</td><td>Runs the orchestrator. Rate limit: 30 requests/hour per client; 3 model turns / 6 tool calls per run.</td></tr>
+</table>
+<figure>
+  <img src="assets/24-ai-roster.png" alt="Agent roster annotated">
+  <figcaption>Figure 25 — The agent roster: four prompt-scoped roles with an enforced tool list.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Agent roster</td><td>19 read-only tools across four agents. Tool access is enforced by the orchestrator, not requested politely.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Agent 1 · Data mapping</td><td>Suggests column mappings and explains each match; never applies them automatically.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Agent 2 · Quality auditor</td><td>Summarises validation issues, duplicates, conflicts and missing fields with denominators.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Citation library</td><td>23 verified entries with a resolution date; unknown identifiers are rejected at the boundary.</td></tr>
+</table>
+<p><b>Agent 3 · Resistance investigation</b> explains candidate discordance per isolate using curated evidence and AST provenance. <b>Agent 4 · Research assistant</b> drafts methods/results summaries and cites only verified reference IDs. Imported CSV text is treated as untrusted data; embedded instructions are ignored (prompt-injection defence).</p>
+<figure>
+  <img src="assets/25-ai-answer.png" alt="AI answer annotated">
+  <figcaption>Figure 26 — A deterministic answer: question, tool calls, tool-derived summary, evidence cards and verified citations.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Your question</td><td>Repeats the exact prompt used.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Tool calls</td><td>The tool that ran, its arguments and timing. This is the audit trail for the answer.</td></tr>
+  <tr><td class="n teal"><span>3</span></td><td class="w">Tool-derived answer</td><td>The deterministic summary. Every number comes from the analysis engine; no model arithmetic.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Verified citations</td><td>Only library entries whose identifiers resolved. The answer card repeats the citations used.</td></tr>
+</table>
+<figure>
+  <img src="assets/26-ai-answer-actions.png" alt="AI answer actions annotated">
+  <figcaption>Figure 27 — Limitations, copy/save/regenerate and the scope guard.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Limitations</td><td>Synthetic dataset; no research evidence; candidate discordance ≠ laboratory error; pairs sharing an isolate are not independent observations.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Copy answer</td><td>Copies the answer text with its limitations.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Save draft to Reports</td><td>Adds a clearly labelled, unverified AI draft to the report builder.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Regenerate</td><td>Re-runs the same question/tool path.</td></tr>
+  <tr><td class="n amber"><span>5</span></td><td class="w">Scope guard</td><td>“No diagnosis, treatment or dosing advice.” The assistant cannot answer patient-specific clinical questions.</td></tr>
+</table>
+
+<!-- ============================ 11. REPORTS ============================ -->
+<h2>11 · Research Reports — a STROBE-oriented builder</h2>
+<p class="chapter-lead">The builder assembles a report from the deterministic output. Every figure carries its numerator and denominator; AI material is appended only as clearly labelled, unverified draft text.</p>
+<figure>
+  <img src="assets/27-reports-config.png" alt="Report configuration annotated">
+  <figcaption>Figure 28 — Builder boundaries, report title, build date and section toggles, with a live preview.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Manifest JSON</td><td>Downloads the report manifest for reproducibility.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Ask the assistant</td><td>Opens the AI workspace for a methods/results summary.</td></tr>
+  <tr><td class="n amber"><span>3</span></td><td class="w">What this builder will not do</td><td>It will not invent results, infer ethics approval, claim clinical validation or modify classifications.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Report title</td><td>Editable; the default describes the synthetic pairing.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Build date</td><td>Stamped into the report header.</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Section toggles</td><td>Include or exclude Study objective, Data &amp; provenance, Methods, Matching &amp; exclusions, Results, Candidate discordance, Data quality, Limitations, References.</td></tr>
+  <tr><td class="n"><span>7</span></td><td class="w">Limitations toggle</td><td>Keep this on. It carries the synthetic-data, dependence and no-clinical-validation statements.</td></tr>
+</table>
+<figure>
+  <img src="assets/28-reports-actions.png" alt="Report actions annotated">
+  <figcaption>Figure 29 — Export buttons, saved drafts and the live preview. “Print / PDF” uses the browser print dialog — check the preview and retain the engine/mapping versions.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Export buttons</td><td><b>Markdown</b> copies the report as text; <b>Copy</b> copies to clipboard; <b>Print / PDF</b> opens the browser print dialog; <b>JSON</b> downloads structured data; <b>Save</b> stores a browser-local draft.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Saved drafts</td><td>Browser-local only. AI drafts appear inside an unverified appendix.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Live preview</td><td>The exact rendered report. The header carries engine version, evidence-map version and dataset type.</td></tr>
+</table>
+
+<!-- ============================ 12. METHODS ============================ -->
+<h2>12 · Methods &amp; Reproducibility — the audit trail</h2>
+<p class="chapter-lead">This page is your defence in a presentation: it states the scope, lists dataset and analysis provenance, and writes the classification rules in plain language.</p>
+<figure>
+  <img src="assets/29-methods-top.png" alt="Methods top annotated">
+  <figcaption>Figure 30 — Scope statement, dataset provenance, analysis provenance and the primary-result denominators.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Manifest JSON</td><td>Downloadable manifest for the current run.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Report builder</td><td>Opens the report builder with this context.</td></tr>
+  <tr><td class="n amber"><span>3</span></td><td class="w">Scope statement</td><td>“AMR PULSE is research-support software… analyses describe the loaded dataset; they do not validate any source database, breakpoint table or laboratory.”</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Dataset provenance</td><td>Name, type, seed, generation time, generator version, isolate count.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Analysis provenance</td><td>Engine version, evidence-map version, run timestamp, panel requirement, standards pooling (none), imputation (none).</td></tr>
+  <tr><td class="n"><span>6</span></td><td class="w">Primary result denominators</td><td>Eligible pairs 147; agreement 104/147; 95% CI 62.9–77.5%; indeterminate 9; excluded AST rows 33; validation issues 938. These are primary-stratum numbers, not all-strata.</td></tr>
+</table>
+<figure>
+  <img src="assets/30-methods-pipeline.png" alt="Seven-stage pipeline annotated">
+  <figcaption>Figure 31 — The seven-stage deterministic pipeline and the five-class rule table.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Seven-stage pipeline</td><td>1 Import (explicit column mapping) → 2 Match (exact identifier/BioSample; no organism-name joins) → 3 Validate (deterministic rules) → 4 Exclude (one primary reason, kept in the register) → 5 Interpret (curated, versioned gene–drug mapping) → 6 Classify (binary S/R against detected/not detected) → 7 Summarise (counts, proportions, Wilson 95% CIs, denominators include excluded records in the audit).</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Classification rules</td><td>Each of the five classes with its rule and whether it is included in the binary denominator. Indeterminate is excluded; the rest are included.</td></tr>
+</table>
+<div class="note">Absence of a gene call counts as “none detected” only when AMR screening provenance is documented. Otherwise the pair is excluded as <code>missing_genomic_panel</code>. Unresolved symbols produce an indeterminate pair.</div>
+
+<!-- ============================ 13. SETTINGS ============================ -->
+<h2>13 · Settings — mode, limits, environment and browser data</h2>
+<p class="chapter-lead">Configuration is server-driven through environment variables. The public demo works without an account, database or AI key; browser-local drafts never become server-side data unless a persistence mode is configured.</p>
+<figure>
+  <img src="assets/31-settings-top.png" alt="Settings top annotated">
+  <figcaption>Figure 32 — Workspace mode and AI provider cards.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Manifest JSON</td><td>Download the current workspace manifest.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Workspace mode card</td><td><b>Mode A · public demo</b> is active: no accounts, read-only demo, browser-local drafts only. Mode B (authenticated projects, persistence, RLS policies) requires the Supabase variables and versioned SQL migrations.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Review datasets</td><td>Opens Research Datasets.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">AI provider card</td><td>Shows provider, model, endpoint host, key presence and rate limit. Keys are read only by route handlers and never included in client bundles or audit logs.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Open AI workspace</td><td>Opens the assistant. With no provider configured, deterministic answers remain available.</td></tr>
+</table>
+<figure>
+  <img src="assets/32-settings-limits.png" alt="Settings limits annotated">
+  <figcaption>Figure 33 — Limits and the environment-variable presence list.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Limits</td><td>Limits are enforced at the boundary, not shown as advisory messages.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Upload limit</td><td>8 MB per file; rejected client- and server-side.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Question limit</td><td>2,000 characters; history capped at the last 10 messages.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Environment variables</td><td>Presence only: 0 of 8 present in the demo. <code>SUPABASE_SERVICE_ROLE_KEY</code> is server-only and must never be prefixed <code>NEXT_PUBLIC_</code> or exposed.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Browser-local data</td><td>Saved reports, review decisions, notes and the last import summary live only in this browser.</td></tr>
+</table>
+<p>Other limits shown on this page: 20,000 rows parsed per table (excess is truncated and reported), 400 rows per normalisation chunk, 3 model turns / 6 tool calls per AI run, 30-second provider timeout, 30 AI requests/hour per client.</p>
+<figure>
+  <img src="assets/32b-settings-browser.png" alt="Browser-local data controls annotated">
+  <figcaption>Figure 34 — Refresh, export and clear browser-local data.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Refresh</td><td>Re-reads the browser-local summary.</td></tr>
+  <tr><td class="n amber"><span>2</span></td><td class="w">Clear browser data</td><td>Deletes saved reports, AI drafts, review decisions and notes from this browser. It cannot be undone here — export first if you need the material.</td></tr>
+</table>
+
+<!-- ============================ 14. MOBILE ============================ -->
+<h2>14 · On a phone — the mobile layout</h2>
+<p class="chapter-lead">Everything works at phone width. The sidebar becomes a drawer and the KPI cards stack.</p>
+<figure>
+  <img src="assets/33-mobile-dashboard.png" alt="Mobile dashboard annotated">
+  <figcaption>Figure 35 — Dashboard at 390 × 844: drawer button, safety banner and stacked cards.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Open navigation</td><td>Opens the sidebar drawer.</td></tr>
+  <tr><td class="n amber"><span>2</span></td><td class="w">Safety banner</td><td>Still present on small screens; scroll it fully — it carries the no-patient-data statement.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Eligible pairs</td><td>147 / 176 pairs.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Observed agreement</td><td>70.7% (104/147), 95% CI 62.9–77.5%, explicitly “not an accuracy estimate”.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Candidate discordance</td><td>43 candidates for review.</td></tr>
+</table>
+<figure>
+  <img src="assets/34-mobile-nav.png" alt="Mobile drawer annotated">
+  <figcaption>Figure 36 — The navigation drawer with the dataset card and the four page groups.</figcaption>
+</figure>
+<table class="callouts">
+  <tr><td class="n"><span>1</span></td><td class="w">Close navigation</td><td>Closes the drawer and returns to the page.</td></tr>
+  <tr><td class="n"><span>2</span></td><td class="w">Dashboard</td><td>The current page is highlighted.</td></tr>
+  <tr><td class="n"><span>3</span></td><td class="w">Research workflow</td><td>Import → Quality → Analysis → Explorer.</td></tr>
+  <tr><td class="n"><span>4</span></td><td class="w">Discordance</td><td>The investigation workbench.</td></tr>
+  <tr><td class="n"><span>5</span></td><td class="w">Dataset card</td><td>Active dataset and seed, with the SYNTHETIC chip.</td></tr>
+</table>
+
+<!-- ============================ 15. NUMBERS ============================ -->
+<h2>15 · The five classes, the table and the 147</h2>
+<p class="chapter-lead">If you remember one page from this manual, make it this one. Every number on every screen flows from these definitions.</p>
+<h3>15.1 The analysis unit</h3>
+<p>The unit is a <b>matched isolate–antibiotic pair</b>, not a patient and not a row. One isolate can contribute several pairs (one per drug), and repeated AST rows for the same pair are collapsed only where their categories agree. Conflicting duplicates are excluded and recorded. This is why 147 pairs come from 176 matched pairs, and why the pair table can show 156 rows (eligible + indeterminate + excluded).</p>
+<h3>15.2 The five classes</h3>
+<table class="plain">
+  <tr><th>Class</th><th>Rule</th><th>In binary denominator?</th></tr>
+  <tr><td>Concordant resistant</td><td>Submitted R AND a curated determinant was detected.</td><td>Included</td></tr>
+  <tr><td>Concordant susceptible</td><td>Submitted S AND no curated determinant detected, with documented screening provenance.</td><td>Included</td></tr>
+  <tr><td>Gene positive / phenotype susceptible</td><td>Submitted S AND a curated determinant was detected. Candidate discordance.</td><td>Included</td></tr>
+  <tr><td>Phenotype resistant / no known determinant</td><td>Submitted R AND no curated determinant detected. Candidate discordance.</td><td>Included</td></tr>
+  <tr><td>Indeterminate</td><td>I / SDD / NS categories, unresolved variants, or a record that fails a required inclusion rule.</td><td>Excluded</td></tr>
+</table>
+<h3>15.3 The primary result, read correctly</h3>
+<table class="plain">
+  <tr><th>Quantity</th><th>Value</th><th>What it means</th></tr>
+  <tr><td>Matched pairs</td><td>176</td><td>Exact isolate/BioSample joins for E. coli × ceftriaxone.</td></tr>
+  <tr><td>Eligible pairs</td><td>147</td><td>Passed organism, screening-provenance, category and mapping rules.</td></tr>
+  <tr><td>Agreement</td><td>104/147 = 70.7%</td><td>Concordant R (34) + concordant S (70).</td></tr>
+  <tr><td>95% Wilson CI</td><td>62.9–77.5%</td><td>Uncertainty of the proportion in this synthetic cohort.</td></tr>
+  <tr><td>Determinant-positive PPV</td><td>34/39 = 87.2%</td><td>34 concordant R among 39 determinant-positive pairs. CI 73.3–94.4%. Not a clinical predictive value.</td></tr>
+  <tr><td>Candidate discordance</td><td>43</td><td>5 gene+/S plus 38 R/no determinant. Review prompts.</td></tr>
+  <tr><td>Indeterminate</td><td>9</td><td>Held outside the binary comparison.</td></tr>
+  <tr><td>Excluded</td><td>29 pairs; 33 AST rows</td><td>Each exclusion has a recorded reason, never a silent drop.</td></tr>
+  <tr><td>All-strata sensitivity view</td><td>978 pairs; 921/978</td><td>Pooled across strata; reported separately, never as the primary result.</td></tr>
+</table>
+<div class="danger"><b>Four sentences never to say:</b> “70.7% accuracy”, “the tool detected misdiagnoses”, “PPV proves the determinant predicts treatment”, “this study validates AMRFinderPlus / CARD / CLSI / EUCAST”. All four are false for this synthetic demo.</div>
+
+<!-- ============================ 16. GLOSSARY ============================ -->
+<h2>16 · Glossary</h2>
+<dl class="glossary">
+  <dt>AMR</dt><dd>Antimicrobial resistance — the ability of a microorganism to survive a drug that would normally inhibit or kill it.</dd>
+  <dt>AST</dt><dd>Antimicrobial susceptibility testing. A laboratory method that assigns a category (susceptible, intermediate, resistant, and sometimes SDD or non-susceptible) to an isolate–drug pair.</dd>
+  <dt>MIC</dt><dd>Minimum inhibitory concentration — the lowest drug concentration that inhibits visible growth in a dilution test.</dd>
+  <dt>Disk diffusion</dt><dd>A method that measures a zone of inhibition around a disk; interpreted against a breakpoint table.</dd>
+  <dt>Breakpoint</dt><dd>The concentration or zone-size threshold that separates categorical interpretations. Breakpoint tables are versioned (e.g. CLSI, EUCAST).</dd>
+  <dt>Genotype</dt><dd>The resistance determinants detected in the genome — here, curated gene or mutation calls.</dd>
+  <dt>Phenotype</dt><dd>The observed susceptibility category from AST.</dd>
+  <dt>Determinant / gene call</dt><dd>A reported resistance gene or mutation. “Curated” means it is in the evidence map with a cited source and evidence level.</dd>
+  <dt>Evidence map</dt><dd>The versioned table linking genes/mutations to drug classes, with evidence level, source URL, database and mapping version.</dd>
+  <dt>Concordant</dt><dd>Submitted phenotype and determinant status point the same way (R with determinant, or S without).</dd>
+  <dt>Candidate discordance</dt><dd>A pair where the two directions disagree. It is a review prompt, not a laboratory error and not a finding.</dd>
+  <dt>Indeterminate</dt><dd>A pair that cannot support a binary comparison (intermediate, SDD/NS, unresolved variant, missing information).</dd>
+  <dt>PPV</dt><dd>Positive predictive value. Here: concordant resistant ÷ determinant-positive pairs. A data-quality metric inside this cohort, not a clinical predictive value.</dd>
+  <dt>Wilson 95% CI</dt><dd>A confidence interval for a proportion that behaves well for small samples and extreme proportions. It describes uncertainty in this cohort only.</dd>
+  <dt>Provenance</dt><dd>The recorded origin and version of every input and rule: dataset seed, generator, engine version, evidence-map version, run timestamp.</dd>
+  <dt>Manifest</dt><dd>A machine-readable record of software versions, counts, identities and the exact evidence mapping used.</dd>
+  <dt>Seed</dt><dd>The fixed number (20261122) used to generate the synthetic cohort, so the demo is reproducible.</dd>
+  <dt>STROBE</dt><dd>A reporting guideline for observational studies. The report builder follows its section structure; it does not claim that your study complies with STROBE.</dd>
+  <dt>RLS</dt><dd>Row-level security, a database feature used in Mode B to isolate authenticated projects.</dd>
+</dl>
+
+<!-- ============================ 17. SAFE USE ============================ -->
+<h2>17 · Safe-use and scientific-honesty rules</h2>
+<h3>17.1 Data handling</h3>
+<ul>
+  <li>Never upload identifiable patient data: names, MRNs, dates of birth, admission dates, addresses, clinical notes, free-text identifiers.</li>
+  <li>Use isolate-level records only, with the identifiers your governance process allows.</li>
+  <li>Keep AI keys and the Supabase service-role key server-side. Never prefix a secret with <code>NEXT_PUBLIC_</code>.</li>
+  <li>Confirm your lawful basis and retention obligations before enabling any persistence mode.</li>
+</ul>
+<h3>17.2 Claims you may make</h3>
+<ul>
+  <li>“A deterministic, auditable genotype–phenotype comparison on a synthetic demonstration cohort.”</li>
+  <li>“Candidate discordance flagged for structured human review, with every exclusion recorded.”</li>
+  <li>“Research-support software; not clinically validated; no regulatory certification claimed.”</li>
+</ul>
+<h3>17.3 Claims you must not make</h3>
+<ul>
+  <li>No HIPAA, ISO 27001, GDPR or other compliance claim without independent assessment.</li>
+  <li>No ethics approval claim. Request faculty guidance on IRB/exemption before any human-data study.</li>
+  <li>No invented papers, DOIs, sample sizes, findings or references. No invented records to reach a sample-size target.</li>
+  <li>No “lab error”, “false result”, “misdiagnosis”, “proves resistance”, “predicts treatment” or “diagnostic”.</li>
+  <li>No claim that demo numbers are findings, or that the platform validates any source database or breakpoint table.</li>
+</ul>
+<div class="warn">If real public-data access fails, the honest deliverable is a completed research protocol plus a feasibility report — not a fabricated empirical paper. The demo exists to exercise the engine end-to-end, not to stand in for a study.</div>
+
+<!-- ============================ 18. SCRIPT/FAQ ============================ -->
+<h2>18 · Demo script, FAQ and troubleshooting</h2>
+<h3>18.1 A 12-minute live walkthrough</h3>
+<ol>
+  <li><b>0:00 Landing (Fig. 1–2).</b> Say what it is in one line and point at the scientific-boundaries link.</li>
+  <li><b>1:00 Dashboard (Fig. 4–5).</b> Read 147 → 70.7% → 43 → 29 and state the unit (matched pairs).</li>
+  <li><b>2:30 Datasets (Fig. 8).</b> Four tables, 220/367/1,082/36, seed 20261122.</li>
+  <li><b>3:30 Import (Fig. 10–12).</b> Upload the four demo CSVs, show the mapping suggestion, confirm.</li>
+  <li><b>5:30 Quality (Fig. 13–15).</b> 938 issues, 17 critical, 99.4% match rate, exclusions with reasons.</li>
+  <li><b>7:00 Analysis (Fig. 16–18).</b> Contingency table, 95% CI, exclusions register, guardrails.</li>
+  <li><b>9:00 Isolates + Investigation (Fig. 19–23).</b> Open one isolate; inspect one candidate; fill one checklist item.</li>
+  <li><b>10:30 AI (Fig. 24–27).</b> Run the suggested prompt; show tool calls, deterministic answer, citations, limitations.</li>
+  <li><b>11:30 Reports + Methods (Fig. 28–31).</b> Show the live preview, then the seven-stage pipeline and the provenance.</li>
+  <li><b>12:00 Close.</b> “Research-support software on synthetic data; next step is a real public dataset pilot with faculty/IRB guidance.”</li>
+</ol>
+<h3>18.2 Frequently asked questions</h3>
+<p><b>Why is AI “off”?</b> No provider key is configured in the public demo. Answers are assembled deterministically from validated tool outputs; every number still comes from the engine. This is a supported mode.</p>
+<p><b>Why are there 938 issues if the data is clean?</b> The demo deliberately includes realistic gaps (numeric measurement missing 45.2%, non-standard BioSample accessions). The audit records them instead of fixing them; only 17 are critical and they block the affected pair, not the dataset.</p>
+<p><b>Why 70.7% and not “accuracy”?</b> Agreement is the proportion of eligible pairs where the submitted category and the curated determinant status match. Accuracy would require an independent gold standard and a validated assay; this is a synthetic cohort.</p>
+<p><b>Can I upload my own data?</b> Yes, in a private environment and only with non-identifiable isolate-level data that you are authorised to use. Check mapping, quality and exclusions first.</p>
+<p><b>Where did my saved report go?</b> Reports, notes and review decisions are browser-local. Export them before clearing browser data or switching machines.</p>
+<p><b>Print / PDF produced an empty page.</b> Wait for the preview to finish rendering, then print with “Background graphics” enabled.</p>
+<p><b>The analysis button does nothing.</b> Check that all required files are mapped (“required mapped”) and that you are not rate-limited.</p>
+<h3>18.3 Troubleshooting</h3>
+<table class="plain">
+  <tr><th>Symptom</th><th>Likely cause</th><th>Action</th></tr>
+  <tr><td>“Review mappings” stays disabled</td><td>One or more required files not loaded</td><td>Load all four CSVs; check the slot labels.</td></tr>
+  <tr><td>Validation badge not green</td><td>A required field has no source column</td><td>Set the missing selector; confirm no duplicate mapping.</td></tr>
+  <tr><td>Zero eligible pairs</td><td>Wrong organism/antibiotic combination</td><td>Run “Default” or pick a stratum present in the dataset.</td></tr>
+  <tr><td>Excluded rows dominate</td><td>Missing screening provenance or unmatched identifiers</td><td>Read the exclusions register and fix the source table, not the result.</td></tr>
+  <tr><td>AI answer unavailable</td><td>Provider unset or rate limit</td><td>Use deterministic mode; wait for the hour window.</td></tr>
+  <tr><td>PDF export empty</td><td>Print dialog timing</td><td>Re-open print after preview renders; enable background graphics.</td></tr>
+</table>
+
+<!-- ============================ 19. CREDITS ============================ -->
+<h2>19 · Credits and contact</h2>
+<div class="two">
+  <div>
+    <h3 style="margin-top:0">Developer</h3>
+    <p><b>Uzair Ahmad</b><br>
+    Final-year Pharm.D student, FUUAST (CGPA 3.7)<br>
+    Brand Management Diploma, IBA Karachi (2023–2024)</p>
+    <p>Built for the <b>Qoder · CEGA Buildathon 2026</b>.</p>
+    <p><b>Email:</b> ua6546830@gmail.com<br>
+    <b>LinkedIn:</b> linkedin.com/in/uzairahmad02<br>
+    <b>Instagram:</b> @dr.uzair.m.ahmad<br>
+    <b>Phone:</b> +92 347 8043689</p>
+  </div>
+  <div>
+    <h3 style="margin-top:0">Selected work</h3>
+    <ul>
+      <li><b>Zen Vacation Homes</b> — hospitality social-media system: 5-slide property carousels, 15 properties across Karachi and Islamabad (+86.77% engagement, 100k+ Meta reach, 15 carousels).</li>
+      <li><b>PharmEvo Cardiology</b> — go-to-market for the BP Passport MVP.</li>
+      <li><b>FUUAST Pharmacy Society</b> — President.</li>
+      <li><b>Brand simulations</b> — Salusarum, Neuroboost (PKR 10k in 48 hours), Synodos, Binerix.</li>
+      <li><b>Internships</b> — Evodianship (cardiology), Patel Hospital, Naimat Begum Hospital, PCSIR (clinical and regulatory).</li>
+      <li><b>Certificates</b> — Learn Prompting (2024), Google Project Management (2024), NED Cybersecurity.</li>
+    </ul>
+  </div>
+</div>
+<div class="warn" style="margin-top:6mm">
+  <b>Final reminder.</b> AMR PULSE is research-support software operating on synthetic demonstration data in this manual. It is not a diagnostic device, has not been clinically validated, and makes no regulatory-compliance or ethics-approval claim. Do not upload identifiable patient data. For any real study, obtain faculty guidance on IRB/exemption before data collection.
+</div>
+<p class="footer-note">AMR PULSE · Beginner's User Manual · November 2026 · analysis engine 1.0.0 · evidence map amr-pulse-evidmap-2026.11.1 · synthetic demo seed 20261122 · 36 annotated figures.</p>
+
+</body>
+</html>
