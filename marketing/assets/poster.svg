@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-label="AMR PULSE research poster">
+  <defs>
+    <pattern id="pgrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#E5EAF0" stroke-width="1"/>
+    </pattern>
+    <pattern id="dgrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#172033"/>
+      <stop offset="1" stop-color="#1E2B45"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F9D8A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#F7F9FC"/>
+  <rect y="158" width="1080" height="922" fill="url(#pgrid)" opacity="0.5"/>
+
+  <!-- header -->
+  <rect width="1080" height="158" fill="url(#head)"/>
+  <rect width="1080" height="158" fill="url(#dgrid)"/>
+  <rect x="64" y="40" width="46" height="46" rx="11" fill="#0B1220"/>
+  <polyline points="74,63 83,63 88,51 95,75 101,58 106,63 112,63" fill="none" stroke="#22D3EE" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="126" y="60" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="3" fill="#FFFFFF">AMR PULSE</text>
+  <text x="127" y="82" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4" fill="#94A3B8">RESEARCH INFRASTRUCTURE</text>
+  <text x="1016" y="60" text-anchor="end" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1" fill="#7DD3FC">OPEN SOURCE · RESEARCH USE</text>
+  <rect x="64" y="108" width="952" height="28" rx="7" fill="#FFFFFF" fill-opacity="0.06"/>
+  <text x="80" y="126" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11.5" fill="#CBD5E1">Deterministic analysis · versioned evidence map · every exclusion counted · AI that can only read</text>
+  <text x="1016" y="126" text-anchor="end" font-family="Consolas, SFMono-Regular, Menlo, monospace" font-size="11" fill="#7DD3FC">v1.0.0</text>
+
+  <!-- headline -->
+  <text x="62" y="238" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="47" font-weight="700" letter-spacing="-1.4" fill="#172033">Genotype–phenotype discordance,</text>
+  <text x="62" y="292" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="47" font-weight="700" letter-spacing="-1.4" fill="url(#accent)">investigated properly.</text>
+  <text x="64" y="334" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#475569">A research workspace that separates genuine candidate discordance from mapping, metadata,</text>
+  <text x="64" y="358" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#475569">duplicate and QC artefacts — with a denominator and an audit trail behind every number.</text>
+
+  <!-- synthetic strip -->
+  <rect x="64" y="382" width="952" height="38" rx="9" fill="#FEF3C7" stroke="#FDE68A"/>
+  <circle cx="82" cy="401" r="4" fill="#B45309"/>
+  <text x="94" y="405" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5" fill="#92400E">SYNTHETIC DEMO — fixed seed, fictional isolates. Figures illustrate the workflow, not epidemiology.</text>
+
+  <!-- left column -->
+  <text x="64" y="466" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#2563EB">THE QUESTION</text>
+  <text x="64" y="496" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14.5" fill="#334155">When a genome carries a known resistance determinant,</text>
+  <text x="64" y="518" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14.5" fill="#334155">does the submitted susceptibility result agree? Where it</text>
+  <text x="64" y="540" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14.5" fill="#334155">does not, is that biology, a mapping gap, or a data-quality</text>
+  <text x="64" y="562" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14.5" fill="#334155">artefact that should be fixed before anyone calls it a finding?</text>
+
+  <text x="64" y="616" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#0891B2">WHAT PULSE DOES</text>
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#334155">
+    <rect x="64" y="636" width="18" height="18" rx="5" fill="#E6F4F1"/>
+    <path d="M68.5 645l3 3 6-6" fill="none" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="650">Matches isolates by exact identifier — never by name.</text>
+
+    <rect x="64" y="668" width="18" height="18" rx="5" fill="#E0F2FE"/>
+    <path d="M68.5 677l3 3 6-6" fill="none" stroke="#0369A1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="682">Validates categories, conflicts and screening provenance.</text>
+
+    <rect x="64" y="700" width="18" height="18" rx="5" fill="#EDE9FE"/>
+    <path d="M68.5 709l3 3 6-6" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="714">Classifies five outcomes with Wilson 95% intervals.</text>
+
+    <rect x="64" y="732" width="18" height="18" rx="5" fill="#FEF3C7"/>
+    <path d="M68.5 741l3 3 6-6" fill="none" stroke="#B45309" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="746">Produces a reproducible report, not a black-box score.</text>
+  </g>
+
+  <text x="64" y="802" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#B45309">SCIENTIFIC BOUNDARIES</text>
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+    <text x="64" y="830">• Candidate discordance is a review prompt, not proof of error.</text>
+    <text x="64" y="856">• Absence of detection is not proof of absence.</text>
+    <text x="64" y="882">• No diagnosis, treatment, dosing or clinical validation.</text>
+  </g>
+
+  <!-- right card -->
+  <rect x="566" y="440" width="450" height="448" rx="16" fill="#FFFFFF" stroke="#E5EAF0"/>
+  <text x="590" y="474" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#172033">Five-class outcome</text>
+  <text x="590" y="494" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748B">E. coli × ceftriaxone · n = 147 eligible pairs</text>
+  <line x1="590" y1="510" x2="992" y2="510" stroke="#E5EAF0"/>
+
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11.5">
+    <text x="590" y="536" fill="#334155">Concordant resistant</text>
+    <rect x="590" y="546" width="126" height="8" rx="4" fill="#DC2626" opacity="0.85"/>
+    <text x="992" y="542" text-anchor="end" font-weight="700" fill="#172033">34</text>
+
+    <text x="590" y="586" fill="#334155">Concordant susceptible</text>
+    <rect x="590" y="596" width="260" height="8" rx="4" fill="#0F9D8A"/>
+    <text x="992" y="592" text-anchor="end" font-weight="700" fill="#172033">70</text>
+
+    <text x="590" y="636" fill="#334155">Gene + / phenotype S</text>
+    <rect x="590" y="646" width="19" height="8" rx="4" fill="#D97706"/>
+    <text x="992" y="642" text-anchor="end" font-weight="700" fill="#172033">5</text>
+
+    <text x="590" y="686" fill="#334155">Phenotype R / no known determinant</text>
+    <rect x="590" y="696" width="141" height="8" rx="4" fill="#B45309" opacity="0.9"/>
+    <text x="992" y="692" text-anchor="end" font-weight="700" fill="#172033">38</text>
+
+    <text x="590" y="736" fill="#334155">Indeterminate (held outside binary)</text>
+    <rect x="590" y="746" width="33" height="8" rx="4" fill="#94A3B8"/>
+    <text x="992" y="742" text-anchor="end" font-weight="700" fill="#172033">9</text>
+  </g>
+
+  <line x1="590" y1="774" x2="992" y2="774" stroke="#E5EAF0"/>
+  <text x="590" y="800" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#64748B">AGREEMENT</text>
+  <text x="590" y="844" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-1" fill="#172033">70.7%</text>
+  <text x="710" y="820" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748B">104 / 147 concordant pairs</text>
+  <text x="710" y="838" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748B">Wilson 95% CI 62.9–77.5%</text>
+  <rect x="590" y="858" width="402" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="600" y="871" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9.5" fill="#64748B">Unadjusted, no breakpoint pooling · synthetic benchmark result</text>
+
+  <!-- workflow -->
+  <text x="64" y="936" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#64748B">SEVEN STEPS, ONE AUDIT TRAIL</text>
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif">
+    <rect x="64" y="954" width="124" height="82" rx="10" fill="#FFFFFF" stroke="#E5EAF0"/>
+    <text x="80" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#2563EB">01</text>
+    <text x="80" y="1002" font-size="12" font-weight="600" fill="#172033">Import</text>
+    <text x="80" y="1020" font-size="9.5" fill="#64748B">CSV · XLSX · JSON</text>
+
+    <rect x="200" y="954" width="124" height="82" rx="10" fill="#FFFFFF" stroke="#E5EAF0"/>
+    <text x="216" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#2563EB">02</text>
+    <text x="216" y="1002" font-size="12" font-weight="600" fill="#172033">Map</text>
+    <text x="216" y="1020" font-size="9.5" fill="#64748B">Explicit, human-confirmed</text>
+
+    <rect x="336" y="954" width="124" height="82" rx="10" fill="#FFFFFF" stroke="#E5EAF0"/>
+    <text x="352" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#2563EB">03</text>
+    <text x="352" y="1002" font-size="12" font-weight="600" fill="#172033">Validate</text>
+    <text x="352" y="1020" font-size="9.5" fill="#64748B">Every issue recorded</text>
+
+    <rect x="472" y="954" width="124" height="82" rx="10" fill="#FFFFFF" stroke="#E5EAF0"/>
+    <text x="488" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#2563EB">04</text>
+    <text x="488" y="1002" font-size="12" font-weight="600" fill="#172033">Analyse</text>
+    <text x="488" y="1020" font-size="9.5" fill="#64748B">Five classes + CI</text>
+
+    <rect x="608" y="954" width="124" height="82" rx="10" fill="#FFFFFF" stroke="#E5EAF0"/>
+    <text x="624" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#2563EB">05</text>
+    <text x="624" y="1002" font-size="12" font-weight="600" fill="#172033">Investigate</text>
+    <text x="624" y="1020" font-size="9.5" fill="#64748B">Structured review</text>
+
+    <rect x="744" y="954" width="124" height="82" rx="10" fill="#FFFFFF" stroke="#E5EAF0"/>
+    <text x="760" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#2563EB">06</text>
+    <text x="760" y="1002" font-size="12" font-weight="600" fill="#172033">Report</text>
+    <text x="760" y="1020" font-size="9.5" fill="#64748B">Labelled drafts</text>
+
+    <rect x="880" y="954" width="136" height="82" rx="10" fill="#172033"/>
+    <text x="896" y="980" font-size="9" font-weight="700" letter-spacing="0.8" fill="#7DD3FC">07</text>
+    <text x="896" y="1002" font-size="12" font-weight="600" fill="#FFFFFF">Reproduce</text>
+    <text x="896" y="1020" font-size="9.5" fill="#94A3B8">Versions + manifest</text>
+  </g>
+
+  <!-- bottom band -->
+  <rect y="1080" width="1080" height="270" fill="#172033"/>
+  <rect y="1080" width="1080" height="270" fill="url(#dgrid)"/>
+  <text x="64" y="1132" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" fill="#FFFFFF">Every record accounted for.</text>
+  <text x="64" y="1158" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="12.5" fill="#94A3B8">Counts and denominators come from the same deterministic run. Nothing is silently dropped.</text>
+
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif">
+    <text x="64" y="1206" font-size="24" font-weight="700" fill="#7DD3FC">147</text>
+    <text x="64" y="1224" font-size="10" fill="#94A3B8">eligible pairs</text>
+
+    <text x="244" y="1206" font-size="24" font-weight="700" fill="#7DD3FC">226</text>
+    <text x="244" y="1224" font-size="10" fill="#94A3B8">unique pairs before exclusions</text>
+
+    <text x="474" y="1206" font-size="24" font-weight="700" fill="#7DD3FC">14</text>
+    <text x="474" y="1224" font-size="10" fill="#94A3B8">duplicate rows reconciled</text>
+
+    <text x="684" y="1206" font-size="24" font-weight="700" fill="#7DD3FC">6</text>
+    <text x="684" y="1224" font-size="10" fill="#94A3B8">exclusion reasons reported</text>
+  </g>
+
+  <line x1="64" y1="1252" x2="1016" y2="1252" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="64" y="1280" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748B">Research-support software. Not a diagnostic device. Not clinically validated. No HIPAA, ISO 27001 or other regulatory certification is claimed.</text>
+  <text x="64" y="1300" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748B">Synthetic demonstration dataset (seed 20261122). Never enter identifiable patient data. Use only under faculty/IRB guidance for research.</text>
+  <text x="1016" y="1330" text-anchor="end" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#7DD3FC">AMR PULSE</text>
+  <text x="1016" y="1272" text-anchor="end" font-family="Consolas, SFMono-Regular, Menlo, monospace" font-size="10" fill="#94A3B8">github.com/ua6546830-ai/amr-pulse</text>
+</svg>

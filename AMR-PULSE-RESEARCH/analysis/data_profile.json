@@ -1,0 +1,230 @@
+{
+  "source": "BV-BRC extract (E. coli, ceftriaxone, laboratory AST)",
+  "generated_at": "2026-11-22T19:36:03.389Z",
+  "totals": {
+    "ast_rows": 4632,
+    "unique_genomes_ast": 1173,
+    "ast_rows_all": 4632,
+    "ast_rows_screened": 1470,
+    "unique_genomes_screened": 1173,
+    "screened_genomes_without_ast": 0,
+    "gene_rows": 268796,
+    "screened_genomes": 1173
+  },
+  "ast_quality_screened": {
+    "phenotype_counts": {
+      "Susceptible": 751,
+      "Resistant": 506,
+      "(missing)": 124,
+      "Intermediate": 2,
+      "": 87
+    },
+    "method_counts": {
+      "Disk diffusion": 415,
+      "Broth dilution": 961,
+      "Agar dilution": 7,
+      "MIC": 87
+    },
+    "standard_counts": {
+      "clsi": 111,
+      "CLSI": 727,
+      "EUCAST": 507,
+      "(missing)": 101,
+      "eucast": 24
+    },
+    "missing_measurement": 655,
+    "missing_measurement_pct": "44.6%",
+    "missing_testing_standard_year_pct": "60.1%",
+    "genomes_with_multiple_ast_rows": 297,
+    "genomes_with_conflicting_phenotypes": 87
+  },
+  "metadata_completeness_screened": {
+    "collection_year": 1099,
+    "country": 1132,
+    "source": 849
+  },
+  "gene_annotation": {
+    "top_symbols": [
+      [
+        "EF-Tu",
+        3426
+      ],
+      [
+        "AcrAB-TolC",
+        2467
+      ],
+      [
+        "MdtABC-TolC",
+        2427
+      ],
+      [
+        "EmrAB-TolC",
+        2425
+      ],
+      [
+        "gyrA",
+        2403
+      ],
+      [
+        "folP",
+        1973
+      ],
+      [
+        "gyrB",
+        1960
+      ],
+      [
+        "rpoB",
+        1935
+      ],
+      [
+        "H-NS",
+        1729
+      ],
+      [
+        "AcrEF-TolC",
+        1630
+      ],
+      [
+        "Ddl",
+        1605
+      ],
+      [
+        "Alr",
+        1605
+      ],
+      [
+        "EmrKY-TolC",
+        1590
+      ],
+      [
+        "MdtEF-TolC",
+        1587
+      ],
+      [
+        "folA",
+        1465
+      ],
+      [
+        "mdtC",
+        1406
+      ],
+      [
+        "tolC",
+        1405
+      ],
+      [
+        "acrR",
+        1404
+      ],
+      [
+        "acrA",
+        1398
+      ],
+      [
+        "emrA",
+        1388
+      ],
+      [
+        "mdtE",
+        1386
+      ],
+      [
+        "acrF",
+        1385
+      ],
+      [
+        "mdtB",
+        1376
+      ],
+      [
+        "acrD",
+        1372
+      ],
+      [
+        "acrE",
+        1369
+      ],
+      [
+        "emrK",
+        1368
+      ],
+      [
+        "marR",
+        1367
+      ],
+      [
+        "marA",
+        1363
+      ],
+      [
+        "mdtF",
+        1289
+      ],
+      [
+        "mdtM",
+        1254
+      ],
+      [
+        "evgS",
+        1244
+      ],
+      [
+        "acrB",
+        1242
+      ],
+      [
+        "parC",
+        1219
+      ],
+      [
+        "evgA",
+        1213
+      ],
+      [
+        "gadX",
+        1207
+      ],
+      [
+        "baeR",
+        1206
+      ],
+      [
+        "cpxA",
+        1204
+      ],
+      [
+        "kdpE",
+        1196
+      ],
+      [
+        "soxS",
+        1194
+      ],
+      [
+        "mdtG",
+        1179
+      ]
+    ],
+    "beta_lactam_class_counts": {
+      "other beta-lactamase": 1613,
+      "carbapenemase": 22,
+      "ESBL": 29,
+      "TEM/SHV unresolved": 51,
+      "AmpC": 8
+    },
+    "genomes_with_mapped_3gc_determinant": 46,
+    "genomes_with_unresolved_tem_shv_only": 21
+  },
+  "phenotype_by_determinant_status": {
+    "susceptible|none": 510,
+    "resistant|none": 446,
+    "undefined|none": 124,
+    "intermediate|none": 2,
+    "resistant|mapped": 3,
+    "resistant|unresolved": 1,
+    "conflict|none": 24,
+    "conflict|mapped": 43,
+    "conflict|unresolved": 20
+  }
+}

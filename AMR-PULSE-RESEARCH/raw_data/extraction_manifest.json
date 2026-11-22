@@ -1,0 +1,66 @@
+{
+  "source": "BV-BRC (Bacterial and Viral Bioinformatics Resource Center)",
+  "source_url": "https://www.bv-brc.org",
+  "api": "https://www.bv-brc.org/api",
+  "extracted_at_utc": "2026-11-22T19:28:59.641Z",
+  "completed_at_utc": "2026-11-22T19:33:37.691Z",
+  "taxon": {
+    "id": 562,
+    "name": "Escherichia coli"
+  },
+  "primary_drug": "ceftriaxone",
+  "inclusion_queries": {
+    "ast": "genome_amr where taxon_id=562 AND antibiotic=ceftriaxone AND evidence=\"Laboratory Method\"",
+    "genes": "sp_gene where genome_id IN (AMR-panel-screened AST genomes) AND property=\"Antibiotic Resistance\"",
+    "metadata": "genome where genome_id IN (AST genomes)"
+  },
+  "counts": {
+    "ast_rows": 4632,
+    "genomes_with_ast": 3985,
+    "genomes_with_amr_panel_screening": 1173,
+    "gene_rows": 268796,
+    "genomes_with_at_least_one_amr_gene": 1173,
+    "genome_metadata_rows": 3985,
+    "failed_gene_chunks": 0
+  },
+  "context_counts_laboratory_ast": {
+    "cefotaxime": 14883,
+    "ceftazidime": 16217,
+    "cefepime": 7153,
+    "meropenem": 13995
+  },
+  "api_quirks": [
+    "Offset pagination start(n) returns HTTP 400 (undefined field object); single large limit() used instead."
+  ],
+  "files": {
+    "bvbrc_ecoli_ceftriaxone_ast_raw.json": {
+      "bytes": 1938361,
+      "sha256": "8a5219c9c65b4c9631df898aac403fe2a567492716ff0300e570d3d7feb1328c"
+    },
+    "bvbrc_ecoli_amr_genes_raw.json": {
+      "bytes": 125298175,
+      "sha256": "dd7a689e80396fe9c9032424a6884db2dd5dd65cc304ae565db14a3c36fdc594"
+    },
+    "bvbrc_ecoli_genomes_raw.json": {
+      "bytes": 1433198,
+      "sha256": "99c47859babccb04eb8dadfa1a9d2e016f723f3059e9a88b979324e85bd779ff"
+    },
+    "bvbrc_ecoli_ceftriaxone_ast_raw.csv": {
+      "bytes": 597349,
+      "sha256": "00645ca4e2784e33e852b612807c61132978970035429f833a19e5ae8883127b"
+    },
+    "bvbrc_ecoli_amr_genes_raw.csv": {
+      "bytes": 68685730,
+      "sha256": "f88c81bf6d5e76229abef4c26fed030d68fade62a34d7fee4b845ca971560cd5"
+    },
+    "bvbrc_ecoli_genomes_raw.csv": {
+      "bytes": 485825,
+      "sha256": "179bee92214aa47788ce9278b654e8080588b014fee10eabb2688b2651ee8eb2"
+    }
+  },
+  "licence_and_access": {
+    "note": "Public BV-BRC data reuse; see https://www.bv-brc.org/docs/ for terms. Records are third-party submitted AST and genome annotations.",
+    "no_patient_data": true
+  },
+  "caveat": "Raw snapshot retained unmodified. Phenotype/genotype interpretation happens only in analysis scripts."
+}

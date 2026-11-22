@@ -1,0 +1,806 @@
+[
+  {
+    "id": "AMRFinderPlus",
+    "query": "AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links",
+    "rows": [
+      {
+        "title": "AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.",
+        "authors": "Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W.",
+        "year": "2021",
+        "journal": "Scientific reports",
+        "doi": "10.1038/s41598-021-91456-0",
+        "pmid": "34135355",
+        "pmcid": "PMC8208984"
+      }
+    ]
+  },
+  {
+    "id": "CARD2023",
+    "query": "CARD 2023 expanded curation support for machine learning resistome prediction",
+    "rows": [
+      {
+        "title": "Exploring the Oral Resistome: From Metagenomics to Precision Oral Health.",
+        "authors": "Correia LN, Correia A, Bessa LJ.",
+        "year": "2026",
+        "journal": "Microorganisms",
+        "doi": "10.3390/microorganisms14092033",
+        "pmid": "42795614",
+        "pmcid": "PMC13609886"
+      },
+      {
+        "title": "Interpreting antimicrobial resistance from bacterial whole-genome sequencing: prediction tools, database fragmentation, analytical trade-offs, and harmonized reporting.",
+        "authors": "Alshehri AA.",
+        "year": "2026",
+        "journal": "Frontiers in microbiology",
+        "doi": "10.3389/fmicb.2026.1849165",
+        "pmid": "42807760",
+        "pmcid": "PMC13617433"
+      },
+      {
+        "title": "Global Research Trends and Insights on AI Usage in Tuberculosis: Bibliometric Analysis.",
+        "authors": "He J, Feng S, Chen Y, Lai Z, Lyu B, Li Y.",
+        "year": "2026",
+        "journal": "JMIR medical informatics",
+        "doi": "10.2196/93885",
+        "pmid": "42721319",
+        "pmcid": "PMC13561195"
+      }
+    ]
+  },
+  {
+    "id": "ResFinder4",
+    "query": "ResFinder 4.0 for predictions of phenotypes from genotypes",
+    "rows": [
+      {
+        "title": "ResFinder 4.0 for predictions of phenotypes from genotypes.",
+        "authors": "Bortolaia V, Kaas RS, Ruppe E, Roberts MC, Schwarz S, Cattoir V, Philippon A, Allesoe RL, Rebelo AR, Florensa AF, Fagelhauer L, Chakraborty T, Neumann B, Werner G, Bender JK, Stingl K, Nguyen M, Coppens J, Xavier BB, Malhotra-Kumar S, Westh H, Pinholt M, Anjum MF, Duggett NA, Kempf I, Nykäsenoja S, Olkkola S, Wieczorek K, Amaro A, Clemente L, Mossong J, Losch S, Ragimbeau C, Lund O, Aarestrup FM.",
+        "year": "2020",
+        "journal": "The Journal of antimicrobial chemotherapy",
+        "doi": "10.1093/jac/dkaa345",
+        "pmid": "32780112",
+        "pmcid": "PMC7662176"
+      },
+      {
+        "title": "Evaluation of a machine learning system for genomic antimicrobial susceptibility determination on a clinically representative test set.",
+        "authors": "Wittenbach JD, Conwill A, Sansum H, Gassett A, Gardner A, Brookhart A, Hollowell T, Knysh P, Worley NB, Billings N, Herriott IC, Shimabukuro JA, Quan KA, Madey KM, Huang SS, Sater MRA, Bittencourt CE, Huntley MH.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.00564-25",
+        "pmid": "41589861",
+        "pmcid": "PMC12955427"
+      },
+      {
+        "title": "Genomic diversity and antimicrobial resistance of &lt;i&gt;Staphylococcus aureus&lt;/i&gt; in Saudi Arabia: a nationwide study using whole-genome sequencing.",
+        "authors": "Alarawi MS, Altammami M, Abutarboush M, Kulmanov M, Alkuraithy DM, Kafkas S, Radley R, Abdelhakim M, Aldakhil H, Bawazeer RA, Alolayan MA, Alnafjan BM, Huraysi AA, Almaabadi A, Suliman BA, Aljohani AG, Hemeg HA, Almogbel MS, Alazmi M, Bazaid AS, Abujamel TS, Hashem AM, Al-Zahrani IA, Abdoh MS, Hobani HI, Felemban RF, Alhazmi WA, Hong PY, Alghoribi MF, Aljohani S, Balkhy H, Alswaji A, Alzayer M, Alalwan B, Kaaki MM, Hala SM, Fallatah OA, Bahitham W, Zakri S, Alshehri MA, Kameli N, Algaissi A, Alamer E, Alhazmi A, Shajri AA, Darraj MA, Kameli B, Sufyani OO, Rahama BS, Bakr AA, Alhoshani FM, Alquait AA, Somily AM, Albarrag AM, Alosaimi L, Aldakeel SA, Bahwerth FS, Khan MA, Abdelrahman TT, Fanning S, Tawfik EA, Alyamani EJ, Gojobori T, Miyazaki S, Al-Fageeh MB, Hoehndorf R.",
+        "year": "2025",
+        "journal": "Microbial genomics",
+        "doi": "10.1099/mgen.0.001540",
+        "pmid": "41223112",
+        "pmcid": "PMC12610826"
+      }
+    ]
+  },
+  {
+    "id": "AMRFinderValidation",
+    "query": "Validating the AMRFinder tool and resistance gene database genotype-phenotype correlations",
+    "rows": [
+      {
+        "title": "Pangenome analysis of &lt;i&gt;Proteus mirabilis&lt;/i&gt; reveals lineage-specific antimicrobial resistance profiles and discordant genotype-phenotype correlations.",
+        "authors": "Deka N, Brauer AL, Connerton K, Hanson BM, Walker JN, Armbruster CE.",
+        "year": "2026",
+        "journal": "Antimicrobial agents and chemotherapy",
+        "doi": "10.1128/aac.01768-25",
+        "pmid": "42210697",
+        "pmcid": "PMC13321803"
+      },
+      {
+        "title": "Applications of Genome Sequencing in Infectious Diseases: From Pathogen Identification to Precision Medicine.",
+        "authors": "Hasan GM, Mohammad T, Shamsi A, Sohal SS, Hassan MI.",
+        "year": "2025",
+        "journal": "Pharmaceuticals (Basel, Switzerland)",
+        "doi": "10.3390/ph18111687",
+        "pmid": "41304932",
+        "pmcid": "PMC12655035"
+      },
+      {
+        "title": "Erratum for Feldgarden et al., \"Validating the AMRFinder Tool and Resistance Gene Database by Using Antimicrobial Resistance Genotype-Phenotype Correlations in a Collection of Isolates\".",
+        "authors": "Feldgarden M, Brover V, Haft DH, Prasad AB, Slotta DJ, Tolstoy I, Tyson GH, Zhao S, Hsu CH, McDermott PF, Tadesse DA, Morales C, Simmons M, Tillman G, Wasilenko J, Folster JP, Klimke W.",
+        "year": "2020",
+        "journal": "Antimicrobial agents and chemotherapy",
+        "doi": "10.1128/aac.00361-20",
+        "pmid": "32209564",
+        "pmcid": "PMC7179288"
+      }
+    ]
+  },
+  {
+    "id": "BVBRC",
+    "query": "Introducing the Bacterial and Viral Bioinformatics Resource Center BV-BRC comparative pathogen genomics",
+    "rows": [
+      {
+        "title": "Comparative Genome Analysis of Illumina, Nanopore, and Hybrid Approaches: A Case Study of the Aquaculture Isolate 160P.",
+        "authors": "Saticioglu IB, Bozkurt J, Duman M.",
+        "year": "2026",
+        "journal": "Pathogens (Basel, Switzerland)",
+        "doi": "10.3390/pathogens15030293",
+        "pmid": "41901746",
+        "pmcid": "PMC13028912"
+      },
+      {
+        "title": "Strategies for integrating whole-genome sequencing into antimicrobial resistance surveillance.",
+        "authors": "On Y, Yoon EJ.",
+        "year": "2026",
+        "journal": "BMC genomics",
+        "doi": "10.1186/s12864-026-13004-2",
+        "pmid": "42243657",
+        "pmcid": "PMC13455497"
+      },
+      {
+        "title": "Computational function prediction of bacteria and phage proteins.",
+        "authors": "Grigson SR, Bouras G, Dutilh BE, Olson RD, Edwards RA.",
+        "year": "2025",
+        "journal": "Microbiology and molecular biology reviews : MMBR",
+        "doi": "10.1128/mmbr.00022-25",
+        "pmid": "40824055",
+        "pmcid": "PMC12462290"
+      }
+    ]
+  },
+  {
+    "id": "NCBI_PD",
+    "query": "NCBI Pathogen Detection foodborne bacterial pathogens surveillance",
+    "rows": [
+      {
+        "title": "Meat-Borne Bacterial Pathogen Detection: Conventional, Molecular and Emerging AI-Based Strategies.",
+        "authors": "Hussain A, Abbas Q, Nadeem M, Nazar A, Athar A, Rahman HUU.",
+        "year": "2026",
+        "journal": "Diagnostics (Basel, Switzerland)",
+        "doi": "10.3390/diagnostics16091360",
+        "pmid": "42122064",
+        "pmcid": "PMC13164157"
+      },
+      {
+        "title": "Editorial: Methods, tools and algorithms in data visualization bioinformatics",
+        "authors": "Hu E.",
+        "journal": "Frontiers in bioinformatics",
+        "doi": null,
+        "pmid": null,
+        "pmcid": "PMC13638629"
+      },
+      {
+        "title": "Global transmission dynamics of antibiotic resistance genes: Foodborne pathways as the critical link to humans.",
+        "authors": "Odinga ES, Ohore OE, Zhou S, Ziyu Z, Hongrui Z, Yang G.",
+        "year": "2026",
+        "journal": "One health (Amsterdam, Netherlands)",
+        "doi": "10.1016/j.onehlt.2026.101531",
+        "pmid": "42571511",
+        "pmcid": "PMC13452398"
+      }
+    ]
+  },
+  {
+    "id": "Ecoli_WGS_AST",
+    "query": "Predicting antimicrobial resistance from whole-genome sequencing Escherichia coli",
+    "rows": [
+      {
+        "title": "Genomic prediction of antimicrobial resistance in priority healthcare pathogens using Staramr.",
+        "authors": "Wilke MAP, Mataseje LF, Lerminiaux N, McCracken M, Edirmanasinghe R, Baxter M, Fakharuddin K, Grewal G, Li XR, Marnier E, Petkau A, Mulvey M, Zhanel G, Golding GR, Bharat A.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.01652-26",
+        "pmid": "42836344",
+        "pmcid": "PMC13729218"
+      },
+      {
+        "title": "Whole-genome sequencing-based characterization of antimicrobial resistance determinants and phenotype-genotype concordance in uropathogenic &lt;i&gt;Escherichia coli&lt;/i&gt; isolates from ICU patients in Saudi Arabia.",
+        "authors": "Almebairik N, Bukhari D, Alhumaidan O, Idrees E, Asiri H, Alanazi F, Alkarni M, Alarjani K, Almaarik B.",
+        "year": "2026",
+        "journal": "Frontiers in microbiology",
+        "doi": "10.3389/fmicb.2026.1931489",
+        "pmid": "43032520",
+        "pmcid": "PMC13760493"
+      },
+      {
+        "title": "Pangenome-based interpretable machine learning framework for predicting antimicrobial resistance in foodborne Escherichia coli.",
+        "authors": "Ren J, Xu Y, Wang Z, He W.",
+        "year": "2026",
+        "journal": "Food research international (Ottawa, Ont.)",
+        "doi": "10.1016/j.foodres.2026.119492",
+        "pmid": "42270222",
+        "pmcid": null
+      }
+    ]
+  },
+  {
+    "id": "Su2019",
+    "query": "Genome-based prediction of bacterial antibiotic resistance",
+    "rows": [
+      {
+        "title": "Genome-Based Prediction of Bacterial Antibiotic Resistance.",
+        "authors": "Su M, Satola SW, Read TD.",
+        "year": "2019",
+        "journal": "Journal of clinical microbiology",
+        "doi": "10.1128/jcm.01405-18",
+        "pmid": "30381421",
+        "pmcid": "PMC6425178"
+      },
+      {
+        "title": "Benchmarking nanopore-based strategies for antimicrobial resistance prediction.",
+        "authors": "Ring N, Low AS, Evans R, Keith M, Paterson GK, Gally D, Nuttall T, Clements DN, Fitzgerald JR.",
+        "year": "2026",
+        "journal": "Microbial genomics",
+        "doi": "10.1099/mgen.0.001885",
+        "pmid": "42975948",
+        "pmcid": "PMC13730460"
+      },
+      {
+        "title": "Multidrug-resistant monophasic Salmonella Typhimurium ST34 strain producing blaNDM-5 carbapenemase isolated from a patient with rectal cancer in Hainan, China: comprehensive whole genome dissection of antibiotic resistance and virulence determinants",
+        "authors": "Zhong S, Xing L, Wang L, Wang C, Fu X, Xu L, Li Y, Zhu H, He L, Zhu X, Li H.",
+        "journal": "Frontiers in cellular and infection microbiology",
+        "doi": null,
+        "pmid": null,
+        "pmcid": "PMC13719422"
+      }
+    ]
+  },
+  {
+    "id": "Boolchandani",
+    "query": "Sequencing-based methods and resources to study antimicrobial resistance",
+    "rows": [
+      {
+        "title": "Sequencing-based methods and resources to study antimicrobial resistance.",
+        "authors": "Boolchandani M, D'Souza AW, Dantas G.",
+        "year": "2019",
+        "journal": "Nature reviews. Genetics",
+        "doi": "10.1038/s41576-019-0108-4",
+        "pmid": "30886350",
+        "pmcid": "PMC6525649"
+      },
+      {
+        "title": "Recent Advances and Future Perspectives in the Detection of Carbapenem-Resistant &lt;i&gt;Acinetobacter Baumannii&lt;/i&gt;.",
+        "authors": "Ye Q, Liu Y, Zhang K, Tian M, Zhang Z, Lin M, Zheng Y.",
+        "year": "2026",
+        "journal": "Infection and drug resistance",
+        "doi": "10.2147/idr.s612634",
+        "pmid": "42801164",
+        "pmcid": "PMC13615765"
+      },
+      {
+        "title": "Molecular evidence of a dominant multidrug resistant &lt;i&gt;Acinetobacter baumannii&lt;/i&gt; lineage in a tertiary hospital in northern Peru.",
+        "authors": "Quispe Choque KG, Ruiz Quiñones N, Binatti Ferreira M, Perini-Leme-Giordano AL, Zaninelli Schreiber A, Fantinatti Garboggini F, Casado FL, Flores Clavo R.",
+        "year": "2026",
+        "journal": "New microbes and new infections",
+        "doi": "10.1016/j.nmni.2026.101864",
+        "pmid": "42926754",
+        "pmcid": "PMC13694419"
+      }
+    ]
+  },
+  {
+    "id": "WGS_review",
+    "query": "whole genome sequencing prediction antimicrobial resistance systematic review",
+    "rows": [
+      {
+        "title": "Artificial Intelligence in Rapid Diagnostics for Antimicrobial Resistance: From Bench to Bedside",
+        "authors": "Mugisha N, Fawaz L, Noureddine R, Okorobe P, Assker M, Uwishema O.",
+        "year": "2026",
+        "journal": "Health science reports",
+        "doi": null,
+        "pmid": null,
+        "pmcid": "PMC13664679"
+      },
+      {
+        "title": "Prospects of pathogen whole-genome sequencing in outbreak tracing and antimicrobial resistance surveillance of spinal infections.",
+        "authors": "Yu X, Jia Z, Li J, Mao Z, Chang Z.",
+        "year": "2026",
+        "journal": "Frontiers in cellular and infection microbiology",
+        "doi": "10.3389/fcimb.2026.1977484",
+        "pmid": "42903328",
+        "pmcid": "PMC13681210"
+      },
+      {
+        "title": "Whole-genome sequencing-driven source tracing of foodborne diseases: from cgMLST/SNP typing toward an integrated framework of pan-genomics and machine learning.",
+        "authors": "Song Y, Zhang C, Li JJ, Dai SY, Zhang Q, Yao ZZ, Ouyang YY, Gong CR.",
+        "year": "2026",
+        "journal": "Frontiers in public health",
+        "doi": "10.3389/fpubh.2026.1968969",
+        "pmid": "42978906",
+        "pmcid": "PMC13728474"
+      }
+    ]
+  },
+  {
+    "id": "ML_review",
+    "query": "machine learning antimicrobial resistance prediction current practice limitations clinical perspective",
+    "rows": [
+      {
+        "title": "Surveillance-Driven Machine Learning for Prediction of Antimicrobial Susceptibility: An Explainable Modeling Framework using the Pfizer ATLAS Dataset (2004 - 2023).",
+        "authors": "Mutua R, Gichohi D, Ndegwa SK, Golicha RO, Njeru F, Kituku B.",
+        "year": "2026",
+        "journal": "Wellcome open research",
+        "doi": "10.12688/wellcomeopenres.26477.2",
+        "pmid": "42823942",
+        "pmcid": "PMC13624498"
+      },
+      {
+        "title": "Beyond antibiotics: artificial intelligence-enabled anti-infective ecosystems for next-generation precision therapeutics against antimicrobial resistance.",
+        "authors": "Pattapulavar V, Ramanujam S, Badmanathan R, Christopher JG.",
+        "year": "2026",
+        "journal": "Frontiers in cellular and infection microbiology",
+        "doi": "10.3389/fcimb.2026.1897057",
+        "pmid": "42718568",
+        "pmcid": "PMC13553243"
+      },
+      {
+        "title": "Artificial Intelligence as a Multifaceted Toolkit for Antibacterial Drug Discovery against Resistance.",
+        "authors": "You J, Xu S, Luo B, He S, Yang Z, Liu Z, Wang Y, Wu M, Zhou G, Zhao M, Lu C, Guo J.",
+        "year": "2026",
+        "journal": "Research (Washington, D.C.)",
+        "doi": "10.34133/research.1457",
+        "pmid": "43011525",
+        "pmcid": "PMC13748630"
+      }
+    ]
+  },
+  {
+    "id": "AMASS",
+    "query": "AMASS large-scale dataset antimicrobial resistance surveillance whole genome sequencing",
+    "rows": [
+      {
+        "title": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance.",
+        "authors": "Bilal H, Khan MN, Khan S, Shafiq M, Fang W, Khan RU, Rahman MU, Li X, Lv QL, Xu B.",
+        "year": "2025",
+        "journal": "Computational and structural biotechnology journal",
+        "doi": "10.1016/j.csbj.2025.01.006",
+        "pmid": "39906157",
+        "pmcid": "PMC11791014"
+      },
+      {
+        "title": "Decoding a cryptic mechanism of metronidazole resistance among globally disseminated fluoroquinolone-resistant Clostridioides difficile.",
+        "authors": "Olaitan AO, Dureja C, Youngblom MA, Topf MA, Shen WJ, Gonzales-Luna AJ, Deshpande A, Hevener KE, Freeman J, Wilcox MH, Palmer KL, Garey KW, Pepperell CS, Hurdle JG.",
+        "year": "2023",
+        "journal": "Nature communications",
+        "doi": "10.1038/s41467-023-39429-x",
+        "pmid": "37438331",
+        "pmcid": "PMC10338468"
+      },
+      {
+        "title": "Comparative Genomics of Disease and Carriage Serotype 1 Pneumococci.",
+        "authors": "Chaguza C, Ebruke C, Senghore M, Lo SW, Tientcheu PE, Gladstone RA, Tonkin-Hill G, Cornick JE, Yang M, Worwui A, McGee L, Breiman RF, Klugman KP, Kadioglu A, Everett DB, Mackenzie G, Croucher NJ, Roca A, Kwambana-Adams BA, Antonio M, Bentley SD.",
+        "year": "2022",
+        "journal": "Genome biology and evolution",
+        "doi": "10.1093/gbe/evac052",
+        "pmid": "35439297",
+        "pmcid": "PMC9048925"
+      }
+    ]
+  },
+  {
+    "id": "CARD2013",
+    "query": "The Comprehensive Antibiotic Resistance Database",
+    "rows": [
+      {
+        "title": "A standardized nomenclature for resistance-modifying agents in the Comprehensive Antibiotic Resistance Database.",
+        "authors": "Smith KW, Alcock BP, French S, Farha MA, Raphenya AR, Brown ED, McArthur AG.",
+        "year": "2023",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.02744-23",
+        "pmid": "37971258",
+        "pmcid": "PMC10714863"
+      },
+      {
+        "title": "CARD*Shark: automated prioritization of literature curation for the Comprehensive Antibiotic Resistance Database.",
+        "authors": "Edalatmand A, McArthur AG.",
+        "year": "2023",
+        "journal": "Database : the journal of biological databases and curation",
+        "doi": "10.1093/database/baad023",
+        "pmid": "37079891",
+        "pmcid": "PMC10118295"
+      },
+      {
+        "title": "CARD 2023: expanded curation, support for machine learning, and resistome prediction at the Comprehensive Antibiotic Resistance Database.",
+        "authors": "Alcock BP, Huynh W, Chalil R, Smith KW, Raphenya AR, Wlodarski MA, Edalatmand A, Petkau A, Syed SA, Tsang KK, Baker SJC, Dave M, McCarthy MC, Mukiri KM, Nasir JA, Golbon B, Imtiaz H, Jiang X, Kaur K, Kwong M, Liang ZC, Niu KC, Shan P, Yang JYJ, Gray KL, Hoad GR, Jia B, Bhando T, Carfrae LA, Farha MA, French S, Gordzevich R, Rachwalski K, Tu MM, Bordeleau E, Dooley D, Griffiths E, Zubyk HL, Brown ED, Maguire F, Beiko RG, Hsiao WWL, Brinkman FSL, Van Domselaar G, McArthur AG.",
+        "year": "2023",
+        "journal": "Nucleic acids research",
+        "doi": "10.1093/nar/gkac920",
+        "pmid": "36263822",
+        "pmcid": "PMC9825576"
+      }
+    ]
+  },
+  {
+    "id": "Zankari2012",
+    "query": "Identification of acquired antimicrobial resistance genes",
+    "rows": [
+      {
+        "title": "Identification, Antimicrobial Susceptibility Profiling, and Genomic Characterization of Aeromonas Species Isolated from Cultured Freshwater Fish in Pakistan.",
+        "authors": "Zhu C, Ali S, Latif T, Abualreesh MH, Munir M, Liu X, Wai HK, Hassan A, Lai CK, Kwok KO, Tun HM.",
+        "year": "2026",
+        "journal": "Acta tropica",
+        "doi": "10.1016/j.actatropica.2026.108410",
+        "pmid": "43014686",
+        "pmcid": null
+      },
+      {
+        "title": "Isolation, identification, and slow-growth phenotype characterization of a clinically derived Escherichia coli from urinary tract infection.",
+        "authors": "Yu W, Ou Y, Dong S, Deng X, Niu S, Jiang X, Tang R, Zhang S, Zhang Q, Liu D, Zou C, Wu J, Zhao Y.",
+        "year": "2026",
+        "journal": "PloS one",
+        "doi": "10.1371/journal.pone.0358948",
+        "pmid": "42955907",
+        "pmcid": "PMC13718956"
+      },
+      {
+        "title": "Identification of acquired antimicrobial resistance genes.",
+        "authors": "Zankari E, Hasman H, Cosentino S, Vestergaard M, Rasmussen S, Lund O, Aarestrup FM, Larsen MV.",
+        "year": "2012",
+        "journal": "The Journal of antimicrobial chemotherapy",
+        "doi": "10.1093/jac/dks261",
+        "pmid": "22782487",
+        "pmcid": "PMC3468078"
+      }
+    ]
+  },
+  {
+    "id": "STROBE",
+    "query": "STROBE statement strengthening the reporting of observational studies in epidemiology",
+    "rows": [
+      {
+        "title": "Strengthening the reporting of observational studies in drowning epidemiology (STROBE-D): a protocol for an extension to the STROBE statement.",
+        "authors": "Bitzer K, Peden AE, Bierens J, Szpilman D, Queiroga AC, Barcala-Furelos R, Webber J, Tipton M, Sempsrott J, Jagnoor J, Mecrow T, Oporia F, Saunders C, Koon W, Pham C, Scarr JP, Clemens T, Beerman S, Franklin R, Feeney T, von Elm E, Breindahl N.",
+        "year": "2026",
+        "journal": "BMJ open",
+        "doi": "10.1136/bmjopen-2026-121255",
+        "pmid": "42463202",
+        "pmcid": "PMC13384120"
+      },
+      {
+        "title": "Correction: Strengthening the Reporting of Observational Studies in Epidemiology Enhanced Prevalence and Incidence Criteria (STROBE EPIC): An Extension of the STROBE Statement.",
+        "year": "2026",
+        "journal": "Annals of internal medicine",
+        "doi": "10.7326/annals-26-03339",
+        "pmid": "42636454",
+        "pmcid": null
+      },
+      {
+        "title": "Choosing the right reporting guideline in veterinary research: an editorial for authors and editors.",
+        "authors": "Ryu PD.",
+        "year": "2026",
+        "journal": "Journal of veterinary science",
+        "doi": "10.4142/jvs.26903",
+        "pmid": "42847796",
+        "pmcid": "PMC13655553"
+      }
+    ]
+  },
+  {
+    "id": "Wilson1927",
+    "query": "Probable inference the law of succession and statistical inference",
+    "rows": [
+      {
+        "title": "Forensic applications of the skin microbiome: a structured narrative review of donor association, contact inference, and crime-scene reconstruction.",
+        "authors": "Song Y, Xing Y, Liu Y, Zhang X.",
+        "year": "2026",
+        "journal": "Frontiers in microbiology",
+        "doi": "10.3389/fmicb.2026.1947173",
+        "pmid": "42828409",
+        "pmcid": "PMC13633070"
+      },
+      {
+        "title": "Are Tonkean macaques able to make intuitive statistical inferences?",
+        "authors": "Beaud A, Detourbet A, Ballesta S, Meunier H.",
+        "year": "2026",
+        "journal": "PeerJ",
+        "doi": "10.7717/peerj.21377",
+        "pmid": "42405252",
+        "pmcid": "PMC13330748"
+      },
+      {
+        "title": "Superstitious conditioning shapes the illusory experience of free will under causal determinism.",
+        "authors": "Kansala C, Cicek E, Nkansah-Okoree VB, Golding AW, Murugan NJ, Rouleau N.",
+        "year": "2026",
+        "journal": "Frontiers in human neuroscience",
+        "doi": "10.3389/fnhum.2026.1832135",
+        "pmid": "42272989",
+        "pmcid": "PMC13247357"
+      }
+    ]
+  },
+  {
+    "id": "Kleb_WGS",
+    "query": "whole genome sequencing prediction antimicrobial resistance Klebsiella pneumoniae",
+    "rows": [
+      {
+        "title": "Genomic prediction of antimicrobial resistance in priority healthcare pathogens using Staramr.",
+        "authors": "Wilke MAP, Mataseje LF, Lerminiaux N, McCracken M, Edirmanasinghe R, Baxter M, Fakharuddin K, Grewal G, Li XR, Marnier E, Petkau A, Mulvey M, Zhanel G, Golding GR, Bharat A.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.01652-26",
+        "pmid": "42836344",
+        "pmcid": "PMC13729218"
+      },
+      {
+        "title": "Comprehensive genomic characterization of multidrug-resistant &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt; from North India.",
+        "authors": "Bali NK, Siddique AI, Majid U, Mathew D, Ramakrishnan S, Borkakoty B.",
+        "year": "2026",
+        "journal": "Frontiers in microbiology",
+        "doi": "10.3389/fmicb.2026.1831365",
+        "pmid": "42851676",
+        "pmcid": "PMC13646146"
+      },
+      {
+        "title": "Antimicrobial resistance analysis of Klebsiella pneumoniae bloodstream infections based on a random forest algorithm: a longitudinal study based on data from tertiary hospitals in China from 2012 to 2023.",
+        "authors": "Wang N, Hu A, Wang Z, Yu X, Wei Y, Song P.",
+        "year": "2026",
+        "journal": "International health",
+        "doi": "10.1093/inthealth/ihaf158",
+        "pmid": "41496730",
+        "pmcid": "PMC13530284"
+      }
+    ]
+  },
+  {
+    "id": "AmpC",
+    "query": "AmpC beta-lactamase overexpression resistance Enterobacteriaceae",
+    "rows": [
+      {
+        "title": "ESKAPEE Microorganisms and the Art of Escape: From Antimicrobial Resistance Mechanisms to the One Health Approach.",
+        "authors": "Krul D, Araújo Braga A, Conte D, Ferreira LK, Dalla-Costa LM, Bavia L.",
+        "year": "2026",
+        "journal": "Antibiotics (Basel, Switzerland)",
+        "doi": "10.3390/antibiotics15101037",
+        "pmid": "42938777",
+        "pmcid": "PMC13700559"
+      },
+      {
+        "title": "Mechanisms, Significance, Detection and Emerging Therapies for Carbapenem-Resistant Enterobacterales: A Scoping Review.",
+        "authors": "Osuala OJ, Ojiako CM, Ezeuko CC, Terhemen K, Ezemba CC, Etikudike VO, Nnadi CO, Oli AN.",
+        "year": "2026",
+        "journal": "Journal of tropical medicine",
+        "doi": "10.1155/jotm/5663176",
+        "pmid": "42840294",
+        "pmcid": "PMC13639380"
+      },
+      {
+        "title": "Current Perspectives on Proteus Species: From Morphology to Multidrug Resistance.",
+        "authors": "Kulkarni PB, Pawar SK, Patil SR.",
+        "year": "2026",
+        "journal": "Cureus",
+        "doi": "10.7759/cureus.115116",
+        "pmid": "42787251",
+        "pmcid": "PMC13601025"
+      }
+    ]
+  },
+  {
+    "id": "Porins",
+    "query": "OmpK35 OmpK36 porin loss carbapenem resistance Klebsiella pneumoniae",
+    "rows": [
+      {
+        "title": "Imipenem/cilastatin/relebactam treatment of hospital-acquired/ventilator-associated bacterial pneumonia caused by imipenem-nonsusceptible pathogens: Subgroup analysis and molecular characterization of isolates from the RESTORE-IMI 2 clinical study.",
+        "authors": "Young K, DeRyke CA, Hilbert DW, Losada MC, Du J, Paschke A, Chen LF.",
+        "year": "2026",
+        "journal": "PloS one",
+        "doi": "10.1371/journal.pone.0357288",
+        "pmid": "42743113",
+        "pmcid": "PMC13577331"
+      },
+      {
+        "title": "Genomic Characterisation of Carbapenem-Resistant &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt; Clinical Isolates from a Tertiary-Care Hospital in Türkiye.",
+        "authors": "Şimşek M, Demir C.",
+        "year": "2026",
+        "journal": "Microorganisms",
+        "doi": "10.3390/microorganisms14102402",
+        "pmid": "42943640",
+        "pmcid": "PMC13707901"
+      },
+      {
+        "title": "Antimicrobial Resistance, Molecular Epidemiology, and Virulence Profiles of Hypervirulent Carbapenem-Resistant &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt; Isolates from a Tertiary Hospital in Zunyi, Southwest China, 2021-2023.",
+        "authors": "Shen M, Chen X, Chen B, Tian R, Yang G, Zha H, Wu K, Yao S.",
+        "year": "2026",
+        "journal": "Infection and drug resistance",
+        "doi": "10.2147/idr.s616513",
+        "pmid": "42572721",
+        "pmcid": "PMC13453386"
+      }
+    ]
+  },
+  {
+    "id": "Discordance",
+    "query": "discordance genotypic phenotypic antimicrobial resistance testing",
+    "rows": [
+      {
+        "title": "Whole-genome sequencing-based characterization of antimicrobial resistance determinants and phenotype-genotype concordance in uropathogenic &lt;i&gt;Escherichia coli&lt;/i&gt; isolates from ICU patients in Saudi Arabia.",
+        "authors": "Almebairik N, Bukhari D, Alhumaidan O, Idrees E, Asiri H, Alanazi F, Alkarni M, Alarjani K, Almaarik B.",
+        "year": "2026",
+        "journal": "Frontiers in microbiology",
+        "doi": "10.3389/fmicb.2026.1931489",
+        "pmid": "43032520",
+        "pmcid": "PMC13760493"
+      },
+      {
+        "title": "Phenotypic Methicillin Resistance, &lt;i&gt;mecA&lt;/i&gt; Carriage, Virulence Gene Profiles, and Antimicrobial Susceptibility of Clinical &lt;i&gt;Staphylococcus aureus&lt;/i&gt; Isolates in Sana'a, Yemen.",
+        "authors": "Al Hatami SM, Al-Mansoub MA, Al-Jaufy AY, Alshami HZ, Alafif AA, Alkassar WY, Al-Haifi AY, Al-Worafi Y, Al-Shami AS.",
+        "year": "2026",
+        "journal": "Infection and drug resistance",
+        "doi": "10.2147/idr.s652232",
+        "pmid": "43061031",
+        "pmcid": "PMC13784171"
+      },
+      {
+        "title": "Evaluation of Oxford nanopore sequencing for antimicrobial resistance surveillance in &lt;i&gt;Salmonella&lt;/i&gt;: comparison with phenotypic antimicrobial susceptibility in a large-scale study.",
+        "authors": "Hong Y-P, Liao Y-S, Wang Y-W, Kuo S-C, Teng R-H, Liang S-Y, Chang J-H, Wei HL, Chiou C-S.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.01797-26",
+        "pmid": "42584076",
+        "pmcid": "PMC13532270"
+      }
+    ]
+  },
+  {
+    "id": "CTXM",
+    "query": "CTX-M extended-spectrum beta-lactamases epidemiology",
+    "rows": [
+      {
+        "title": "High prevalence of CTX-M-associated multidrug resistance and diagnostic accuracy of NG-Test CTX-M Multi among ESBL-producing &lt;i&gt;Escherichia coli&lt;/i&gt; in Vietnam.",
+        "authors": "Le TL, Nguyen S-T, Le VC, Nguyen TLC, Nguyen TH, Maviza F.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.01330-26",
+        "pmid": "43062049",
+        "pmcid": null
+      },
+      {
+        "title": "Distribution of blaCTX-M, blaTEM and blaSHV encoding-genes among extended-spectrum beta-lactamase (ESBL)-producing Escherichia coli isolates at the different hospitals in Tabuk, Kingdom of Saudi Arabia.",
+        "authors": "Bedaiwi RI, Alatawi MN, Silvala B.",
+        "year": "2026",
+        "journal": "PloS one",
+        "doi": "10.1371/journal.pone.0350207",
+        "pmid": "42721137",
+        "pmcid": "PMC13561370"
+      },
+      {
+        "title": "Development of simplex and multiplex immunochromatographic assays for rapid detection of GES-, PER-, and VEB-producing gram-negative bacteria.",
+        "authors": "Nicević M, Moguet C, Oueslati S, Gelhaye S, Chalin A, Favé M, Vogel A, Rifatbegović M, Dortet L, Volland H, Naas T.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.01544-26",
+        "pmid": "42725732",
+        "pmcid": "PMC13688859"
+      }
+    ]
+  },
+  {
+    "id": "MCR1",
+    "query": "Emergence of plasmid-mediated colistin resistance mechanism MCR-1",
+    "rows": [
+      {
+        "title": "Multidrug resistance and lipopolysaccharide remodeling associated with &lt;i&gt;mcr-1&lt;/i&gt; acquisition in Shiga toxin-producing &lt;i&gt;Escherichia coli&lt;/i&gt;.",
+        "authors": "Ahn E, Kim J, Ryu S, Jeon B.",
+        "year": "2026",
+        "journal": "Microbiology spectrum",
+        "doi": "10.1128/spectrum.02034-26",
+        "pmid": "42813778",
+        "pmcid": "PMC13729178"
+      },
+      {
+        "title": "Molecular and metabolic features of colistin-resistant ST11 carbapenem-resistant &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt;.",
+        "authors": "Hao L, Yang X, Ullah N.",
+        "year": "2026",
+        "journal": "Journal of medical microbiology",
+        "doi": "10.1099/jmm.0.002217",
+        "pmid": "42975953",
+        "pmcid": "PMC13730195"
+      },
+      {
+        "title": "Environmental occurrence and dissemination of colistin resistance in contaminated aquatic systems: a systematic review of eight observational studies.",
+        "authors": "Sinha A, Murmu J, Singh S, Pal A, Mallick U, Mishra P, Sahoo KC, Sahu MC, Pati S.",
+        "year": "2026",
+        "journal": "Frontiers in antibiotics",
+        "doi": "10.3389/frabi.2026.1970443",
+        "pmid": "42909078",
+        "pmcid": "PMC13683747"
+      }
+    ]
+  },
+  {
+    "id": "GLASS",
+    "query": "Global Antimicrobial Resistance and Use Surveillance System GLASS",
+    "rows": [
+      {
+        "title": "Global antimicrobial resistance and use surveillance system (GLASS 2022): Investigating the relationship between antimicrobial resistance and antimicrobial consumption data across the participating countries.",
+        "authors": "Ajulo S, Awosile B.",
+        "year": "2024",
+        "journal": "PloS one",
+        "doi": "10.1371/journal.pone.0297921",
+        "pmid": "38315668",
+        "pmcid": "PMC10843100"
+      },
+      {
+        "title": "Closing the Surveillance-to-Stewardship Gap in antimicrobial resistance: a narrative review of global lessons from WHO GLASS, UK ESPAUR, and low- and middle-income countries.",
+        "authors": "Elshenawy RA, Cernaliu A, Abe OM, Dsouza R, Chowdhury SM.",
+        "year": "2026",
+        "journal": "Clinical microbiology and infection : the official publication of the European Society of Clinical Microbiology and Infectious Diseases",
+        "doi": "10.1016/j.cmi.2026.09.020",
+        "pmid": "42805292",
+        "pmcid": null
+      },
+      {
+        "title": "Generating Actionable Data From Antimicrobial Resistance Surveillance: Insights From the Fleming Fund's International Experience.",
+        "authors": "Gupta-Wright A, Adeleke SY, Adetunji V, Ahsan Q, Amatya R, Amos B, Asare B, Bangura SIO, Buhler C, Feasey N, Gordon NC, Hopkins H, Kitutu FE, Leslie T, Lo I, Lo S, Majekodunmi A, Maudling R, Mudenda NB, Musyoki VM, Nanjebe D, Oakley T, Pathak M, Roberts T, Shehata L, Shorten T, Siddiky NA, Stelling J, Taimoor M, Thwe MS, Ting S, Torumkuney D, Turner P, Wildfire J, Worth TD.",
+        "year": "2026",
+        "journal": "Clinical infectious diseases : an official publication of the Infectious Diseases Society of America",
+        "doi": "10.1093/cid/ciag497",
+        "pmid": "42895838",
+        "pmcid": "PMC13679386"
+      }
+    ]
+  },
+  {
+    "id": "EUCAST_disk",
+    "query": "EUCAST disk diffusion method antimicrobial susceptibility testing",
+    "rows": [
+      {
+        "title": "Validation of EUCAST 2026 breakpoints for Brucella species using routine laboratory methods: A comprehensive French National Reference Centre study.",
+        "authors": "Gaillard M, Pastre T, Magnan C, Sotto A, O'Callaghan D, Keriel A, Lavigne JP.",
+        "year": "2026",
+        "journal": "PLoS neglected tropical diseases",
+        "doi": "10.1371/journal.pntd.0014817",
+        "pmid": "42945175",
+        "pmcid": "PMC13712602"
+      },
+      {
+        "title": "From empirical to targeted therapy: A comprehensive review of clinical microbiological diagnostics for urinary tract infections.",
+        "authors": "Kim JA, Kim JH.",
+        "year": "2026",
+        "journal": "Investigative and clinical urology",
+        "doi": "10.4111/icu.20260348",
+        "pmid": "42990035",
+        "pmcid": "PMC13747896"
+      },
+      {
+        "title": "Discordance without error: why antimicrobial susceptibility testing methods give different results and which result should we report?",
+        "authors": "P S S, Sumri SHA, Joy R, Darping LP.",
+        "year": "2027",
+        "journal": "Diagnostic microbiology and infectious disease",
+        "doi": "10.1016/j.diagmicrobio.2026.117691",
+        "pmid": "42880146",
+        "pmcid": null
+      }
+    ]
+  },
+  {
+    "id": "AMR_predict_review",
+    "query": "machine learning whole genome sequencing antimicrobial resistance prediction review",
+    "rows": [
+      {
+        "title": "Bridging generalizability and reproducibility in machine learning-based antimicrobial resistance prediction.",
+        "authors": "Elseifi N, Rogers H, Ferraro M, Boucher C.",
+        "year": "2026",
+        "journal": "mSphere",
+        "doi": "10.1128/msphere.00647-26",
+        "pmid": "42992836",
+        "pmcid": null
+      },
+      {
+        "title": "Integrating Pan-Genomics and Machine Learning into Foodborne Pathogen Traceability.",
+        "authors": "Song Y, Zhang C, Li JJ, Dai SY, Zhang Q, Yao ZZ, Ouyang YY, Gong CR.",
+        "year": "2026",
+        "journal": "Journal of food protection",
+        "doi": "10.1016/j.jfp.2026.100968",
+        "pmid": "43057581",
+        "pmcid": null
+      },
+      {
+        "title": "Whole-genome sequencing-driven source tracing of foodborne diseases: from cgMLST/SNP typing toward an integrated framework of pan-genomics and machine learning.",
+        "authors": "Song Y, Zhang C, Li JJ, Dai SY, Zhang Q, Yao ZZ, Ouyang YY, Gong CR.",
+        "year": "2026",
+        "journal": "Frontiers in public health",
+        "doi": "10.3389/fpubh.2026.1968969",
+        "pmid": "42978906",
+        "pmcid": "PMC13728474"
+      }
+    ]
+  }
+]

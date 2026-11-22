@@ -1,0 +1,1083 @@
+ast_record_id,isolate_id,antibiotic,drug_class,ast_method,measurement,measurement_unit,interpretation,interpretation_standard,breakpoint_version,testing_year,lab_id
+SYN-AST-00001,SYN-EC-0001,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),56,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00002,SYN-EC-0001,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00003,SYN-EC-0001,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00004,SYN-EC-0002,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00005,SYN-EC-0002,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00006,SYN-EC-0002,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),28,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00007,SYN-EC-0002,tetracycline,Tetracyclines,Disk diffusion,,mm,R,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00008,SYN-EC-0002,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),29,mg/L,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00009,SYN-EC-0002,meropenem,Carbapenems,Broth dilution (MIC),32,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00010,SYN-EC-0003,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),80,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00011,SYN-EC-0003,ampicillin,Penicillins,Broth dilution (MIC),23,mg/L,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00012,SYN-EC-0003,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00013,SYN-EC-0003,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,,2023,2021,SYN-LAB-01
+SYN-AST-00014,SYN-EC-0003,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00015,SYN-EC-0004,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00016,SYN-EC-0004,ampicillin,Penicillins,Broth dilution (MIC),8,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00017,SYN-EC-0004,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00018,SYN-EC-0004,gentamicin,Aminoglycosides,Broth dilution (MIC),13,mg/L,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00019,SYN-EC-0004,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2023,SYN-LAB-01
+SYN-AST-00020,SYN-EC-0005,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),60,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00021,SYN-EC-0005,ampicillin,Penicillins,Broth dilution (MIC),27,mg/L,R,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00022,SYN-EC-0005,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),7,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00023,SYN-EC-0005,tetracycline,Tetracyclines,Broth dilution (MIC),15,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00024,SYN-EC-0005,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00025,SYN-EC-0005,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00026,SYN-EC-0006,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00027,SYN-EC-0006,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00028,SYN-EC-0006,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,,,2023,SYN-LAB-01
+SYN-AST-00029,SYN-EC-0006,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),20,mg/L,R,,,2020,SYN-LAB-01
+SYN-AST-00030,SYN-EC-0007,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00031,SYN-EC-0007,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00032,SYN-EC-0007,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,,2023,2022,SYN-LAB-01
+SYN-AST-00033,SYN-EC-0007,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00034,SYN-EC-0007,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00035,SYN-EC-0007,meropenem,Carbapenems,Broth dilution (MIC),21,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00036,SYN-EC-0008,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2023,SYN-LAB-01
+SYN-AST-00037,SYN-EC-0008,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00038,SYN-EC-0008,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00039,SYN-EC-0008,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),5,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00040,SYN-EC-0009,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),84,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00041,SYN-EC-0009,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00042,SYN-EC-0009,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00043,SYN-EC-0009,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00044,SYN-EC-0010,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),60,mg/L,R,,,2024,SYN-LAB-01
+SYN-AST-00045,SYN-EC-0010,ampicillin,Penicillins,Broth dilution (MIC),1,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00046,SYN-EC-0010,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00047,SYN-EC-0010,tetracycline,Tetracyclines,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00048,SYN-EC-0011,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00049,SYN-EC-0011,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00050,SYN-EC-0011,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00051,SYN-EC-0012,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),52,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00052,SYN-EC-0012,ampicillin,Penicillins,Broth dilution (MIC),7,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00053,SYN-EC-0013,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00054,SYN-EC-0013,ampicillin,Penicillins,Broth dilution (MIC),4,mg/L,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00055,SYN-EC-0013,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00056,SYN-EC-0013,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00057,SYN-EC-0013,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),8,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00058,SYN-EC-0013,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00059,SYN-EC-0014,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00060,SYN-EC-0014,ampicillin,Penicillins,Broth dilution (MIC),16,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00061,SYN-EC-0014,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00062,SYN-EC-0014,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),23,mg/L,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00063,SYN-EC-0015,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00064,SYN-EC-0015,ampicillin,Penicillins,Broth dilution (MIC),9,mg/L,R,,2023,2024,SYN-LAB-01
+SYN-AST-00065,SYN-EC-0015,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),7,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00066,SYN-EC-0015,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00067,SYN-EC-0015,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),31,mg/L,R,,2023,2022,SYN-LAB-01
+SYN-AST-00068,SYN-EC-0016,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00069,SYN-EC-0016,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00070,SYN-EC-0016,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),19,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00071,SYN-EC-0016,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00072,SYN-EC-0017,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,R,,2023,2021,SYN-LAB-01
+SYN-AST-00073,SYN-EC-0017,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00074,SYN-EC-0017,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),5,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00075,SYN-EC-0017,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00076,SYN-EC-0017,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00077,SYN-EC-0018,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),120,mg/L,R,,2023,2024,SYN-LAB-01
+SYN-AST-00078,SYN-EC-0018,ampicillin,Penicillins,Broth dilution (MIC),3,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00079,SYN-EC-0018,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00080,SYN-EC-0018,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),10,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00081,SYN-EC-0018,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,,2023,2024,SYN-LAB-01
+SYN-AST-00082,SYN-EC-0019,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00083,SYN-EC-0019,ampicillin,Penicillins,Broth dilution (MIC),11,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00084,SYN-EC-0019,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),28,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00085,SYN-EC-0019,gentamicin,Aminoglycosides,Broth dilution (MIC),8,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00086,SYN-EC-0019,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00087,SYN-EC-0020,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),84,mg/L,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00088,SYN-EC-0020,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00089,SYN-EC-0020,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00090,SYN-EC-0020,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00091,SYN-EC-0020,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00092,SYN-EC-0021,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00093,SYN-EC-0021,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00094,SYN-EC-0021,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),25,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00095,SYN-EC-0021,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00096,SYN-EC-0021,gentamicin,Aminoglycosides,Broth dilution (MIC),24,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00097,SYN-EC-0021,meropenem,Carbapenems,Broth dilution (MIC),15,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00098,SYN-EC-0022,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),116,mg/L,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00099,SYN-EC-0022,ampicillin,Penicillins,Disk diffusion,,mm,R,,,2019,SYN-LAB-01
+SYN-AST-00100,SYN-EC-0023,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00101,SYN-EC-0023,ampicillin,Penicillins,Broth dilution (MIC),13,mg/L,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00102,SYN-EC-0024,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00103,SYN-EC-0024,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00104,SYN-EC-0024,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),31,mg/L,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00105,SYN-EC-0024,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2019,SYN-LAB-01
+SYN-AST-00106,SYN-EC-0025,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),76,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00107,SYN-EC-0025,ampicillin,Penicillins,Broth dilution (MIC),30,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00108,SYN-EC-0025,tetracycline,Tetracyclines,Broth dilution (MIC),1,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00109,SYN-EC-0025,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),25,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00110,SYN-EC-0026,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),40,mg/L,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00111,SYN-EC-0026,ampicillin,Penicillins,Disk diffusion,,mm,R,,,2020,SYN-LAB-01
+SYN-AST-00112,SYN-EC-0026,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),17,mg/L,S,,2023,2019,SYN-LAB-01
+SYN-AST-00113,SYN-EC-0026,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00114,SYN-EC-0027,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),88,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00115,SYN-EC-0027,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00116,SYN-EC-0027,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00117,SYN-EC-0027,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00118,SYN-EC-0027,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00119,SYN-EC-0028,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),56,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00120,SYN-EC-0028,ampicillin,Penicillins,Disk diffusion,,mm,R,,2023,2022,SYN-LAB-01
+SYN-AST-00121,SYN-EC-0028,tetracycline,Tetracyclines,Broth dilution (MIC),14,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00122,SYN-EC-0028,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),24,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00123,SYN-EC-0028,meropenem,Carbapenems,Broth dilution (MIC),18,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00124,SYN-EC-0029,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00125,SYN-EC-0029,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00126,SYN-EC-0029,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),28,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00127,SYN-EC-0029,tetracycline,Tetracyclines,Broth dilution (MIC),27,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00128,SYN-EC-0029,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00129,SYN-EC-0029,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00130,SYN-EC-0029,meropenem,Carbapenems,Broth dilution (MIC),10,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00131,SYN-EC-0030,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00132,SYN-EC-0030,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00133,SYN-EC-0030,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00134,SYN-EC-0030,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00135,SYN-EC-0030,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),24,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00136,SYN-EC-0030,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00137,SYN-EC-0031,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00138,SYN-EC-0031,ampicillin,Penicillins,Broth dilution (MIC),27,mg/L,R,,,2019,SYN-LAB-01
+SYN-AST-00139,SYN-EC-0031,tetracycline,Tetracyclines,Broth dilution (MIC),11,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00140,SYN-EC-0031,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),20,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00141,SYN-EC-0031,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),29,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00142,SYN-EC-0032,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),116,mg/L,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00143,SYN-EC-0032,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00144,SYN-EC-0032,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),3,mg/L,S,,2023,2019,SYN-LAB-01
+SYN-AST-00145,SYN-EC-0032,gentamicin,Aminoglycosides,Broth dilution (MIC),7,mg/L,S,,2023,2020,SYN-LAB-01
+SYN-AST-00146,SYN-EC-0032,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00147,SYN-EC-0032,meropenem,Carbapenems,Broth dilution (MIC),21,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00148,SYN-EC-0033,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),100,mg/L,R,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00149,SYN-EC-0033,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00150,SYN-EC-0033,tetracycline,Tetracyclines,Broth dilution (MIC),32,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00151,SYN-EC-0033,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00152,SYN-EC-0033,meropenem,Carbapenems,Broth dilution (MIC),30,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00153,SYN-EC-0034,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),112,mg/L,R,,,2020,SYN-LAB-01
+SYN-AST-00154,SYN-EC-0034,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00155,SYN-EC-0034,tetracycline,Tetracyclines,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00156,SYN-EC-0034,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,,,2021,SYN-LAB-01
+SYN-AST-00157,SYN-EC-0034,gentamicin,Aminoglycosides,Broth dilution (MIC),17,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00158,SYN-EC-0034,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2023,SYN-LAB-01
+SYN-AST-00159,SYN-EC-0034,meropenem,Carbapenems,Broth dilution (MIC),31,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00160,SYN-EC-0035,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2021,SYN-LAB-01
+SYN-AST-00161,SYN-EC-0035,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00162,SYN-EC-0035,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),13,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00163,SYN-EC-0035,gentamicin,Aminoglycosides,Broth dilution (MIC),3,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00164,SYN-EC-0035,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),21,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00165,SYN-EC-0036,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00166,SYN-EC-0036,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00167,SYN-EC-0036,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,,,2024,SYN-LAB-01
+SYN-AST-00168,SYN-EC-0036,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00169,SYN-EC-0037,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00170,SYN-EC-0037,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00171,SYN-EC-0037,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),28,mg/L,R,,,2024,SYN-LAB-01
+SYN-AST-00172,SYN-EC-0037,tetracycline,Tetracyclines,Broth dilution (MIC),31,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00173,SYN-EC-0038,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00174,SYN-EC-0038,ampicillin,Penicillins,Broth dilution (MIC),2,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00175,SYN-EC-0038,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),5,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00176,SYN-EC-0038,tetracycline,Tetracyclines,Broth dilution (MIC),25,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00177,SYN-EC-0038,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00178,SYN-EC-0038,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),28,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00179,SYN-EC-0039,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),24,mg/L,S,,2023,2022,SYN-LAB-01
+SYN-AST-00180,SYN-EC-0039,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00181,SYN-EC-0039,tetracycline,Tetracyclines,Disk diffusion,,mm,S,,,2021,SYN-LAB-01
+SYN-AST-00182,SYN-EC-0040,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),92,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00183,SYN-EC-0040,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00184,SYN-EC-0040,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),11,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00185,SYN-EC-0040,tetracycline,Tetracyclines,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00186,SYN-EC-0040,gentamicin,Aminoglycosides,Broth dilution (MIC),4,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00187,SYN-EC-0041,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),64,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00188,SYN-EC-0041,ampicillin,Penicillins,Broth dilution (MIC),18,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00189,SYN-EC-0041,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00190,SYN-EC-0041,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),30,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00191,SYN-EC-0041,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00192,SYN-EC-0041,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),19,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00193,SYN-EC-0042,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00194,SYN-EC-0042,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00195,SYN-EC-0042,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00196,SYN-EC-0042,tetracycline,Tetracyclines,Disk diffusion,,mm,S,,2023,2021,SYN-LAB-01
+SYN-AST-00197,SYN-EC-0042,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),21,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00198,SYN-EC-0042,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00199,SYN-EC-0042,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00200,SYN-EC-0043,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),92,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00201,SYN-EC-0043,ampicillin,Penicillins,Broth dilution (MIC),26,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00202,SYN-EC-0043,gentamicin,Aminoglycosides,Broth dilution (MIC),21,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00203,SYN-EC-0044,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),32,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00204,SYN-EC-0044,ampicillin,Penicillins,Disk diffusion,,mm,S,,2023,2020,SYN-LAB-01
+SYN-AST-00205,SYN-EC-0044,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00206,SYN-EC-0044,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00207,SYN-EC-0044,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00208,SYN-EC-0044,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00209,SYN-EC-0045,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00210,SYN-EC-0045,ampicillin,Penicillins,Broth dilution (MIC),23,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00211,SYN-EC-0045,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),30,mg/L,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00212,SYN-EC-0045,tetracycline,Tetracyclines,Broth dilution (MIC),16,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00213,SYN-EC-0045,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00214,SYN-EC-0046,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,2023,2020,SYN-LAB-01
+SYN-AST-00215,SYN-EC-0046,ampicillin,Penicillins,Broth dilution (MIC),2,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00216,SYN-EC-0046,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),4,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00217,SYN-EC-0046,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00218,SYN-EC-0047,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),32,mg/L,S,,,2024,SYN-LAB-01
+SYN-AST-00219,SYN-EC-0047,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00220,SYN-EC-0047,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),25,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00221,SYN-EC-0048,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),88,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00222,SYN-EC-0048,ampicillin,Penicillins,Broth dilution (MIC),26,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00223,SYN-EC-0048,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00224,SYN-EC-0049,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00225,SYN-EC-0049,ampicillin,Penicillins,Broth dilution (MIC),1,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00226,SYN-EC-0049,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00227,SYN-EC-0049,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00228,SYN-EC-0049,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),9,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00229,SYN-EC-0050,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00230,SYN-EC-0050,ampicillin,Penicillins,Broth dilution (MIC),21,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00231,SYN-EC-0050,tetracycline,Tetracyclines,Broth dilution (MIC),19,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00232,SYN-EC-0050,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00233,SYN-EC-0050,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00234,SYN-EC-0051,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),48,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00235,SYN-EC-0051,ampicillin,Penicillins,Disk diffusion,,mm,S,,,2024,SYN-LAB-01
+SYN-AST-00236,SYN-EC-0051,tetracycline,Tetracyclines,Broth dilution (MIC),16,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00237,SYN-EC-0052,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00238,SYN-EC-0052,ampicillin,Penicillins,Broth dilution (MIC),20,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00239,SYN-EC-0052,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00240,SYN-EC-0052,tetracycline,Tetracyclines,Broth dilution (MIC),2,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00241,SYN-EC-0052,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,,2023,2020,SYN-LAB-01
+SYN-AST-00242,SYN-EC-0052,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00243,SYN-EC-0052,meropenem,Carbapenems,Broth dilution (MIC),29,mg/L,S,,2023,2019,SYN-LAB-01
+SYN-AST-00244,SYN-EC-0053,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),16,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-00245,SYN-EC-0053,ampicillin,Penicillins,Broth dilution (MIC),9,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00246,SYN-EC-0053,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00247,SYN-EC-0053,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),11,mg/L,S,,2023,2020,SYN-LAB-01
+SYN-AST-00248,SYN-EC-0053,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00249,SYN-EC-0054,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),72,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00250,SYN-EC-0054,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00251,SYN-EC-0054,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00252,SYN-EC-0054,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00253,SYN-EC-0055,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00254,SYN-EC-0055,ampicillin,Penicillins,Broth dilution (MIC),32,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00255,SYN-EC-0055,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,,,2020,SYN-LAB-01
+SYN-AST-00256,SYN-EC-0055,tetracycline,Tetracyclines,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00257,SYN-EC-0055,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),12,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00258,SYN-EC-0055,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00259,SYN-EC-0055,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00260,SYN-EC-0056,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00261,SYN-EC-0056,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00262,SYN-EC-0056,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),18,mg/L,S,,2023,2024,SYN-LAB-01
+SYN-AST-00263,SYN-EC-0056,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),27,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00264,SYN-EC-0057,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00265,SYN-EC-0057,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00266,SYN-EC-0057,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),26,mg/L,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00267,SYN-EC-0057,tetracycline,Tetracyclines,Broth dilution (MIC),27,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00268,SYN-EC-0057,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00269,SYN-EC-0057,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),16,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00270,SYN-EC-0058,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),92,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00271,SYN-EC-0058,ampicillin,Penicillins,Broth dilution (MIC),3,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00272,SYN-EC-0058,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00273,SYN-EC-0058,tetracycline,Tetracyclines,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00274,SYN-EC-0059,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2020,SYN-LAB-01
+SYN-AST-00275,SYN-EC-0059,ampicillin,Penicillins,Broth dilution (MIC),29,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00276,SYN-EC-0059,gentamicin,Aminoglycosides,Broth dilution (MIC),15,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00277,SYN-EC-0059,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00278,SYN-EC-0059,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00279,SYN-EC-0060,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),96,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00280,SYN-EC-0060,ampicillin,Penicillins,Broth dilution (MIC),2,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00281,SYN-EC-0060,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),2,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00282,SYN-EC-0060,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),7,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00283,SYN-EC-0061,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00284,SYN-EC-0061,ampicillin,Penicillins,Broth dilution (MIC),28,mg/L,S,,2023,2024,SYN-LAB-01
+SYN-AST-00285,SYN-EC-0061,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),14,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00286,SYN-EC-0061,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),3,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00287,SYN-EC-0061,meropenem,Carbapenems,Broth dilution (MIC),6,mg/L,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00288,SYN-EC-0062,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),60,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00289,SYN-EC-0062,ampicillin,Penicillins,Broth dilution (MIC),2,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00290,SYN-EC-0062,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00291,SYN-EC-0062,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00292,SYN-EC-0063,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00293,SYN-EC-0063,ampicillin,Penicillins,Disk diffusion,,mm,S,,,2023,SYN-LAB-01
+SYN-AST-00294,SYN-EC-0063,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,,,2019,SYN-LAB-01
+SYN-AST-00295,SYN-EC-0063,gentamicin,Aminoglycosides,Broth dilution (MIC),18,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00296,SYN-EC-0064,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),64,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00297,SYN-EC-0064,ampicillin,Penicillins,Broth dilution (MIC),27,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00298,SYN-EC-0064,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),20,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00299,SYN-EC-0064,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),18,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00300,SYN-EC-0064,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00301,SYN-EC-0065,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),56,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00302,SYN-EC-0065,ampicillin,Penicillins,Broth dilution (MIC),5,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00303,SYN-EC-0065,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),4,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00304,SYN-EC-0065,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),17,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00305,SYN-EC-0066,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),60,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00306,SYN-EC-0066,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00307,SYN-EC-0066,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00308,SYN-EC-0066,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),18,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00309,SYN-EC-0067,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00310,SYN-EC-0067,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00311,SYN-EC-0067,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),31,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00312,SYN-EC-0068,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),12,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00313,SYN-EC-0068,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00314,SYN-EC-0068,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),24,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00315,SYN-EC-0068,tetracycline,Tetracyclines,Broth dilution (MIC),5,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00316,SYN-EC-0068,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00317,SYN-EC-0069,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),120,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00318,SYN-EC-0069,ampicillin,Penicillins,Broth dilution (MIC),1,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00319,SYN-EC-0069,tetracycline,Tetracyclines,Broth dilution (MIC),5,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00320,SYN-EC-0069,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00321,SYN-EC-0070,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00322,SYN-EC-0070,ampicillin,Penicillins,Broth dilution (MIC),29,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00323,SYN-EC-0070,tetracycline,Tetracyclines,Broth dilution (MIC),21,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00324,SYN-EC-0070,meropenem,Carbapenems,Broth dilution (MIC),9,mg/L,S,,2023,2022,SYN-LAB-01
+SYN-AST-00325,SYN-EC-0071,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),48,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00326,SYN-EC-0071,ampicillin,Penicillins,Broth dilution (MIC),32,mg/L,S,,2023,2023,SYN-LAB-01
+SYN-AST-00327,SYN-EC-0071,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00328,SYN-EC-0071,gentamicin,Aminoglycosides,Broth dilution (MIC),28,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00329,SYN-EC-0071,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),11,mg/L,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00330,SYN-EC-0072,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00331,SYN-EC-0072,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00332,SYN-EC-0072,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),15,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00333,SYN-EC-0073,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00334,SYN-EC-0073,ampicillin,Penicillins,Broth dilution (MIC),20,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00335,SYN-EC-0073,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00336,SYN-EC-0074,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00337,SYN-EC-0074,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00338,SYN-EC-0074,tetracycline,Tetracyclines,Broth dilution (MIC),5,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00339,SYN-EC-0075,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),44,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00340,SYN-EC-0075,ampicillin,Penicillins,Broth dilution (MIC),29,mg/L,S,,2023,2023,SYN-LAB-01
+SYN-AST-00341,SYN-EC-0075,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00342,SYN-EC-0076,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00343,SYN-EC-0076,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00344,SYN-EC-0076,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00345,SYN-EC-0076,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),15,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00346,SYN-EC-0076,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00347,SYN-EC-0077,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00348,SYN-EC-0077,ampicillin,Penicillins,Broth dilution (MIC),27,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00349,SYN-EC-0077,tetracycline,Tetracyclines,Broth dilution (MIC),11,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00350,SYN-EC-0077,gentamicin,Aminoglycosides,Broth dilution (MIC),25,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00351,SYN-EC-0077,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),22,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00352,SYN-EC-0077,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00353,SYN-EC-0078,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2021,SYN-LAB-01
+SYN-AST-00354,SYN-EC-0078,ampicillin,Penicillins,Broth dilution (MIC),25,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00355,SYN-EC-0078,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00356,SYN-EC-0078,tetracycline,Tetracyclines,Broth dilution (MIC),14,mg/L,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00357,SYN-EC-0078,gentamicin,Aminoglycosides,Broth dilution (MIC),20,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00358,SYN-EC-0078,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00359,SYN-EC-0079,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),80,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00360,SYN-EC-0079,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00361,SYN-EC-0079,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),20,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00362,SYN-EC-0079,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00363,SYN-EC-0079,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00364,SYN-EC-0080,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),108,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00365,SYN-EC-0080,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00366,SYN-EC-0080,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),18,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00367,SYN-EC-0080,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),13,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00368,SYN-EC-0081,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00369,SYN-EC-0081,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00370,SYN-EC-0081,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),19,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00371,SYN-EC-0081,tetracycline,Tetracyclines,Disk diffusion,,mm,S,,2023,2019,SYN-LAB-01
+SYN-AST-00372,SYN-EC-0081,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),5,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00373,SYN-EC-0081,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),5,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00374,SYN-EC-0081,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00375,SYN-EC-0082,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),84,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00376,SYN-EC-0082,ampicillin,Penicillins,Broth dilution (MIC),5,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00377,SYN-EC-0082,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00378,SYN-EC-0082,gentamicin,Aminoglycosides,Broth dilution (MIC),14,mg/L,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00379,SYN-EC-0082,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),22,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00380,SYN-EC-0083,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00381,SYN-EC-0083,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00382,SYN-EC-0083,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),24,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00383,SYN-EC-0083,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00384,SYN-EC-0083,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),2,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00385,SYN-EC-0084,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00386,SYN-EC-0084,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00387,SYN-EC-0084,tetracycline,Tetracyclines,Broth dilution (MIC),13,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00388,SYN-EC-0085,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00389,SYN-EC-0085,ampicillin,Penicillins,Broth dilution (MIC),26,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00390,SYN-EC-0086,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),116,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00391,SYN-EC-0086,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00392,SYN-EC-0086,meropenem,Carbapenems,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00393,SYN-EC-0087,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00394,SYN-EC-0087,ampicillin,Penicillins,Broth dilution (MIC),13,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00395,SYN-EC-0087,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00396,SYN-EC-0088,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),76,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00397,SYN-EC-0088,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00398,SYN-EC-0088,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),14,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00399,SYN-EC-0088,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00400,SYN-EC-0088,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),27,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00401,SYN-EC-0089,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00402,SYN-EC-0089,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00403,SYN-EC-0089,tetracycline,Tetracyclines,Broth dilution (MIC),31,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00404,SYN-EC-0089,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),27,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00405,SYN-EC-0089,meropenem,Carbapenems,Broth dilution (MIC),13,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00406,SYN-EC-0090,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00407,SYN-EC-0090,ampicillin,Penicillins,Broth dilution (MIC),31,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00408,SYN-EC-0090,tetracycline,Tetracyclines,Broth dilution (MIC),17,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00409,SYN-EC-0090,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),26,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00410,SYN-EC-0091,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),36,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00411,SYN-EC-0091,ampicillin,Penicillins,Broth dilution (MIC),29,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00412,SYN-EC-0091,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),24,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00413,SYN-EC-0091,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),28,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00414,SYN-EC-0091,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00415,SYN-EC-0092,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00416,SYN-EC-0092,ampicillin,Penicillins,Broth dilution (MIC),18,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00417,SYN-EC-0092,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),18,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00418,SYN-EC-0093,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),48,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00419,SYN-EC-0093,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00420,SYN-EC-0094,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),116,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00421,SYN-EC-0094,ampicillin,Penicillins,Broth dilution (MIC),20,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00422,SYN-EC-0094,tetracycline,Tetracyclines,Broth dilution (MIC),2,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00423,SYN-EC-0095,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00424,SYN-EC-0095,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00425,SYN-EC-0095,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),14,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00426,SYN-EC-0095,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00427,SYN-EC-0096,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00428,SYN-EC-0096,ampicillin,Penicillins,Broth dilution (MIC),28,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00429,SYN-EC-0096,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00430,SYN-EC-0096,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),16,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00431,SYN-EC-0096,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),23,mg/L,S,,,2024,SYN-LAB-01
+SYN-AST-00432,SYN-EC-0097,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00433,SYN-EC-0097,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00434,SYN-EC-0097,ampicillin,Penicillins,Disk diffusion,,mm,S,,2023,2019,SYN-LAB-01
+SYN-AST-00435,SYN-EC-0097,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),4,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00436,SYN-EC-0097,tetracycline,Tetracyclines,Broth dilution (MIC),21,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00437,SYN-EC-0098,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00438,SYN-EC-0098,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00439,SYN-EC-0098,ampicillin,Penicillins,Broth dilution (MIC),15,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00440,SYN-EC-0098,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00441,SYN-EC-0098,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),6,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00442,SYN-EC-0098,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),26,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-00443,SYN-EC-0099,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00444,SYN-EC-0099,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),20,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00445,SYN-EC-0099,ampicillin,Penicillins,Broth dilution (MIC),19,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00446,SYN-EC-0099,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),20,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00447,SYN-EC-0099,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2021,SYN-LAB-01
+SYN-AST-00448,SYN-EC-0099,meropenem,Carbapenems,Broth dilution (MIC),15,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00449,SYN-EC-0100,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00450,SYN-EC-0100,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),80,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00451,SYN-EC-0100,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00452,SYN-EC-0100,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00453,SYN-EC-0100,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00454,SYN-EC-0100,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00455,SYN-EC-0101,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),24,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00456,SYN-EC-0101,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00457,SYN-EC-0101,ampicillin,Penicillins,Broth dilution (MIC),13,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00458,SYN-EC-0101,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),11,mg/L,R,,2023,2021,SYN-LAB-01
+SYN-AST-00459,SYN-EC-0102,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),116,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00460,SYN-EC-0102,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),108,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00461,SYN-EC-0102,ampicillin,Penicillins,Broth dilution (MIC),30,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00462,SYN-EC-0102,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),9,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00463,SYN-EC-0102,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00464,SYN-EC-0103,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),100,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00465,SYN-EC-0103,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),116,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00466,SYN-EC-0103,ampicillin,Penicillins,Broth dilution (MIC),8,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00467,SYN-EC-0103,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00468,SYN-EC-0103,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),27,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00469,SYN-EC-0104,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00470,SYN-EC-0104,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,S,,,2024,SYN-LAB-01
+SYN-AST-00471,SYN-EC-0104,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00472,SYN-EC-0104,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00473,SYN-EC-0105,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00474,SYN-EC-0105,ampicillin,Penicillins,Disk diffusion,,mm,R,,2023,2023,SYN-LAB-01
+SYN-AST-00475,SYN-EC-0106,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),72,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00476,SYN-EC-0106,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00477,SYN-EC-0106,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00478,SYN-EC-0106,tetracycline,Tetracyclines,Broth dilution (MIC),27,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00479,SYN-EC-0106,gentamicin,Aminoglycosides,Broth dilution (MIC),13,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00480,SYN-EC-0107,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2019,SYN-LAB-01
+SYN-AST-00481,SYN-EC-0107,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00482,SYN-EC-0107,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00483,SYN-EC-0107,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00484,SYN-EC-0107,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00485,SYN-EC-0108,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),112,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00486,SYN-EC-0108,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00487,SYN-EC-0108,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00488,SYN-EC-0108,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00489,SYN-EC-0108,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00490,SYN-EC-0109,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00491,SYN-EC-0109,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00492,SYN-EC-0109,tetracycline,Tetracyclines,Broth dilution (MIC),22,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00493,SYN-EC-0109,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),27,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00494,SYN-EC-0110,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),104,mg/L,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00495,SYN-EC-0110,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00496,SYN-EC-0110,gentamicin,Aminoglycosides,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00497,SYN-EC-0111,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00498,SYN-EC-0111,ampicillin,Penicillins,Broth dilution (MIC),31,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00499,SYN-EC-0111,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00500,SYN-EC-0111,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00501,SYN-EC-0111,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),28,mg/L,S,,2023,2019,SYN-LAB-01
+SYN-AST-00502,SYN-EC-0112,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),40,mg/L,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00503,SYN-EC-0112,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00504,SYN-EC-0112,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00505,SYN-EC-0112,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),17,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00506,SYN-EC-0113,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),36,mg/L,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00507,SYN-EC-0113,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00508,SYN-EC-0113,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00509,SYN-EC-0113,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),9,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00510,SYN-EC-0113,meropenem,Carbapenems,Broth dilution (MIC),25,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00511,SYN-EC-0114,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),16,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00512,SYN-EC-0114,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00513,SYN-EC-0114,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00514,SYN-EC-0114,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00515,SYN-EC-0115,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),60,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00516,SYN-EC-0115,ampicillin,Penicillins,Broth dilution (MIC),28,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00517,SYN-EC-0115,tetracycline,Tetracyclines,Disk diffusion,,mm,S,,,2019,SYN-LAB-01
+SYN-AST-00518,SYN-EC-0115,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),28,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00519,SYN-EC-0115,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2020,SYN-LAB-01
+SYN-AST-00520,SYN-EC-0115,meropenem,Carbapenems,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00521,SYN-EC-0116,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00522,SYN-EC-0116,ampicillin,Penicillins,Broth dilution (MIC),26,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00523,SYN-EC-0116,tetracycline,Tetracyclines,Broth dilution (MIC),4,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00524,SYN-EC-0116,gentamicin,Aminoglycosides,Broth dilution (MIC),12,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00525,SYN-EC-0116,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00526,SYN-EC-0117,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00527,SYN-EC-0117,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00528,SYN-EC-0117,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),32,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00529,SYN-EC-0117,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00530,SYN-EC-0117,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),29,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00531,SYN-EC-0117,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),12,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00532,SYN-EC-0118,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),36,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00533,SYN-EC-0118,ampicillin,Penicillins,Disk diffusion,,mm,S,,2023,2021,SYN-LAB-01
+SYN-AST-00534,SYN-EC-0118,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),26,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00535,SYN-EC-0118,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00536,SYN-EC-0118,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00537,SYN-EC-0119,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00538,SYN-EC-0119,ampicillin,Penicillins,Broth dilution (MIC),26,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00539,SYN-EC-0119,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),7,mg/L,R,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00540,SYN-EC-0119,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),13,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00541,SYN-EC-0119,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),1,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-00542,SYN-EC-0120,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00543,SYN-EC-0120,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00544,SYN-EC-0120,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),29,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00545,SYN-EC-0120,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),22,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00546,SYN-EC-0120,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),3,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00547,SYN-EC-0120,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),12,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00548,SYN-EC-0120,meropenem,Carbapenems,Broth dilution (MIC),5,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00549,SYN-EC-0121,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00550,SYN-EC-0121,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00551,SYN-EC-0121,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00552,SYN-EC-0122,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00553,SYN-EC-0122,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00554,SYN-EC-0122,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),32,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00555,SYN-EC-0122,tetracycline,Tetracyclines,Broth dilution (MIC),20,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-00556,SYN-EC-0122,gentamicin,Aminoglycosides,Broth dilution (MIC),12,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00557,SYN-EC-0123,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,,2023,2021,SYN-LAB-01
+SYN-AST-00558,SYN-EC-0123,ampicillin,Penicillins,Broth dilution (MIC),8,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00559,SYN-EC-0123,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00560,SYN-EC-0123,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),18,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00561,SYN-EC-0123,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00562,SYN-EC-0124,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),60,mg/L,R,,,2021,SYN-LAB-01
+SYN-AST-00563,SYN-EC-0124,ampicillin,Penicillins,Broth dilution (MIC),7,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00564,SYN-EC-0124,tetracycline,Tetracyclines,Broth dilution (MIC),11,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00565,SYN-EC-0124,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),25,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00566,SYN-EC-0125,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00567,SYN-EC-0125,ampicillin,Penicillins,Broth dilution (MIC),12,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00568,SYN-EC-0125,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),2,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00569,SYN-EC-0125,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),5,mg/L,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00570,SYN-EC-0125,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00571,SYN-EC-0125,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00572,SYN-EC-0126,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00573,SYN-EC-0126,ampicillin,Penicillins,Broth dilution (MIC),29,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00574,SYN-EC-0126,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),10,mg/L,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00575,SYN-EC-0127,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00576,SYN-EC-0127,ampicillin,Penicillins,Broth dilution (MIC),21,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00577,SYN-EC-0127,tetracycline,Tetracyclines,Broth dilution (MIC),19,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00578,SYN-EC-0127,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00579,SYN-EC-0128,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00580,SYN-EC-0128,ampicillin,Penicillins,Broth dilution (MIC),6,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00581,SYN-EC-0128,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),8,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00582,SYN-EC-0129,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),36,mg/L,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00583,SYN-EC-0129,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00584,SYN-EC-0129,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),12,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00585,SYN-EC-0129,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00586,SYN-EC-0129,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00587,SYN-EC-0130,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00588,SYN-EC-0130,ampicillin,Penicillins,Broth dilution (MIC),12,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00589,SYN-EC-0130,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),17,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00590,SYN-EC-0130,tetracycline,Tetracyclines,Broth dilution (MIC),6,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00591,SYN-EC-0131,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),40,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00592,SYN-EC-0131,ampicillin,Penicillins,Broth dilution (MIC),9,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00593,SYN-EC-0131,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),19,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00594,SYN-EC-0132,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00595,SYN-EC-0132,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00596,SYN-EC-0132,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),17,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00597,SYN-EC-0132,tetracycline,Tetracyclines,Broth dilution (MIC),8,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00598,SYN-EC-0132,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00599,SYN-EC-0132,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),20,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00600,SYN-EC-0132,meropenem,Carbapenems,Broth dilution (MIC),28,mg/L,R,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00601,SYN-EC-0133,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00602,SYN-EC-0133,ampicillin,Penicillins,Broth dilution (MIC),18,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00603,SYN-EC-0133,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),17,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00604,SYN-EC-0133,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00605,SYN-EC-0133,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),29,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00606,SYN-EC-0134,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00607,SYN-EC-0134,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00608,SYN-EC-0134,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),11,mg/L,R,,2023,2021,SYN-LAB-01
+SYN-AST-00609,SYN-EC-0134,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),11,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00610,SYN-EC-0134,meropenem,Carbapenems,Broth dilution (MIC),17,mg/L,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00611,SYN-EC-0135,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),120,mg/L,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00612,SYN-EC-0135,ampicillin,Penicillins,Broth dilution (MIC),28,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00613,SYN-EC-0135,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00614,SYN-EC-0135,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),6,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00615,SYN-EC-0135,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),23,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00616,SYN-EC-0136,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00617,SYN-EC-0136,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00618,SYN-EC-0136,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00619,SYN-EC-0136,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00620,SYN-EC-0137,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00621,SYN-EC-0137,ampicillin,Penicillins,Broth dilution (MIC),6,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00622,SYN-EC-0137,tetracycline,Tetracyclines,Broth dilution (MIC),23,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-00623,SYN-EC-0137,gentamicin,Aminoglycosides,Broth dilution (MIC),17,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00624,SYN-EC-0138,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00625,SYN-EC-0138,ampicillin,Penicillins,Broth dilution (MIC),31,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00626,SYN-EC-0138,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),10,mg/L,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00627,SYN-EC-0138,tetracycline,Tetracyclines,Broth dilution (MIC),16,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00628,SYN-EC-0138,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),26,mg/L,S,,,2023,SYN-LAB-01
+SYN-AST-00629,SYN-EC-0138,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00630,SYN-EC-0138,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),13,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00631,SYN-EC-0139,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00632,SYN-EC-0139,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00633,SYN-EC-0139,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00634,SYN-EC-0139,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00635,SYN-EC-0140,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2023,SYN-LAB-01
+SYN-AST-00636,SYN-EC-0140,ampicillin,Penicillins,Broth dilution (MIC),14,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00637,SYN-EC-0140,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00638,SYN-EC-0140,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00639,SYN-EC-0140,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),14,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00640,SYN-EC-0140,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00641,SYN-EC-0141,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00642,SYN-EC-0141,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00643,SYN-EC-0141,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),4,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00644,SYN-EC-0141,tetracycline,Tetracyclines,Broth dilution (MIC),2,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00645,SYN-EC-0141,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),19,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00646,SYN-EC-0141,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),7,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00647,SYN-EC-0141,gentamicin,Aminoglycosides,Broth dilution (MIC),4,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00648,SYN-EC-0141,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2019,SYN-LAB-01
+SYN-AST-00649,SYN-EC-0142,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),12,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00650,SYN-EC-0142,ampicillin,Penicillins,Broth dilution (MIC),14,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00651,SYN-EC-0142,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),21,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00652,SYN-EC-0142,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00653,SYN-EC-0143,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00654,SYN-EC-0143,ampicillin,Penicillins,Broth dilution (MIC),4,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00655,SYN-EC-0143,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00656,SYN-EC-0144,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),108,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00657,SYN-EC-0144,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00658,SYN-EC-0144,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00659,SYN-EC-0144,tetracycline,Tetracyclines,Broth dilution (MIC),21,mg/L,R,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00660,SYN-EC-0144,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00661,SYN-EC-0145,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),76,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00662,SYN-EC-0145,ampicillin,Penicillins,Broth dilution (MIC),13,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00663,SYN-EC-0145,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),7,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00664,SYN-EC-0145,tetracycline,Tetracyclines,Broth dilution (MIC),18,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00665,SYN-EC-0145,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00666,SYN-EC-0146,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),28,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00667,SYN-EC-0146,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00668,SYN-EC-0146,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),25,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00669,SYN-EC-0146,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00670,SYN-EC-0146,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00671,SYN-EC-0146,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),5,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00672,SYN-EC-0146,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,,,2024,SYN-LAB-01
+SYN-AST-00673,SYN-EC-0146,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00674,SYN-EC-0147,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),64,mg/L,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00675,SYN-EC-0147,ampicillin,Penicillins,Broth dilution (MIC),28,mg/L,S,,2023,2020,SYN-LAB-01
+SYN-AST-00676,SYN-EC-0147,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),7,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00677,SYN-EC-0147,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00678,SYN-EC-0147,meropenem,Carbapenems,Disk diffusion,,mm,S,,,2024,SYN-LAB-01
+SYN-AST-00679,SYN-EC-0148,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00680,SYN-EC-0148,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00681,SYN-EC-0148,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00682,SYN-EC-0148,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),13,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00683,SYN-EC-0148,meropenem,Carbapenems,Broth dilution (MIC),25,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00684,SYN-EC-0149,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00685,SYN-EC-0149,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00686,SYN-EC-0149,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),14,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00687,SYN-EC-0149,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00688,SYN-EC-0149,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),10,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00689,SYN-EC-0150,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00690,SYN-EC-0150,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00691,SYN-EC-0150,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),18,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00692,SYN-EC-0150,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00693,SYN-EC-0151,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00694,SYN-EC-0151,ampicillin,Penicillins,Broth dilution (MIC),6,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00695,SYN-EC-0151,gentamicin,Aminoglycosides,Broth dilution (MIC),8,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00696,SYN-EC-0151,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00697,SYN-EC-0151,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00698,SYN-EC-0152,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00699,SYN-EC-0152,ampicillin,Penicillins,Disk diffusion,,mm,R,,,2023,SYN-LAB-01
+SYN-AST-00700,SYN-EC-0152,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),11,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00701,SYN-EC-0152,tetracycline,Tetracyclines,Broth dilution (MIC),14,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00702,SYN-EC-0152,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),8,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00703,SYN-EC-0152,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),16,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00704,SYN-EC-0153,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),80,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00705,SYN-EC-0153,ampicillin,Penicillins,Broth dilution (MIC),3,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00706,SYN-EC-0153,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),30,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00707,SYN-EC-0153,gentamicin,Aminoglycosides,Broth dilution (MIC),30,mg/L,R,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00708,SYN-EC-0153,meropenem,Carbapenems,Broth dilution (MIC),26,mg/L,S,,2023,2022,SYN-LAB-01
+SYN-AST-00709,SYN-EC-0154,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,I,CLSI,,2020,SYN-LAB-01
+SYN-AST-00710,SYN-EC-0154,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00711,SYN-EC-0154,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),15,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00712,SYN-EC-0154,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00713,SYN-EC-0155,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),44,mg/L,I,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00714,SYN-EC-0155,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00715,SYN-EC-0155,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00716,SYN-EC-0155,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),17,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00717,SYN-EC-0155,meropenem,Carbapenems,Broth dilution (MIC),17,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00718,SYN-EC-0156,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,I,CLSI,,2021,SYN-LAB-01
+SYN-AST-00719,SYN-EC-0156,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00720,SYN-EC-0156,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00721,SYN-EC-0156,tetracycline,Tetracyclines,Broth dilution (MIC),28,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00722,SYN-EC-0156,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),2,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00723,SYN-EC-0156,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00724,SYN-EC-0157,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),100,mg/L,,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00725,SYN-EC-0157,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00726,SYN-EC-0157,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),30,mg/L,R,,,2022,SYN-LAB-01
+SYN-AST-00727,SYN-EC-0157,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00728,SYN-EC-0157,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00729,SYN-EC-0157,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),4,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00730,SYN-EC-0157,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00731,SYN-EC-0158,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00732,SYN-EC-0158,ampicillin,Penicillins,Broth dilution (MIC),27,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00733,SYN-EC-0158,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),13,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00734,SYN-EC-0158,tetracycline,Tetracyclines,Disk diffusion,,mm,R,,,2020,SYN-LAB-01
+SYN-AST-00735,SYN-EC-0158,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),28,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00736,SYN-EC-0158,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00737,SYN-EC-0158,meropenem,Carbapenems,Disk diffusion,,mm,R,,,2022,SYN-LAB-01
+SYN-AST-00738,SYN-EC-0159,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00739,SYN-EC-0159,ampicillin,Penicillins,Broth dilution (MIC),24,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00740,SYN-EC-0159,tetracycline,Tetracyclines,Broth dilution (MIC),6,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00741,SYN-EC-0159,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),6,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00742,SYN-EC-0159,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),11,mg/L,S,,2023,2022,SYN-LAB-01
+SYN-AST-00743,SYN-EC-0160,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00744,SYN-EC-0160,ampicillin,Penicillins,Broth dilution (MIC),30,mg/L,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00745,SYN-EC-0160,tetracycline,Tetracyclines,Disk diffusion,,mm,S,,,2021,SYN-LAB-01
+SYN-AST-00746,SYN-EC-0160,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00747,SYN-EC-0160,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00748,SYN-EC-0161,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00749,SYN-EC-0161,ampicillin,Penicillins,Broth dilution (MIC),2,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00750,SYN-EC-0161,tetracycline,Tetracyclines,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00751,SYN-EC-0161,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),32,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00752,SYN-EC-0161,gentamicin,Aminoglycosides,Broth dilution (MIC),7,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00753,SYN-EC-0162,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00754,SYN-EC-0162,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),100,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00755,SYN-EC-0162,ampicillin,Penicillins,Broth dilution (MIC),4,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00756,SYN-EC-0162,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00757,SYN-EC-0162,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00758,SYN-EC-0162,meropenem,Carbapenems,Broth dilution (MIC),30,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00759,SYN-EC-0163,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00760,SYN-EC-0163,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00761,SYN-EC-0163,ampicillin,Penicillins,Disk diffusion,,mm,S,,2023,2023,SYN-LAB-01
+SYN-AST-00762,SYN-EC-0163,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00763,SYN-EC-0163,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),7,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00764,SYN-EC-0163,meropenem,Carbapenems,Broth dilution (MIC),30,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00765,SYN-EC-0164,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),112,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00766,SYN-EC-0164,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),80,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00767,SYN-EC-0164,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00768,SYN-EC-0164,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),8,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00769,SYN-EC-0164,tetracycline,Tetracyclines,Broth dilution (MIC),15,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00770,SYN-EC-0164,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),27,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00771,SYN-EC-0165,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00772,SYN-EC-0165,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00773,SYN-EC-0165,ampicillin,Penicillins,Broth dilution (MIC),3,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00774,SYN-EC-0165,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,R,,2023,2021,SYN-LAB-01
+SYN-AST-00775,SYN-EC-0165,tetracycline,Tetracyclines,Broth dilution (MIC),23,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00776,SYN-EC-0165,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),29,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00777,SYN-EC-0166,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00778,SYN-EC-0166,ampicillin,Penicillins,Broth dilution (MIC),18,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00779,SYN-EC-0166,tetracycline,Tetracyclines,Broth dilution (MIC),31,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00780,SYN-EC-0166,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00781,SYN-EC-0166,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2021,SYN-LAB-01
+SYN-AST-00782,SYN-EC-0167,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),40,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00783,SYN-EC-0167,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00784,SYN-EC-0167,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),26,mg/L,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00785,SYN-EC-0168,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00786,SYN-EC-0168,ampicillin,Penicillins,Broth dilution (MIC),27,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00787,SYN-EC-0168,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00788,SYN-EC-0168,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),27,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00789,SYN-EC-0169,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00790,SYN-EC-0169,ampicillin,Penicillins,Broth dilution (MIC),32,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00791,SYN-EC-0169,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),13,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00792,SYN-EC-0170,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),88,mg/L,S,,2023,2021,SYN-LAB-01
+SYN-AST-00793,SYN-EC-0170,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00794,SYN-EC-0170,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),21,mg/L,R,,,2021,SYN-LAB-01
+SYN-AST-00795,SYN-EC-0170,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),26,mg/L,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00796,SYN-EC-0170,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),32,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00797,SYN-EC-0170,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00798,SYN-KP-0001,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),100,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00799,SYN-KP-0001,ampicillin,Penicillins,Disk diffusion,,mm,R,,,2024,SYN-LAB-01
+SYN-AST-00800,SYN-KP-0001,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00801,SYN-KP-0001,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00802,SYN-KP-0001,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00803,SYN-KP-0001,meropenem,Carbapenems,Disk diffusion,,mm,R,,,2019,SYN-LAB-01
+SYN-AST-00804,SYN-KP-0002,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),48,mg/L,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00805,SYN-KP-0002,ampicillin,Penicillins,Broth dilution (MIC),23,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00806,SYN-KP-0002,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,,,2023,SYN-LAB-01
+SYN-AST-00807,SYN-KP-0002,meropenem,Carbapenems,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00808,SYN-KP-0003,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00809,SYN-KP-0003,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00810,SYN-KP-0003,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),30,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00811,SYN-KP-0003,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00812,SYN-KP-0003,meropenem,Carbapenems,Disk diffusion,,mm,R,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00813,SYN-KP-0004,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00814,SYN-KP-0004,ampicillin,Penicillins,Broth dilution (MIC),21,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00815,SYN-KP-0004,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),21,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00816,SYN-KP-0004,tetracycline,Tetracyclines,Broth dilution (MIC),16,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00817,SYN-KP-0004,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00818,SYN-KP-0004,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00819,SYN-KP-0004,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00820,SYN-KP-0004,meropenem,Carbapenems,Disk diffusion,,mm,R,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00821,SYN-KP-0005,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00822,SYN-KP-0005,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00823,SYN-KP-0005,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),24,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00824,SYN-KP-0005,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),2,mg/L,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00825,SYN-KP-0005,meropenem,Carbapenems,Broth dilution (MIC),21,mg/L,R,,,2021,SYN-LAB-01
+SYN-AST-00826,SYN-KP-0006,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00827,SYN-KP-0006,ampicillin,Penicillins,Disk diffusion,,mm,S,,,2022,SYN-LAB-01
+SYN-AST-00828,SYN-KP-0006,tetracycline,Tetracyclines,Broth dilution (MIC),9,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-00829,SYN-KP-0006,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),32,mg/L,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00830,SYN-KP-0006,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00831,SYN-KP-0006,meropenem,Carbapenems,Disk diffusion,,mm,R,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00832,SYN-KP-0007,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00833,SYN-KP-0007,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00834,SYN-KP-0007,meropenem,Carbapenems,Broth dilution (MIC),30,mg/L,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00835,SYN-KP-0008,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),96,mg/L,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00836,SYN-KP-0008,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00837,SYN-KP-0008,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),22,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00838,SYN-KP-0008,tetracycline,Tetracyclines,Broth dilution (MIC),24,mg/L,S,,,2021,SYN-LAB-01
+SYN-AST-00839,SYN-KP-0008,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),21,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00840,SYN-KP-0008,gentamicin,Aminoglycosides,Broth dilution (MIC),29,mg/L,S,,2023,2023,SYN-LAB-01
+SYN-AST-00841,SYN-KP-0008,meropenem,Carbapenems,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00842,SYN-KP-0009,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),32,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00843,SYN-KP-0009,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00844,SYN-KP-0009,tetracycline,Tetracyclines,Broth dilution (MIC),3,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00845,SYN-KP-0009,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00846,SYN-KP-0009,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00847,SYN-KP-0009,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),15,mg/L,R,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00848,SYN-KP-0009,meropenem,Carbapenems,Broth dilution (MIC),6,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00849,SYN-KP-0010,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00850,SYN-KP-0010,ampicillin,Penicillins,Broth dilution (MIC),21,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00851,SYN-KP-0010,meropenem,Carbapenems,Disk diffusion,,mm,R,,2023,2022,SYN-LAB-01
+SYN-AST-00852,SYN-KP-0011,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00853,SYN-KP-0011,ampicillin,Penicillins,Broth dilution (MIC),22,mg/L,R,,2023,2019,SYN-LAB-01
+SYN-AST-00854,SYN-KP-0011,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00855,SYN-KP-0011,gentamicin,Aminoglycosides,Broth dilution (MIC),13,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00856,SYN-KP-0011,meropenem,Carbapenems,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00857,SYN-KP-0012,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),84,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00858,SYN-KP-0012,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00859,SYN-KP-0012,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00860,SYN-KP-0012,tetracycline,Tetracyclines,Broth dilution (MIC),12,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00861,SYN-KP-0012,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00862,SYN-KP-0012,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),13,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00863,SYN-KP-0012,meropenem,Carbapenems,Broth dilution (MIC),2,mg/L,R,CLSI,,2023,SYN-LAB-01
+SYN-AST-00864,SYN-KP-0013,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00865,SYN-KP-0013,ampicillin,Penicillins,Broth dilution (MIC),17,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00866,SYN-KP-0013,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00867,SYN-KP-0013,tetracycline,Tetracyclines,Broth dilution (MIC),15,mg/L,S,,2023,2020,SYN-LAB-01
+SYN-AST-00868,SYN-KP-0013,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,,,2024,SYN-LAB-01
+SYN-AST-00869,SYN-KP-0013,meropenem,Carbapenems,Disk diffusion,,mm,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00870,SYN-KP-0014,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),92,mg/L,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00871,SYN-KP-0014,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00872,SYN-KP-0014,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),15,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00873,SYN-KP-0014,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00874,SYN-KP-0014,meropenem,Carbapenems,Broth dilution (MIC),31,mg/L,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-00875,SYN-KP-0015,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00876,SYN-KP-0015,ampicillin,Penicillins,Disk diffusion,,mm,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00877,SYN-KP-0015,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00878,SYN-KP-0015,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00879,SYN-KP-0015,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00880,SYN-KP-0015,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00881,SYN-KP-0015,meropenem,Carbapenems,Broth dilution (MIC),14,mg/L,R,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00882,SYN-KP-0016,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),32,mg/L,R,,,2020,SYN-LAB-01
+SYN-AST-00883,SYN-KP-0016,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00884,SYN-KP-0016,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00885,SYN-KP-0016,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00886,SYN-KP-0016,meropenem,Carbapenems,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-00887,SYN-KP-0017,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),92,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00888,SYN-KP-0017,ampicillin,Penicillins,Broth dilution (MIC),13,mg/L,R,CLSI,,2019,SYN-LAB-01
+SYN-AST-00889,SYN-KP-0017,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),32,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00890,SYN-KP-0017,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00891,SYN-KP-0017,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),29,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00892,SYN-KP-0017,meropenem,Carbapenems,Broth dilution (MIC),9,mg/L,R,,2023,2019,SYN-LAB-01
+SYN-AST-00893,SYN-KP-0018,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),12,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00894,SYN-KP-0018,ampicillin,Penicillins,Broth dilution (MIC),30,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00895,SYN-KP-0018,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),26,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00896,SYN-KP-0018,meropenem,Carbapenems,Broth dilution (MIC),4,mg/L,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00897,SYN-KP-0019,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),100,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00898,SYN-KP-0019,ampicillin,Penicillins,Broth dilution (MIC),7,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00899,SYN-KP-0019,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),3,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00900,SYN-KP-0019,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00901,SYN-KP-0019,meropenem,Carbapenems,Disk diffusion,,mm,S,,2023,2021,SYN-LAB-01
+SYN-AST-00902,SYN-KP-0020,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),16,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00903,SYN-KP-0020,ampicillin,Penicillins,Broth dilution (MIC),31,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00904,SYN-KP-0020,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),28,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00905,SYN-KP-0020,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),11,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00906,SYN-KP-0020,meropenem,Carbapenems,Broth dilution (MIC),13,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00907,SYN-KP-0021,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),128,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00908,SYN-KP-0021,ampicillin,Penicillins,Broth dilution (MIC),25,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-00909,SYN-KP-0021,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00910,SYN-KP-0021,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00911,SYN-KP-0021,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),22,mg/L,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00912,SYN-KP-0021,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00913,SYN-KP-0021,meropenem,Carbapenems,Broth dilution (MIC),21,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00914,SYN-KP-0022,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2023,SYN-LAB-01
+SYN-AST-00915,SYN-KP-0022,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00916,SYN-KP-0022,tetracycline,Tetracyclines,Disk diffusion,,mm,R,,2023,2023,SYN-LAB-01
+SYN-AST-00917,SYN-KP-0022,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),2,mg/L,S,,2023,2020,SYN-LAB-01
+SYN-AST-00918,SYN-KP-0022,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00919,SYN-KP-0022,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00920,SYN-KP-0022,meropenem,Carbapenems,Broth dilution (MIC),32,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00921,SYN-KP-0023,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),20,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00922,SYN-KP-0023,ampicillin,Penicillins,Broth dilution (MIC),4,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00923,SYN-KP-0023,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),29,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00924,SYN-KP-0023,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),16,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00925,SYN-KP-0023,meropenem,Carbapenems,Disk diffusion,,mm,R,,,2022,SYN-LAB-01
+SYN-AST-00926,SYN-KP-0024,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00927,SYN-KP-0024,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00928,SYN-KP-0024,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-00929,SYN-KP-0024,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00930,SYN-KP-0024,meropenem,Carbapenems,Broth dilution (MIC),13,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00931,SYN-KP-0025,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00932,SYN-KP-0025,ampicillin,Penicillins,Broth dilution (MIC),20,mg/L,S,,2023,2020,SYN-LAB-01
+SYN-AST-00933,SYN-KP-0025,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),31,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00934,SYN-KP-0025,tetracycline,Tetracyclines,Broth dilution (MIC),23,mg/L,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00935,SYN-KP-0025,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),3,mg/L,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00936,SYN-KP-0025,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00937,SYN-KP-0025,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-00938,SYN-KP-0025,meropenem,Carbapenems,Broth dilution (MIC),32,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00939,SYN-KP-0026,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00940,SYN-KP-0026,ampicillin,Penicillins,Broth dilution (MIC),32,mg/L,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00941,SYN-KP-0026,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),32,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00942,SYN-KP-0026,meropenem,Carbapenems,Broth dilution (MIC),18,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-00943,SYN-KP-0027,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),92,mg/L,S,,2023,2019,SYN-LAB-01
+SYN-AST-00944,SYN-KP-0027,ampicillin,Penicillins,Broth dilution (MIC),7,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00945,SYN-KP-0027,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00946,SYN-KP-0027,meropenem,Carbapenems,Broth dilution (MIC),24,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00947,SYN-KP-0028,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00948,SYN-KP-0028,ampicillin,Penicillins,Broth dilution (MIC),4,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00949,SYN-KP-0028,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),9,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00950,SYN-KP-0028,tetracycline,Tetracyclines,Broth dilution (MIC),20,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00951,SYN-KP-0028,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),22,mg/L,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-00952,SYN-KP-0028,meropenem,Carbapenems,Broth dilution (MIC),9,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00953,SYN-KP-0029,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00954,SYN-KP-0029,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00955,SYN-KP-0029,tetracycline,Tetracyclines,Broth dilution (MIC),28,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-00956,SYN-KP-0029,gentamicin,Aminoglycosides,Broth dilution (MIC),7,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00957,SYN-KP-0029,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),16,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00958,SYN-KP-0029,meropenem,Carbapenems,Broth dilution (MIC),5,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00959,SYN-KP-0030,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00960,SYN-KP-0030,ampicillin,Penicillins,Disk diffusion,,mm,S,,2023,2020,SYN-LAB-01
+SYN-AST-00961,SYN-KP-0030,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),20,mg/L,R,EUCAST,,2023,SYN-LAB-01
+SYN-AST-00962,SYN-KP-0030,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),28,mg/L,R,,2023,2019,SYN-LAB-01
+SYN-AST-00963,SYN-KP-0030,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),29,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00964,SYN-KP-0030,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00965,SYN-KP-0031,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),80,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00966,SYN-KP-0031,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00967,SYN-KP-0031,meropenem,Carbapenems,Broth dilution (MIC),12,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-00968,SYN-KP-0032,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00969,SYN-KP-0032,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-00970,SYN-KP-0032,tetracycline,Tetracyclines,Broth dilution (MIC),21,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00971,SYN-KP-0032,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),23,mg/L,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-00972,SYN-KP-0032,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00973,SYN-KP-0032,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),5,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00974,SYN-KP-0032,meropenem,Carbapenems,Broth dilution (MIC),13,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00975,SYN-KP-0033,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),4,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00976,SYN-KP-0033,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00977,SYN-KP-0033,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00978,SYN-KP-0033,meropenem,Carbapenems,Broth dilution (MIC),24,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-00979,SYN-KP-0034,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),12,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-00980,SYN-KP-0034,ampicillin,Penicillins,Broth dilution (MIC),11,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-00981,SYN-KP-0034,tetracycline,Tetracyclines,Disk diffusion,,mm,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-00982,SYN-KP-0034,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00983,SYN-KP-0034,gentamicin,Aminoglycosides,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00984,SYN-KP-0034,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),21,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00985,SYN-KP-0034,meropenem,Carbapenems,Broth dilution (MIC),14,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00986,SYN-KP-0035,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),72,mg/L,S,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-00987,SYN-KP-0035,ampicillin,Penicillins,Broth dilution (MIC),29,mg/L,S,EUCAST,2023,2023,SYN-LAB-01
+SYN-AST-00988,SYN-KP-0035,tetracycline,Tetracyclines,Broth dilution (MIC),13,mg/L,R,CLSI,,2024,SYN-LAB-01
+SYN-AST-00989,SYN-KP-0035,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),29,mg/L,S,EUCAST,2023,2022,SYN-LAB-01
+SYN-AST-00990,SYN-KP-0035,gentamicin,Aminoglycosides,Broth dilution (MIC),25,mg/L,R,CLSI,,2020,SYN-LAB-01
+SYN-AST-00991,SYN-KP-0035,cefotaxime,Third-generation cephalosporins,Broth dilution (MIC),5,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-00992,SYN-KP-0035,meropenem,Carbapenems,Broth dilution (MIC),24,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-00993,SYN-KP-0036,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-00994,SYN-KP-0036,ampicillin,Penicillins,Broth dilution (MIC),11,mg/L,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-00995,SYN-KP-0036,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-00996,SYN-KP-0036,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-00997,SYN-KP-0036,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-00998,SYN-KP-0036,meropenem,Carbapenems,Broth dilution (MIC),3,mg/L,S,,2023,2024,SYN-LAB-01
+SYN-AST-00999,SYN-KP-0037,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),68,mg/L,S,,2023,2022,SYN-LAB-01
+SYN-AST-01000,SYN-KP-0037,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-01001,SYN-KP-0037,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-01002,SYN-KP-0037,tetracycline,Tetracyclines,Broth dilution (MIC),32,mg/L,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-01003,SYN-KP-0037,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-01004,SYN-KP-0037,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-01005,SYN-KP-0038,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2019,SYN-LAB-01
+SYN-AST-01006,SYN-KP-0038,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-01007,SYN-KP-0038,meropenem,Carbapenems,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-01008,SYN-KP-0039,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-01009,SYN-KP-0039,ampicillin,Penicillins,Disk diffusion,,mm,R,CLSI,2023,2022,SYN-LAB-01
+SYN-AST-01010,SYN-KP-0039,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,,,2023,SYN-LAB-01
+SYN-AST-01011,SYN-KP-0039,tetracycline,Tetracyclines,Broth dilution (MIC),21,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-01012,SYN-KP-0039,meropenem,Carbapenems,Broth dilution (MIC),4,mg/L,S,,,2019,SYN-LAB-01
+SYN-AST-01013,SYN-KP-0040,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),84,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-01014,SYN-KP-0040,ampicillin,Penicillins,Broth dilution (MIC),30,mg/L,R,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-01015,SYN-KP-0040,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-01016,SYN-KP-0040,tetracycline,Tetracyclines,Broth dilution (MIC),22,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-01017,SYN-KP-0040,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),32,mg/L,S,EUCAST,,2019,SYN-LAB-01
+SYN-AST-01018,SYN-KP-0040,meropenem,Carbapenems,Broth dilution (MIC),2,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-01019,SYN-KP-0041,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2022,SYN-LAB-01
+SYN-AST-01020,SYN-KP-0041,ampicillin,Penicillins,Broth dilution (MIC),17,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-01021,SYN-KP-0041,ciprofloxacin,Fluoroquinolones,Broth dilution (MIC),24,mg/L,S,CLSI,,2021,SYN-LAB-01
+SYN-AST-01022,SYN-KP-0041,tetracycline,Tetracyclines,Broth dilution (MIC),4,mg/L,S,CLSI,2023,2020,SYN-LAB-01
+SYN-AST-01023,SYN-KP-0041,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-01024,SYN-KP-0041,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),22,mg/L,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-01025,SYN-KP-0041,meropenem,Carbapenems,Disk diffusion,,mm,S,,,2024,SYN-LAB-01
+SYN-AST-01026,SYN-KP-0042,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-01027,SYN-KP-0042,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2023,SYN-LAB-01
+SYN-AST-01028,SYN-KP-0042,meropenem,Carbapenems,Broth dilution (MIC),9,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-01029,SYN-KP-0043,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,,2023,2023,SYN-LAB-01
+SYN-AST-01030,SYN-KP-0043,ampicillin,Penicillins,Broth dilution (MIC),19,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-01031,SYN-KP-0043,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2020,SYN-LAB-01
+SYN-AST-01032,SYN-KP-0043,meropenem,Carbapenems,Broth dilution (MIC),12,mg/L,S,EUCAST,2023,2021,SYN-LAB-01
+SYN-AST-01033,SYN-KP-0044,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),104,mg/L,R,,,2024,SYN-LAB-01
+SYN-AST-01034,SYN-KP-0044,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2021,SYN-LAB-01
+SYN-AST-01035,SYN-KP-0044,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-01036,SYN-KP-0044,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),29,mg/L,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-01037,SYN-KP-0044,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-01038,SYN-KP-0044,meropenem,Carbapenems,Broth dilution (MIC),17,mg/L,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-01039,SYN-KP-0045,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),24,mg/L,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-01040,SYN-KP-0045,ampicillin,Penicillins,Broth dilution (MIC),8,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-01041,SYN-KP-0045,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-01042,SYN-KP-0045,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,,2019,SYN-LAB-01
+SYN-AST-01043,SYN-KP-0045,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),3,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-01044,SYN-KP-0045,meropenem,Carbapenems,Broth dilution (MIC),21,mg/L,S,CLSI,,2024,SYN-LAB-01
+SYN-AST-01045,SYN-KP-0046,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),96,mg/L,R,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-01046,SYN-KP-0046,ampicillin,Penicillins,Broth dilution (MIC),14,mg/L,S,CLSI,,2019,SYN-LAB-01
+SYN-AST-01047,SYN-KP-0046,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-01048,SYN-KP-0046,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,EUCAST,2023,2020,SYN-LAB-01
+SYN-AST-01049,SYN-KP-0046,meropenem,Carbapenems,Broth dilution (MIC),25,mg/L,S,,,2022,SYN-LAB-01
+SYN-AST-01050,SYN-KP-0047,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,S,,2023,2024,SYN-LAB-01
+SYN-AST-01051,SYN-KP-0047,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),16,mg/L,R,EUCAST,,2024,SYN-LAB-01
+SYN-AST-01052,SYN-KP-0047,ampicillin,Penicillins,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-01053,SYN-KP-0047,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,,2023,2024,SYN-LAB-01
+SYN-AST-01054,SYN-KP-0047,tetracycline,Tetracyclines,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-01055,SYN-KP-0047,trimethoprim,Diaminopyrimidines,Broth dilution (MIC),13,mg/L,S,EUCAST,2023,2024,SYN-LAB-01
+SYN-AST-01056,SYN-KP-0047,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,,,2024,SYN-LAB-01
+SYN-AST-01057,SYN-KP-0047,meropenem,Carbapenems,Disk diffusion,,mm,S,EUCAST,,2023,SYN-LAB-01
+SYN-AST-01058,SYN-KP-0048,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),24,mg/L,S,,2023,2024,SYN-LAB-01
+SYN-AST-01059,SYN-KP-0048,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,CLSI,,2021,SYN-LAB-01
+SYN-AST-01060,SYN-KP-0048,ampicillin,Penicillins,Broth dilution (MIC),6,mg/L,S,,,2020,SYN-LAB-01
+SYN-AST-01061,SYN-KP-0048,sulfamethoxazole,Sulfonamides,Broth dilution (MIC),10,mg/L,R,,2023,2021,SYN-LAB-01
+SYN-AST-01062,SYN-KP-0048,trimethoprim,Diaminopyrimidines,Disk diffusion,,mm,S,EUCAST,,2024,SYN-LAB-01
+SYN-AST-01063,SYN-KP-0048,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,S,CLSI,2023,2024,SYN-LAB-01
+SYN-AST-01064,SYN-KP-0048,meropenem,Carbapenems,Broth dilution (MIC),26,mg/L,S,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-01065,SYN-KP-0049,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),88,mg/L,R,EUCAST,2023,2019,SYN-LAB-01
+SYN-AST-01066,SYN-KP-0049,ampicillin,Penicillins,Disk diffusion,,mm,S,CLSI,,2022,SYN-LAB-01
+SYN-AST-01067,SYN-KP-0049,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-01068,SYN-KP-0049,sulfamethoxazole,Sulfonamides,Disk diffusion,,mm,S,CLSI,,2020,SYN-LAB-01
+SYN-AST-01069,SYN-KP-0049,gentamicin,Aminoglycosides,Broth dilution (MIC),10,mg/L,S,EUCAST,,2022,SYN-LAB-01
+SYN-AST-01070,SYN-KP-0049,cefotaxime,Third-generation cephalosporins,Disk diffusion,,mm,R,EUCAST,,2020,SYN-LAB-01
+SYN-AST-01071,SYN-KP-0049,meropenem,Carbapenems,Disk diffusion,,mm,R,CLSI,2023,2019,SYN-LAB-01
+SYN-AST-01072,SYN-KP-0050,ceftriaxone,Third-generation cephalosporins,Disk diffusion,,mm,R,,2023,2023,SYN-LAB-01
+SYN-AST-01073,SYN-KP-0050,ampicillin,Penicillins,Broth dilution (MIC),18,mg/L,S,EUCAST,,2020,SYN-LAB-01
+SYN-AST-01074,SYN-KP-0050,ciprofloxacin,Fluoroquinolones,Disk diffusion,,mm,S,CLSI,2023,2021,SYN-LAB-01
+SYN-AST-01075,SYN-KP-0050,tetracycline,Tetracyclines,Disk diffusion,,mm,R,EUCAST,,2022,SYN-LAB-01
+SYN-AST-01076,SYN-KP-0050,meropenem,Carbapenems,Broth dilution (MIC),16,mg/L,R,,2023,2019,SYN-LAB-01
+SYN-AST-UNMATCHED-1,SYN-UNMATCHED-001,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2023,SYN-LAB-EXT
+SYN-AST-UNMATCHED-2,SYN-UNMATCHED-002,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2023,SYN-LAB-EXT
+SYN-AST-UNMATCHED-3,SYN-UNMATCHED-003,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2023,SYN-LAB-EXT
+SYN-AST-UNMATCHED-4,SYN-UNMATCHED-004,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2023,SYN-LAB-EXT
+SYN-AST-UNMATCHED-5,SYN-UNMATCHED-005,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2023,SYN-LAB-EXT
+SYN-AST-UNMATCHED-6,SYN-UNMATCHED-006,ceftriaxone,Third-generation cephalosporins,Broth dilution (MIC),8,mg/L,R,CLSI,2023,2023,SYN-LAB-EXT

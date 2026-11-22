@@ -1,0 +1,143 @@
+{
+  "datasetType": "SYNTHETIC",
+  "generatorVersion": "1.0.0",
+  "seed": 20261122,
+  "generatedAt": "2026-11-22T19:39:15.570Z",
+  "scope": {
+    "antibiotic": "ceftriaxone",
+    "note": "Benchmark expectations apply when the engine is filtered to ceftriaxone."
+  },
+  "injectedScenarios": [
+    {
+      "scenario": "cr_esbl",
+      "expected": "concordant_resistant",
+      "isolates": 34,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "cr_carba",
+      "expected": "concordant_resistant",
+      "isolates": 18,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "cs_plain",
+      "expected": "concordant_susceptible",
+      "isolates": 82,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "gene_pos_s",
+      "expected": "candidate_gene_positive_phenotype_susceptible",
+      "isolates": 7,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "r_no_det",
+      "expected": "candidate_phenotype_resistant_no_known_determinant",
+      "isolates": 41,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "unknown_gene_r",
+      "expected": "candidate_phenotype_resistant_no_known_determinant",
+      "isolates": 3,
+      "drug": "ceftriaxone",
+      "note": "Unknown gene association; classified as no-known-determinant, not as proof of absence."
+    },
+    {
+      "scenario": "unresolved_s",
+      "expected": "indeterminate",
+      "isolates": 6,
+      "drug": "ceftriaxone",
+      "note": "Generic TEM/SHV must not be treated as a 3GC determinant."
+    },
+    {
+      "scenario": "intermediate",
+      "expected": "indeterminate",
+      "isolates": 3,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "missing_category",
+      "expected": "excluded_missing_ast_category",
+      "isolates": 5,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "conflict",
+      "expected": "excluded_conflicting_ast_categories",
+      "isolates": 6,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "missing_panel",
+      "expected": "excluded_missing_genomic_panel",
+      "isolates": 7,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "cs_duplicate",
+      "expected": "duplicate_deduplicated_not_excluded",
+      "isolates": 8,
+      "drug": "ceftriaxone"
+    },
+    {
+      "scenario": "unmatched_ast",
+      "expected": "excluded_unmatched_ast_isolate",
+      "isolates": 6,
+      "drug": "ceftriaxone"
+    }
+  ],
+  "expected": {
+    "ceftriaxone": {
+      "eligiblePairs": 193,
+      "classifications": {
+        "concordant_resistant": 52,
+        "concordant_susceptible": 90,
+        "candidate_gene_positive_phenotype_susceptible": 7,
+        "candidate_phenotype_resistant_no_known_determinant": 44
+      },
+      "indeterminatePairs": 9,
+      "exclusionsByReason": {
+        "unmatched_ast_isolate": 6,
+        "missing_ast_category": 5,
+        "conflicting_ast_categories": 12,
+        "missing_genomic_panel": 7,
+        "intermediate_or_nonbinary_category": 3,
+        "unresolved_determinant_variant": 6
+      },
+      "astRows": 240,
+      "uniquePairs": 226,
+      "duplicateRows": 14,
+      "agreement": 0.7357512953367875
+    },
+    "escherichia_coli_ceftriaxone": {
+      "eligiblePairs": 147,
+      "classifications": {
+        "concordant_resistant": 34,
+        "concordant_susceptible": 70,
+        "candidate_gene_positive_phenotype_susceptible": 5,
+        "candidate_phenotype_resistant_no_known_determinant": 38
+      },
+      "indeterminatePairs": 9,
+      "exclusionsByReason": {
+        "unmatched_ast_isolate": 6,
+        "missing_ast_category": 5,
+        "conflicting_ast_categories": 8,
+        "missing_genomic_panel": 5,
+        "intermediate_or_nonbinary_category": 3,
+        "unresolved_determinant_variant": 6
+      },
+      "astRows": 188,
+      "uniquePairs": 176,
+      "duplicateRows": 12,
+      "agreement": 0.7074829931972789
+    }
+  },
+  "limitations": [
+    "Synthetic data; scenario probabilities were injected deliberately and are not epidemiological estimates.",
+    "Only a subset of resistance mechanisms is represented.",
+    "No clinical validation is implied."
+  ]
+}

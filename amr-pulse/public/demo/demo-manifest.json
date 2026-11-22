@@ -1,0 +1,39 @@
+{
+  "datasetName": "AMR PULSE synthetic demonstration dataset",
+  "datasetType": "SYNTHETIC",
+  "generatorVersion": "1.0.0",
+  "generatorScript": "scripts/generate-demo-dataset.ts",
+  "seed": 20261122,
+  "generatedAt": "2026-11-22T19:39:15.572Z",
+  "label": "Synthetic demonstration data — not real isolates, patients, hospitals or surveillance findings.",
+  "counts": {
+    "isolates": 220,
+    "escherichiaColi": 170,
+    "klebsiellaPneumoniae": 50,
+    "geneCalls": 367,
+    "astRows": 1082,
+    "astCeftriaxoneRows": 240,
+    "evidenceMappings": 36
+  },
+  "files": [
+    "demo-isolates.csv",
+    "demo-gene-calls.csv",
+    "demo-ast-results.csv",
+    "gene-drug-evidence.csv",
+    "demo-manifest.json",
+    "data-dictionary.md"
+  ],
+  "intendedUse": [
+    "Demonstrate the AMR PULSE import, validation, matching, analysis and reporting workflow.",
+    "Software benchmark with injected, known scenarios (see src/server/fixtures/demo-benchmark-truth.json)."
+  ],
+  "limitations": [
+    "Synthetic records must never be pooled with real research data.",
+    "Gene–drug mappings are limited to selected, curated examples and are not a complete resistance catalogue.",
+    "Scenario counts are deliberately balanced and are not prevalence estimates."
+  ],
+  "provenance": {
+    "source": "Deterministic generator",
+    "licence": "MIT (project code); synthetic content"
+  }
+}
