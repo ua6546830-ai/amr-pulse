@@ -4,23 +4,24 @@ import { expect, test } from "@playwright/test";
 test.describe("AMR PULSE demo workspace", () => {
   test("load demo, audit quality, analyse, investigate, build and download a report", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Genotype–phenotype discordance");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("Understand the gaps");
 
-    await page.getByRole("link", { name: "Open demo" }).click();
+    await page.getByRole("link", { name: "Explore Research Workspace" }).first().click();
     await expect(page).toHaveURL(/\/dashboard$/);
     await expect(page.getByRole("heading", { name: "Research overview" })).toBeVisible();
     await expect(page.getByText("Synthetic demonstration dataset — not research evidence")).toBeVisible();
     await expect(page.getByText("220 isolates", { exact: false }).first()).toBeVisible();
 
-    await page.getByRole("link", { name: "Data Quality", exact: true }).click();
+    await page.getByRole("link", { name: "Data quality", exact: true }).click();
     await expect(page).toHaveURL(/\/quality$/);
     await expect(page.getByRole("heading", { name: "Data quality audit" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Issue register" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Identifier matching review" })).toBeVisible();
 
-    await page.getByRole("link", { name: "Geno–Pheno Analysis", exact: true }).click();
-    await expect(page).toHaveURL(/\/analysis$/);
-    await expect(page.getByRole("heading", { name: "Genotype–phenotype comparison" })).toBeVisible();
+    await page.getByRole("link", { name: "Overview", exact: true }).click();
+    await page.getByRole("link", { name: "Open analysis" }).click();
+    await expect(page).toHaveURL(/\/analysis/);
+    await expect(page.getByRole("heading", { name: "Analysis results" })).toBeVisible();
     await expect(page.getByText("eligible pairs", { exact: false }).first()).toBeVisible();
 
     await page.getByLabel("Organism stratum").selectOption("Escherichia coli");
@@ -30,7 +31,7 @@ test.describe("AMR PULSE demo workspace", () => {
     await expect(page).toHaveURL(/antibiotic=ceftriaxone/);
     await expect(page.getByText("147", { exact: false }).first()).toBeVisible();
 
-    await page.getByRole("link", { name: "Discordance", exact: true }).click();
+    await page.getByRole("link", { name: "Findings", exact: true }).click();
     await expect(page).toHaveURL(/\/investigations$/);
     await expect(page.getByRole("heading", { name: "Discordance investigation" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Triage queue" })).toBeVisible();
@@ -38,9 +39,9 @@ test.describe("AMR PULSE demo workspace", () => {
     await expect(page.getByText("Reviewing pair")).toBeVisible();
     await expect(page.getByRole("button", { name: "Save note" })).toBeVisible();
 
-    await page.getByRole("link", { name: "Research Reports", exact: true }).click();
+    await page.getByRole("link", { name: "Reports", exact: true }).click();
     await expect(page).toHaveURL(/\/reports$/);
-    await expect(page.getByRole("heading", { name: "Research report builder" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Research reports" })).toBeVisible();
     await expect(page.locator("#report-preview")).toContainText("SYNTHETIC");
 
     const downloadPromise = page.waitForEvent("download");
@@ -52,6 +53,24 @@ test.describe("AMR PULSE demo workspace", () => {
     const contents = await readFile(filePath!, "utf8");
     expect(contents).toContain("Data and provenance");
     expect(contents).toContain("SYNTHETIC");
+  });
+
+  test("guided demonstration labels synthetic data and walks five steps", async ({ page }) => {
+    await page.goto("/demo");
+    await expect(page.getByRole("heading", { name: "Guided demonstration" })).toBeVisible();
+    await expect(page.getByText("Demonstration dataset · synthetic data").first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "The research problem" })).toBeVisible();
+    await expect(page.getByText("01 / 05")).toBeVisible();
+
+    await page.getByRole("button", { name: "Next step" }).click();
+    await expect(page.getByRole("heading", { name: "Upload and validation" })).toBeVisible();
+    await page.getByRole("button", { name: "Next step" }).click();
+    await expect(page.getByRole("heading", { name: "Genotype–phenotype comparison" })).toBeVisible();
+    await page.getByRole("button", { name: "Next step" }).click();
+    await expect(page.getByRole("heading", { name: "Discovering discordant records" })).toBeVisible();
+    await page.getByRole("button", { name: "Next step" }).click();
+    await expect(page.getByRole("heading", { name: "AI-supported investigation and reporting" })).toBeVisible();
+    await expect(page.getByText("05 / 05")).toBeVisible();
   });
 
   test("export endpoints carry provenance and deterministic results", async ({ request }) => {
