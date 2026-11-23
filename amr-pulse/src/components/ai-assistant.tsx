@@ -3,6 +3,7 @@
 import * as React from "react";
 import {
   AlertTriangle,
+  ArrowUpRight,
   BookOpen,
   Bot,
   CheckCircle2,
@@ -20,7 +21,6 @@ import { MarkdownLite } from "@/components/markdown-lite";
 import { Alert } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
@@ -214,25 +214,216 @@ export function AiAssistant({
   }
 
   return (
-    <div className="space-y-4">
-      <Card>
-        <CardHeader>
-          <div>
-            <CardTitle className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-brand-600" /> Ask the research assistant
-            </CardTitle>
-            <p className="mt-0.5 text-xs leading-relaxed text-muted">
-              The assistant can only read validated tool outputs. It cannot change mappings, exclusions, classifications or statistics.
-            </p>
+    <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-5">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-ai-soft text-ai">
+            <Sparkles className="h-4 w-4" />
           </div>
-          <Badge variant={aiConfigured ? "blue" : "amber"}>{aiConfigured ? `AI · ${model ?? "model"}` : "Deterministic mode"}</Badge>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {!aiConfigured ? (
-            <Alert variant="warning" title="No AI provider configured">
-              Answers are assembled deterministically from read-only tools. {aiReason ?? "Set AI_PROVIDER, AI_API_KEY and AI_MODEL to enable model-written summaries."}
-            </Alert>
-          ) : null}
+          <div>
+            <p className="text-[13px] font-semibold text-ink">Research assistant</p>
+            <p className="text-[10.5px] text-muted">Read-only tools · evidence cards · verified citations</p>
+          </div>
+        </div>
+        <Badge variant={aiConfigured ? "blue" : "amber"}>{aiConfigured ? `AI · ${model ?? "model"}` : "Deterministic fallback"}</Badge>
+      </div>
+
+      {!aiConfigured ? (
+        <div className="border-b border-line bg-warn-50/60 px-4 py-2.5 text-[11px] leading-relaxed text-warn-700 sm:px-5">
+          <span className="font-medium">No AI provider configured.</span> Answers are assembled deterministically from the same read-only tools; nothing is invented.{" "}
+          {aiReason ?? "Set AI_PROVIDER, AI_API_KEY and AI_MODEL to enable model-written summaries."}
+        </div>
+      ) : null}
+
+      <div className="max-h-[600px] min-h-[420px] space-y-5 overflow-y-auto bg-canvas/30 px-3 py-4 sm:px-5">
+        {runs.length === 0 ? (
+          <div className="flex min-h-[380px] flex-col items-center justify-center text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ai-soft text-ai">
+              <Bot className="h-5 w-5" />
+            </div>
+            <p className="mt-3 text-[15px] font-semibold text-ink">Ask about the current analysis</p>
+            <p className="mt-1 max-w-md text-[11.5px] leading-relaxed text-muted">
+              The assistant reads only validated pipeline outputs. It cannot change mappings, exclusions, classifications or statistics — and it never writes citations that are not in the verified library.
+            </p>
+            <div className="mt-4 grid w-full max-w-xl gap-1.5 sm:grid-cols-2">
+              {suggestions.map((suggestion) => (
+                <button
+                  key={suggestion}
+                  type="button"
+                  onClick={() => void ask(suggestion)}
+                  disabled={running}
+                  className="group flex items-center justify-between gap-2 rounded-xl border border-line bg-white px-3 py-2.5 text-left text-[11.5px] text-ink transition-colors hover:border-brand-200 hover:bg-brand-50/40 disabled:opacity-50"
+                >
+                  <span>{suggestion}</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-700" />
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {runs.map((run) => (
+          <div key={run.id} className="space-y-2.5">
+            <div className="flex justify-end">
+              <div className="max-w-[85%] rounded-2xl rounded-br-md bg-navy-900 px-3.5 py-2.5 text-[12px] leading-relaxed text-white">
+                {run.question}
+              </div>
+            </div>
+
+            <div className="flex items-start gap-2.5">
+              <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-ai-soft text-ai">
+                <Bot className="h-3.5 w-3.5" />
+              </div>
+              <div className={cn("min-w-0 flex-1 rounded-2xl rounded-tl-md border border-line bg-white p-3.5", run.status === "failed" && "border-danger-100")}>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {run.mode ? <Badge variant={run.mode === "ai" ? "blue" : "neutral"}>{run.mode === "ai" ? "AI mode" : "Deterministic"}</Badge> : null}
+                  {run.status === "running" ? (
+                    <Badge variant="cyan">
+                      <Loader2 className="h-3 w-3 animate-spin" /> Running
+                    </Badge>
+                  ) : null}
+                  {run.final ? (
+                    <span className="text-[10px] text-muted">
+                      {(run.final.elapsedMs / 1000).toFixed(1)} s · run {run.final.runId}
+                    </span>
+                  ) : null}
+                </div>
+
+                {run.error ? (
+                  <Alert variant="danger" title="Run failed" className="mt-2">
+                    {run.error}
+                  </Alert>
+                ) : null}
+
+                {run.status === "running" && !run.final ? (
+                  <div className="mt-2 space-y-2" aria-live="polite">
+                    <p className="flex items-center gap-2 text-[11px] text-muted">
+                      <Wrench className="h-3.5 w-3.5" /> Reading validated outputs…
+                    </p>
+                    <div className="space-y-1.5">
+                      <div className="h-2.5 w-11/12 animate-pulse rounded bg-line/70" />
+                      <div className="h-2.5 w-4/5 animate-pulse rounded bg-line/70" />
+                      <div className="h-2.5 w-2/3 animate-pulse rounded bg-line/50" />
+                    </div>
+                  </div>
+                ) : null}
+
+                {run.notices.map((notice, index) => (
+                  <Alert key={`${run.id}-notice-${index}`} variant="info" className="mt-2">
+                    {notice}
+                  </Alert>
+                ))}
+
+                {run.final ? (
+                  <div className="mt-2 space-y-3">
+                    <MarkdownLite text={run.final.answer} />
+
+                    {run.final.evidenceCards.length > 0 ? (
+                      <div>
+                        <p className="mono-label mb-1.5">Evidence cards · tool-derived</p>
+                        <div className="grid gap-1.5 sm:grid-cols-2">
+                          {run.final.evidenceCards.slice(0, 6).map((card, index) => (
+                            <div key={`${card.name}-${index}`} className="rounded-lg border border-line bg-canvas/50 p-2.5">
+                              <p className="flex items-center gap-1.5 font-mono text-[10.5px] font-medium text-ink">
+                                <Wrench className="h-3 w-3 text-muted" /> {card.name}
+                              </p>
+                              <p className="mt-1 text-[11px] leading-snug text-ink/80">{card.summary}</p>
+                              <p className="mt-1 text-[9.5px] text-muted">Source: {card.source}</p>
+                              {card.citations.length > 0 ? (
+                                <p className="mt-1 font-mono text-[9.5px] text-brand-700">{card.citations.join(" · ")}</p>
+                              ) : null}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
+
+                    {run.final.citations.length > 0 ? (
+                      <div>
+                        <p className="mono-label mb-1.5">Verified citations</p>
+                        <ul className="space-y-1">
+                          {run.final.citations.map((citation) => (
+                            <li key={citation.id} className="flex items-start gap-1.5 text-[11px] text-ink/80">
+                              <BookOpen className="mt-0.5 h-3 w-3 shrink-0 text-muted" />
+                              <a href={citation.url} target="_blank" rel="noreferrer" className="hover:text-brand-700 hover:underline">
+                                {citation.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : (
+                      <p className="text-[10.5px] text-muted">No verified citation identifiers were attached to this answer.</p>
+                    )}
+
+                    {run.final.limitations.length > 0 ? (
+                      <div className="rounded-lg border border-warn-100 bg-warn-50/60 p-2.5">
+                        <p className="flex items-center gap-1.5 text-[10.5px] font-semibold text-warn-700">
+                          <AlertTriangle className="h-3.5 w-3.5" /> Limitations to carry into any write-up
+                        </p>
+                        <ul className="mt-1 ml-4 list-disc space-y-0.5 text-[11px] leading-relaxed text-ink/80">
+                          {run.final.limitations.map((limitation, index) => (
+                            <li key={`${run.id}-lim-${index}`}>{limitation}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <Button variant="secondary" size="sm" onClick={() => void copyAnswer(run)}>
+                        {copied === run.id ? <CheckCircle2 className="h-3.5 w-3.5 text-ok-600" /> : <Copy className="h-3.5 w-3.5" />}
+                        {copied === run.id ? "Copied" : "Copy answer"}
+                      </Button>
+                      <Button variant="secondary" size="sm" onClick={() => saveToReports(run)}>
+                        {savedFlash === run.id ? <CheckCircle2 className="h-3.5 w-3.5 text-ok-600" /> : <Save className="h-3.5 w-3.5" />}
+                        {savedFlash === run.id ? "Saved to Reports" : "Save draft"}
+                      </Button>
+                      <Button variant="ghost" size="sm" onClick={() => regenerate(run)} disabled={running}>
+                        <RefreshCw className="h-3.5 w-3.5" /> Regenerate
+                      </Button>
+                      <span className="ml-auto inline-flex items-center gap-1 text-[9.5px] text-muted">
+                        <ShieldCheck className="h-3 w-3" /> No diagnosis, treatment or dosing advice
+                      </span>
+                    </div>
+                  </div>
+                ) : null}
+
+                {run.tools.length > 0 ? (
+                  <details className="group mt-2 rounded-lg border border-line bg-canvas/40">
+                    <summary className="flex cursor-pointer items-center gap-1.5 px-2.5 py-2 text-[10px] text-muted">
+                      <Wrench className="h-3 w-3" /> {run.tools.length} read-only tool {run.tools.length === 1 ? "call" : "calls"}
+                      <span className="ml-auto group-open:hidden">Show</span>
+                      <span className="ml-auto hidden group-open:inline">Hide</span>
+                    </summary>
+                    <div className="grid gap-1.5 px-2.5 pb-2.5 sm:grid-cols-2">
+                      {run.tools.map((tool, index) => (
+                        <div key={`${tool.name}-${index}`} className="flex items-start gap-1.5 rounded-md border border-line bg-white px-2 py-1.5">
+                          {tool.status === "completed" ? (
+                            <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-ok-600" />
+                          ) : (
+                            <XCircle className="mt-0.5 h-3 w-3 shrink-0 text-danger-600" />
+                          )}
+                          <div className="min-w-0">
+                            <p className="truncate font-mono text-[10px] font-medium text-ink">{tool.name}</p>
+                            <p className="text-[10px] leading-snug text-muted">{tool.summary}</p>
+                            <p className="mt-0.5 text-[9.5px] text-slate-400">
+                              {tool.source} · {tool.durationMs} ms
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        ))}
+        <div ref={bottomRef} />
+      </div>
+
+      <div className="border-t border-line bg-white p-3 sm:p-4">
+        <div className="rounded-2xl border border-line bg-white px-2.5 py-2 focus-within:border-brand-600 focus-within:ring-2 focus-within:ring-brand-600/15">
           <Textarea
             aria-label="Question for the research assistant"
             value={question}
@@ -243,13 +434,14 @@ export function AiAssistant({
                 void ask(question);
               }
             }}
-            rows={3}
+            rows={2}
             maxLength={2000}
-            placeholder="e.g. Which isolates have candidate discordance for ceftriaxone, and what should I check first?"
+            placeholder="Ask about discordance, resistance mechanisms, data quality or methods…"
             disabled={running}
+            className="min-h-[52px] resize-none border-0 px-1 py-1 text-[12.5px] shadow-none focus:ring-0"
           />
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="text-[11px] text-muted">Ctrl/⌘ + Enter to send · {question.length}/2000</p>
+          <div className="flex flex-wrap items-center justify-between gap-2 px-1">
+            <p className="text-[10px] text-muted">Ctrl/⌘ + Enter · {question.length}/2000 · do not enter patient identifiers</p>
             <div className="flex items-center gap-2">
               {running ? (
                 <Button variant="secondary" size="sm" onClick={() => abortRef.current?.abort()}>
@@ -261,182 +453,8 @@ export function AiAssistant({
               </Button>
             </div>
           </div>
-          <div className="flex flex-wrap gap-1.5">
-            {suggestions.map((suggestion) => (
-              <button
-                key={suggestion}
-                type="button"
-                onClick={() => void ask(suggestion)}
-                disabled={running}
-                className="rounded-full border border-line bg-canvas px-3 py-1 text-left text-[11px] text-muted transition-colors hover:border-brand-200 hover:bg-brand-50 hover:text-brand-700 disabled:opacity-50"
-              >
-                {suggestion}
-              </button>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {runs.length === 0 ? (
-        <Card>
-          <CardContent className="flex flex-col items-center gap-2 py-12 text-center">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-line bg-canvas">
-              <Bot className="h-5 w-5 text-muted" />
-            </div>
-            <p className="text-sm font-medium text-ink">No questions yet</p>
-            <p className="max-w-lg text-xs leading-relaxed text-muted">
-              Every answer exposes its tool calls, evidence cards and verified citation IDs. Anything the model adds beyond tool output is labelled as interpretation.
-            </p>
-          </CardContent>
-        </Card>
-      ) : null}
-
-      {runs.map((run) => (
-        <Card key={run.id} className={cn(run.status === "failed" && "border-danger-100")}>
-          <CardHeader className="items-start">
-            <div className="min-w-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">Question</p>
-              <p className="mt-1 text-[13px] font-medium text-ink">{run.question}</p>
-            </div>
-            <div className="flex shrink-0 items-center gap-1.5">
-              {run.mode ? <Badge variant={run.mode === "ai" ? "blue" : "neutral"}>{run.mode === "ai" ? "AI mode" : "Deterministic"}</Badge> : null}
-              {run.status === "running" ? (
-                <Badge variant="cyan">
-                  <Loader2 className="h-3 w-3 animate-spin" /> Running
-                </Badge>
-              ) : null}
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {run.tools.length > 0 ? (
-              <div className="space-y-1.5">
-                <p className="mono-label">Tool calls</p>
-                <div className="grid gap-1.5 sm:grid-cols-2">
-                  {run.tools.map((tool, index) => (
-                    <div key={`${tool.name}-${index}`} className="flex items-start gap-2 rounded-lg border border-line bg-canvas/60 px-2.5 py-2">
-                      {tool.status === "completed" ? (
-                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ok-600" />
-                      ) : (
-                        <XCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-danger-600" />
-                      )}
-                      <div className="min-w-0">
-                        <p className="truncate font-mono text-[11px] font-medium text-ink">{tool.name}</p>
-                        <p className="text-[11px] leading-snug text-muted">{tool.summary}</p>
-                        <p className="mt-0.5 text-[10px] text-slate-400">
-                          {tool.source} · {tool.durationMs} ms
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-
-            {run.notices.map((notice, index) => (
-              <Alert key={`${run.id}-notice-${index}`} variant="info">
-                {notice}
-              </Alert>
-            ))}
-
-            {run.error ? (
-              <Alert variant="danger" title="Run failed">
-                {run.error}
-              </Alert>
-            ) : null}
-
-            {run.status === "running" && !run.final ? (
-              <div className="flex items-center gap-2 text-xs text-muted">
-                <Wrench className="h-3.5 w-3.5" /> Running read-only tools and composing an answer…
-              </div>
-            ) : null}
-
-            {run.final ? (
-              <div className="space-y-4">
-                <div className="rounded-lg border border-line bg-white p-4">
-                  <div className="mb-2 flex items-center gap-2">
-                    <Badge variant={run.final.mode === "ai" ? "blue" : "neutral"}>
-                      {run.final.mode === "ai" ? "Source-backed AI summary" : "Deterministic summary"}
-                    </Badge>
-                    <span className="text-[10px] text-muted">
-                      {(run.final.elapsedMs / 1000).toFixed(1)} s · run {run.final.runId}
-                    </span>
-                  </div>
-                  <MarkdownLite text={run.final.answer} />
-                </div>
-
-                {run.final.evidenceCards.length > 0 ? (
-                  <div>
-                    <p className="mono-label mb-1.5">Evidence cards (tool-derived, authoritative)</p>
-                    <div className="grid gap-2 md:grid-cols-2">
-                      {run.final.evidenceCards.slice(0, 6).map((card, index) => (
-                        <div key={`${card.name}-${index}`} className="rounded-lg border border-line bg-canvas/50 p-3">
-                          <p className="flex items-center gap-1.5 font-mono text-[11px] font-medium text-ink">
-                            <Wrench className="h-3 w-3 text-muted" /> {card.name}
-                          </p>
-                          <p className="mt-1 text-[11.5px] leading-snug text-ink/80">{card.summary}</p>
-                          <p className="mt-1 text-[10px] text-muted">Source: {card.source}</p>
-                          {card.citations.length > 0 ? (
-                            <p className="mt-1 font-mono text-[10px] text-brand-700">{card.citations.join(" · ")}</p>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
-
-                {run.final.citations.length > 0 ? (
-                  <div>
-                    <p className="mono-label mb-1.5">Verified citations</p>
-                    <ul className="space-y-1">
-                      {run.final.citations.map((citation) => (
-                        <li key={citation.id} className="flex items-start gap-1.5 text-[11.5px] text-ink/80">
-                          <BookOpen className="mt-0.5 h-3 w-3 shrink-0 text-muted" />
-                          <a href={citation.url} target="_blank" rel="noreferrer" className="hover:text-brand-700 hover:underline">
-                            {citation.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : (
-                  <p className="text-[11px] text-muted">No verified citation identifiers were attached to this answer.</p>
-                )}
-
-                {run.final.limitations.length > 0 ? (
-                  <div className="rounded-lg border border-amber-100 bg-warn-50/60 p-3">
-                    <p className="flex items-center gap-1.5 text-[11px] font-semibold text-warn-600">
-                      <AlertTriangle className="h-3.5 w-3.5" /> Limitations to carry into any write-up
-                    </p>
-                    <ul className="mt-1 ml-4 list-disc space-y-0.5 text-[11.5px] text-ink/80">
-                      {run.final.limitations.map((limitation, index) => (
-                        <li key={`${run.id}-lim-${index}`}>{limitation}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-
-                <div className="flex flex-wrap items-center gap-2">
-                  <Button variant="secondary" size="sm" onClick={() => void copyAnswer(run)}>
-                    {copied === run.id ? <CheckCircle2 className="h-3.5 w-3.5 text-ok-600" /> : <Copy className="h-3.5 w-3.5" />}
-                    {copied === run.id ? "Copied" : "Copy answer"}
-                  </Button>
-                  <Button variant="secondary" size="sm" onClick={() => saveToReports(run)}>
-                    {savedFlash === run.id ? <CheckCircle2 className="h-3.5 w-3.5 text-ok-600" /> : <Save className="h-3.5 w-3.5" />}
-                    {savedFlash === run.id ? "Saved to Reports" : "Save draft to Reports"}
-                  </Button>
-                  <Button variant="ghost" size="sm" onClick={() => regenerate(run)} disabled={running}>
-                    <RefreshCw className="h-3.5 w-3.5" /> Regenerate
-                  </Button>
-                  <span className="ml-auto inline-flex items-center gap-1 text-[10px] text-muted">
-                    <ShieldCheck className="h-3 w-3" /> No diagnosis, treatment or dosing advice
-                  </span>
-                </div>
-              </div>
-            ) : null}
-          </CardContent>
-        </Card>
-      ))}
-      <div ref={bottomRef} />
+        </div>
+      </div>
     </div>
   );
 }

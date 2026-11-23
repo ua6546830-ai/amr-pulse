@@ -88,6 +88,7 @@ const SECTIONS = [
   { id: "exclusions", label: "Matching & exclusions", description: "Every exclusion reason with counts." },
   { id: "results", label: "Results", description: "Agreement, five-way classification, by-drug table." },
   { id: "discordance", label: "Candidate discordance", description: "Examples queued for human review." },
+  { id: "interpretation", label: "Interpretation", description: "What the numbers support — and what they do not." },
   { id: "quality", label: "Data quality", description: "Completeness, duplicates, standards, methods." },
   { id: "limitations", label: "Limitations", description: "Synthetic data, dependence, no clinical validation." },
   { id: "references", label: "References", description: "Verified library entries only." },
@@ -231,7 +232,23 @@ function buildMarkdown(options: {
     }
   }
 
-  if (section("quality", "7. Data quality")) {
+  if (section("interpretation", "7. Interpretation")) {
+    const agreement = data.summary.agreement;
+    push(
+      agreement.proportion === null
+        ? "Agreement was not estimable in this stratum because no pair met the inclusion rules."
+        : `In this synthetic cohort, ${formatPct(agreement.proportion)} of ${formatNumber(agreement.denominator)} eligible pairs agreed between determinant status and binary AST category.`,
+      "",
+      `The ${formatNumber(data.summary.candidateGenePositivePhenotypeSusceptible.numerator)} gene-positive/susceptible pairs and ${formatNumber(data.summary.candidatePhenotypeResistantNoKnownDeterminant.numerator)} resistant/no-known-determinant pairs are review prompts, not verdicts.`,
+      "",
+      "- Agreement is descriptive concordance. It is not diagnostic accuracy, clinical validity or a measure of laboratory error.",
+      "- Gene-positive/susceptible pairs may reflect gene expression, regulation, testing conditions, mixed breakpoints or an incomplete evidence map. None of these is established for a given pair without review.",
+      "- Phenotype-resistant/no-known-determinant pairs may reflect uncurated or novel mechanisms, screening-panel gaps or resistance not captured by the submitted assay.",
+      "- No causal or patient-level claim is made. Human review against the source record is required before any scientific or clinical interpretation."
+    );
+  }
+
+  if (section("quality", "8. Data quality")) {
     const q = data.quality;
     bulletTable([
       ["Isolates / screened with panel provenance", `${formatNumber(q.genomes)} / ${formatNumber(q.screenedGenomes)}`],
@@ -249,7 +266,7 @@ function buildMarkdown(options: {
     push(`- AST methods observed: ${q.methods.map((entry) => `${entry.method} (${formatNumber(entry.count)})`).join("; ") || "none recorded"}.`);
   }
 
-  if (section("limitations", "8. Limitations")) {
+  if (section("limitations", "9. Limitations")) {
     push(
       `- The dataset is ${data.datasetLabel.toLowerCase()}. No finding here is research evidence.`,
       "- No clinical validation, diagnostic accuracy claim, regulatory certification or ethics approval is asserted.",
@@ -261,7 +278,7 @@ function buildMarkdown(options: {
     );
   }
 
-  if (section("references", "9. References")) {
+  if (section("references", "10. References")) {
     for (const citation of data.citations) {
       push(
         `- ${citation.authors} (${citation.year}). ${citation.title}. _${citation.journal}_.${citation.doi ? ` doi:${citation.doi}` : ""} [${citation.id}](${citation.url})`
@@ -363,7 +380,7 @@ export function ReportBuilder({ data }: { data: ReportData }) {
   }
 
   return (
-    <div className="grid gap-5 xl:grid-cols-[320px_minmax(0,1fr)]">
+    <div className="grid grid-cols-1 gap-5 xl:grid-cols-[320px_minmax(0,1fr)]">
       <div className="no-print space-y-4">
         <Card>
           <CardHeader>

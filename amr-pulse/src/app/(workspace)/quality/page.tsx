@@ -50,7 +50,7 @@ export default async function QualityPage() {
         }
       />
 
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard label="Recorded issues" value={formatNumber(totalIssues)} hint="One record may raise multiple issues." icon={Sigma} />
         <StatCard label="Critical" value={formatNumber(demo.validation.bySeverity.critical)} hint="Blocking for the affected pair, not the dataset." tone="bad" icon={AlertTriangle} />
         <StatCard label="Warnings" value={formatNumber(demo.validation.bySeverity.warning)} hint="Analysable with a documented caveat." tone="warn" icon={AlertTriangle} />
@@ -73,7 +73,7 @@ export default async function QualityPage() {
         </div>
       </section>
 
-      <div className="grid gap-3 lg:grid-cols-[1.4fr_1fr]">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1.4fr_1fr]">
         <section className="rounded-xl border border-line bg-white p-4 shadow-card">
           <SectionHeader
             title="Identifier matching review"

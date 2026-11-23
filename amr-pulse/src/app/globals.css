@@ -12,20 +12,26 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   @apply bg-canvas text-ink antialiased;
-  font-feature-settings: "cv11", "ss01";
+  font-size: 15px;
+  font-feature-settings: "cv11", "ss01", "tnum";
   text-rendering: optimizeLegibility;
+  background-image:
+    radial-gradient(1200px 600px at 6% -8%, rgba(66, 184, 213, 0.07), transparent 60%),
+    radial-gradient(1000px 520px at 96% 0%, rgba(118, 101, 232, 0.06), transparent 60%);
+  background-attachment: fixed;
 }
 
 ::selection {
-  background: #dbe8fe;
+  background: rgba(18, 169, 133, 0.22);
 }
 
 :focus-visible {
-  outline: 2px solid rgba(37, 99, 235, 0.55);
+  outline: 2px solid rgba(18, 169, 133, 0.6);
   outline-offset: 2px;
 }
 
@@ -34,23 +40,119 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d3dce7;
-  border: 2px solid #f7f9fc;
+  background: #d2dae6;
+  border: 2px solid #f4f6fb;
   border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b9c5d6;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.grid-paper {
-  background-image:
-    linear-gradient(to right, rgba(226, 232, 240, 0.55) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(226, 232, 240, 0.55) 1px, transparent 1px);
-  background-size: 28px 28px;
+/* ---------- surfaces ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: theme("boxShadow.glass");
+}
+
+.glass-tint {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.9), rgba(244, 246, 251, 0.66));
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: theme("boxShadow.glass");
+}
+
+.glass-dark {
+  background: linear-gradient(160deg, rgba(25, 59, 89, 0.72), rgba(8, 23, 38, 0.78));
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  border: 1px solid rgba(143, 233, 218, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 30px 80px -40px rgba(8, 23, 38, 0.7);
+}
+
+.ring-top {
+  position: relative;
+}
+.ring-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(90deg, #12a985, #42b8d5 55%, #7665e8);
+  opacity: 0.9;
+}
+
+/* ---------- typography ---------- */
+.display {
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.035em;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #12a985 0%, #42b8d5 48%, #7665e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mono-label {
+  @apply font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted;
 }
 
 .hairline {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- decorative ---------- */
+.grid-faint {
+  background-image: theme("backgroundImage.grid-faint");
+  background-size: 32px 32px;
+}
+
+.dot-fade {
+  background-image: radial-gradient(rgba(16, 36, 58, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
+}
+
+/* ---------- motion ---------- */
+.rise {
+  animation: rise 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-1 { animation-delay: 60ms; }
+.rise-2 { animation-delay: 130ms; }
+.rise-3 { animation-delay: 210ms; }
+.rise-4 { animation-delay: 300ms; }
+
+.hover-lift {
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: theme("boxShadow.lift");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .hover-lift:hover {
+    transform: none;
+  }
 }
 
 details > summary {
@@ -60,10 +162,7 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.mono-label {
-  @apply font-mono text-[10px] uppercase tracking-[0.08em] text-muted;
-}
-
+/* ---------- report document ---------- */
 .prose-report h1 {
   @apply mb-3 text-xl font-semibold tracking-tight text-ink;
 }
@@ -95,6 +194,7 @@ details > summary::-webkit-details-marker {
   }
   body {
     background: #fff;
+    background-image: none;
   }
   .print-page {
     padding: 0 !important;

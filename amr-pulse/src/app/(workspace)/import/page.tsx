@@ -73,7 +73,7 @@ export default function ImportPage() {
           title="Public data import guides"
           description="The platform consumes existing annotations; it does not sequence, assemble or re-call genes."
         />
-        <div className="mt-2.5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-2.5 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           {SOURCES.map((source) => (
             <div key={source.name} className="rounded-xl border border-line bg-white p-3.5 shadow-card">
               <div className="flex items-start justify-between gap-2">
@@ -89,7 +89,7 @@ export default function ImportPage() {
         </div>
       </section>
 
-      <div className="grid gap-3 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
         <div className="rounded-xl border border-line bg-white p-4 shadow-card">
           <p className="flex items-center gap-1.5 text-[12px] font-semibold text-ink"><FileSpreadsheet className="h-3.5 w-3.5 text-brand-600" /> Expected tables</p>
           <ul className="mt-2 space-y-1.5 text-[10.5px] leading-relaxed text-slate-600">

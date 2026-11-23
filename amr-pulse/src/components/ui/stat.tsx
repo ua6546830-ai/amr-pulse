@@ -25,6 +25,14 @@ export function Progress({
   );
 }
 
+const TONE: Record<string, { value: string; bar: string; icon: string }> = {
+  default: { value: "text-ink", bar: "from-navy-800/70 to-navy-800/0", icon: "text-faint" },
+  good: { value: "text-brand-700", bar: "from-brand-600/80 to-brand-600/0", icon: "text-brand-600" },
+  warn: { value: "text-warn-700", bar: "from-warn-600/70 to-warn-600/0", icon: "text-warn-600" },
+  bad: { value: "text-danger-600", bar: "from-danger-600/70 to-danger-600/0", icon: "text-danger-600" },
+  info: { value: "text-navy-800", bar: "from-sci-cyan/80 to-sci-cyan/0", icon: "text-sci-cyan" },
+};
+
 export function StatCard({
   label,
   value,
@@ -32,6 +40,7 @@ export function StatCard({
   hint,
   tone = "default",
   icon: Icon,
+  tooltip,
 }: {
   label: string;
   value: React.ReactNode;
@@ -39,28 +48,30 @@ export function StatCard({
   hint?: string;
   tone?: "default" | "good" | "warn" | "bad" | "info";
   icon?: React.ComponentType<{ className?: string }>;
+  tooltip?: string;
 }) {
-  const toneClass =
-    tone === "good"
-      ? "text-ok-600"
-      : tone === "warn"
-        ? "text-warn-600"
-        : tone === "bad"
-          ? "text-danger-600"
-          : tone === "info"
-            ? "text-brand-700"
-            : "text-ink";
+  const theme = TONE[tone] ?? TONE.default;
   return (
-    <div className="rounded-xl border border-line bg-white p-4 shadow-card">
-      <div className="flex items-center justify-between gap-2">
-        <p className="text-[11px] font-medium uppercase tracking-[0.05em] text-muted">{label}</p>
-        {Icon ? <Icon className="h-4 w-4 text-slate-400" /> : null}
+    <div className="group relative overflow-hidden rounded-2xl border border-line bg-white p-5 shadow-card hover-lift">
+      <span className={cn("absolute inset-x-0 top-0 h-px bg-gradient-to-r", theme.bar)} />
+      <div className="flex items-start justify-between gap-3">
+        <p
+          className={cn("text-[10.5px] font-semibold uppercase tracking-[0.11em] text-muted", tooltip && "cursor-help border-b border-dotted border-line-strong")}
+          title={tooltip}
+        >
+          {label}
+        </p>
+        {Icon ? (
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-canvas ring-1 ring-line/70">
+            <Icon className={cn("h-4 w-4", theme.icon)} />
+          </span>
+        ) : null}
       </div>
-      <div className="mt-2 flex items-baseline gap-1.5">
-        <span className={cn("font-mono text-2xl font-semibold tabular-nums tracking-tight", toneClass)}>{value}</span>
-        {denominator ? <span className="text-xs text-muted">{denominator}</span> : null}
+      <div className="mt-3 flex items-baseline gap-1.5">
+        <span className={cn("display font-mono text-[30px] font-semibold leading-none tabular-nums", theme.value)}>{value}</span>
+        {denominator ? <span className="text-[11.5px] text-muted">{denominator}</span> : null}
       </div>
-      {hint ? <p className="mt-1.5 text-[11px] leading-relaxed text-muted">{hint}</p> : null}
+      {hint ? <p className="mt-2.5 text-[11.5px] leading-relaxed text-muted">{hint}</p> : null}
     </div>
   );
 }

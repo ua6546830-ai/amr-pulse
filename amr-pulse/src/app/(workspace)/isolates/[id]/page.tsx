@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BookOpen, FlaskConical, Sparkles } from "lucide-react";
-import { Alert } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageHeader, KeyValue, SectionHeader } from "@/components/ui/page-header";
@@ -11,7 +10,7 @@ import { getDemoDataset } from "@/server/demo/load";
 import { evidenceForPair, primaryGeneSymbol } from "@/lib/analysis/evidence";
 import { AST_CATEGORY_META, CLASSIFICATION_META } from "@/lib/presentation";
 
-export const metadata: Metadata = { title: "Isolate detail" };
+export const metadata: Metadata = { title: "Investigation view" };
 
 export default async function IsolateDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -29,15 +28,21 @@ export default async function IsolateDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div className="space-y-5">
-      <Link href="/isolates" className="inline-flex items-center gap-1 text-[11.5px] font-medium text-muted hover:text-ink">
-        <ArrowLeft className="h-3.5 w-3.5" /> Back to isolate explorer
-      </Link>
+      <div className="flex flex-wrap items-center gap-4 text-[11.5px]">
+        <Link href="/investigations" className="inline-flex items-center gap-1 font-medium text-muted hover:text-ink">
+          <ArrowLeft className="h-3.5 w-3.5" /> Back to findings
+        </Link>
+        <Link href="/isolates" className="font-medium text-muted hover:text-ink">
+          Isolate explorer
+        </Link>
+      </div>
 
       <PageHeader
         eyebrow={
           <div className="flex flex-wrap items-center gap-1.5">
+            <Badge variant="outline">Investigation view</Badge>
             <Badge variant="amber">Synthetic isolate</Badge>
-            <Badge variant="outline">AMR panel: {isolate.amrPanelVersion ? "reported" : "missing"}</Badge>
+            <Badge variant="neutral">AMR panel: {isolate.amrPanelVersion ? "reported" : "missing"}</Badge>
           </div>
         }
         title={isolate.isolateId}
@@ -54,8 +59,126 @@ export default async function IsolateDetailPage({ params }: { params: Promise<{ 
         }
       />
 
-      <div className="grid gap-3 lg:grid-cols-[1fr_1fr]">
-        <div className="rounded-xl border border-line bg-white p-4 shadow-card">
+      <section className="overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
+          <div>
+            <p className="mono-label">Genotype · phenotype · interpretation</p>
+            <p className="mt-1 text-[15px] font-semibold text-ink">Ceftriaxone comparison record</p>
+          </div>
+          <div className="flex items-center gap-2">
+            {primaryPair ? (
+              <Badge variant={CLASSIFICATION_META[primaryPair.classification].variant}>
+                {CLASSIFICATION_META[primaryPair.classification].label}
+              </Badge>
+            ) : null}
+            <Link href="/investigations">
+              <Button size="sm" variant="secondary">Findings queue</Button>
+            </Link>
+          </div>
+        </div>
+
+        {primaryPair ? (
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className="border-b border-line p-5 md:border-b-0 md:border-r">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-700">Genotype</p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {primaryPair.detectedGenes.length ? (
+                  primaryPair.detectedGenes.map((gene) => (
+                    <span key={gene} className="rounded-lg border border-brand-100 bg-brand-50 px-2 py-1 font-mono text-[11px] text-brand-800">
+                      {gene}
+                    </span>
+                  ))
+                ) : (
+                  <span className="text-[12px] text-muted">No curated determinant detected.</span>
+                )}
+              </div>
+              <dl className="mt-4 space-y-2 text-[11.5px]">
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Determinant status</dt>
+                  <dd className="font-mono text-[10.5px] text-ink">{primaryPair.determinantStatus.replace(/_/g, " ")}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Mapped drug classes</dt>
+                  <dd className="text-right text-[11px] text-ink">{primaryPair.mappedGeneClasses.join(", ") || "—"}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Unresolved symbols</dt>
+                  <dd className="font-mono text-right text-[10.5px] text-ink">{primaryPair.unresolvedGenes.join(", ") || "—"}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Screening panel</dt>
+                  <dd className="font-mono text-[10.5px] text-ink">{isolate.amrPanelVersion ?? "not reported"}</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div className="border-b border-line p-5 md:border-b-0 md:border-r">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#1E7A93]">Phenotype</p>
+              <div className="mt-3 flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-canvas font-mono text-[20px] font-semibold text-ink ring-1 ring-line">
+                  {primaryPair.phenotype}
+                </span>
+                <div>
+                  <p className="text-[12px] font-medium text-ink">{AST_CATEGORY_META[primaryPair.phenotype].label}</p>
+                  <p className="text-[11px] text-muted">submitted as &ldquo;{primaryPair.phenotypeRaw || "(blank)"}&rdquo;</p>
+                </div>
+              </div>
+              <dl className="mt-4 space-y-2 text-[11.5px]">
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Method</dt>
+                  <dd className="text-right text-[11px] text-ink">{primaryPair.astMethod ?? "not reported"}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Standard</dt>
+                  <dd className="text-right text-[11px] text-ink">{primaryPair.astStandard ?? "not reported"}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Measurement</dt>
+                  <dd className="font-mono text-[10.5px] text-ink">
+                    {primaryPair.measurement ?? "not reported"} {primaryPair.measurementUnit ?? ""}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Testing year</dt>
+                  <dd className="font-mono text-[10.5px] text-ink">{primaryPair.testingYear ?? "not reported"}</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div className="bg-ai-soft/25 p-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-ai-deep">Interpretation</p>
+              <p className="mt-3 text-[13px] font-semibold text-ink">{CLASSIFICATION_META[primaryPair.classification].label}</p>
+              <p className="mt-1.5 text-[11.5px] leading-relaxed text-slate-600">
+                {CLASSIFICATION_META[primaryPair.classification].description}
+              </p>
+              <p className="mt-3 rounded-lg border border-ai/15 bg-white/70 px-2.5 py-2 text-[10.5px] leading-relaxed text-slate-600">
+                Candidate discordance is a review prompt. It is not proof of laboratory error or a novel resistance mechanism.
+              </p>
+              <dl className="mt-3 space-y-1.5 text-[11px]">
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">In primary cohort</dt>
+                  <dd className="font-medium text-ink">{primaryPair.includedInPrimary ? "Yes" : "No"}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">Exclusion</dt>
+                  <dd className="text-right text-[10.5px] text-ink">{primaryPair.exclusionReason?.replace(/_/g, " ") ?? "None"}</dd>
+                </div>
+                <div className="flex justify-between gap-3">
+                  <dt className="text-muted">AST record</dt>
+                  <dd className="font-mono text-[10px] text-ink">{primaryPair.astRecordId}</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        ) : (
+          <p className="px-5 py-6 text-[12px] leading-relaxed text-muted">
+            No ceftriaxone pair exists for this isolate, or the pair could not be interpreted. All matched pairs are listed below.
+          </p>
+        )}
+      </section>
+
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1fr_1fr]">
+        <div className="rounded-2xl border border-line bg-white p-4 shadow-card">
           <SectionHeader title="Isolate metadata" description="Values as submitted; nothing is inferred." />
           <dl className="mt-2">
             <KeyValue label="BioSample" value={isolate.biosampleAccession ?? "not reported"} mono />
@@ -70,46 +193,32 @@ export default async function IsolateDetailPage({ params }: { params: Promise<{ 
           </dl>
         </div>
 
-        <div className="rounded-xl border border-line bg-white p-4 shadow-card">
-          <SectionHeader
-            title="Ceftriaxone comparison"
-            description="Primary pairing used by the demo workspace."
-            actions={primaryPair ? <Badge variant={CLASSIFICATION_META[primaryPair.classification].variant}>{CLASSIFICATION_META[primaryPair.classification].short}</Badge> : null}
-          />
-          {primaryPair ? (
-            <>
-              <div className="mt-3 grid grid-cols-2 gap-2">
-                <div className="rounded-lg border border-line bg-canvas/40 p-2.5">
-                  <p className="text-[10px] uppercase tracking-wide text-muted">Submitted phenotype</p>
-                  <div className="mt-1 flex items-center gap-1.5">
-                    <Badge variant={AST_CATEGORY_META[primaryPair.phenotype].variant}>{primaryPair.phenotype}</Badge>
-                    <span className="font-mono text-[10.5px] text-muted">&ldquo;{primaryPair.phenotypeRaw || "(blank)"}&rdquo;</span>
-                  </div>
-                </div>
-                <div className="rounded-lg border border-line bg-canvas/40 p-2.5">
-                  <p className="text-[10px] uppercase tracking-wide text-muted">Determinant status</p>
-                  <p className="mt-1 font-mono text-[11.5px] text-ink">{primaryPair.determinantStatus.replace(/_/g, " ")}</p>
-                </div>
-              </div>
-              <dl className="mt-2">
-                <KeyValue label="Detected determinants" value={<span className="font-mono">{primaryPair.detectedGenes.join(", ") || "none detected"}</span>} />
-                <KeyValue label="Unresolved symbols" value={<span className="font-mono">{primaryPair.unresolvedGenes.join(", ") || "—"}</span>} />
-                <KeyValue label="Mapped drug classes" value={primaryPair.mappedGeneClasses.join(", ") || "—"} />
-                <KeyValue label="AST record" value={primaryPair.astRecordId} mono />
-                <KeyValue label="Method" value={primaryPair.astMethod ?? "not reported"} />
-                <KeyValue label="Standard" value={primaryPair.astStandard ?? "not reported"} />
-                <KeyValue label="Measurement" value={primaryPair.measurement ?? "not reported"} mono />
-              </dl>
-              <Alert variant={primaryPair.includedInPrimary ? "info" : "warning"} className="mt-3 py-2 text-[11px]">
-                {CLASSIFICATION_META[primaryPair.classification].description}
-              </Alert>
-            </>
-          ) : (
-            <p className="mt-3 text-[12px] leading-relaxed text-muted">
-              No ceftriaxone pair exists for this isolate, or the pair could not be interpreted. All matched pairs are
-              listed below.
-            </p>
-          )}
+        <div className="rounded-2xl border border-line bg-white p-4 shadow-card">
+          <SectionHeader title="What to verify next" description="Structured checks before any biological interpretation." />
+          <ol className="mt-3 space-y-2 text-[11.5px] leading-relaxed text-slate-600">
+            {[
+              "Verify the exact isolate and BioSample linkage — never by organism or approximate name.",
+              "Check the AST standard, method, measurement and testing year recorded above.",
+              "Confirm the AMR screening panel and database version for this genome.",
+              "Check whether the determinant is established for this organism–drug pair before interpreting the gap.",
+            ].map((item, index) => (
+              <li key={item} className="flex gap-2.5">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-50 font-mono text-[9px] text-brand-700">
+                  {index + 1}
+                </span>
+                {item}
+              </li>
+            ))}
+          </ol>
+          <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-line pt-3">
+            <Link href="/investigations">
+              <Button size="sm">Record a review note</Button>
+            </Link>
+            <Link href="/methods" className="text-[11px] font-medium text-brand-700 hover:text-brand-800">
+              Classification rules
+            </Link>
+            <span className="ml-auto text-[9.5px] text-faint">Synthetic record · no clinical use</span>
+          </div>
         </div>
       </div>
 
@@ -149,7 +258,7 @@ export default async function IsolateDetailPage({ params }: { params: Promise<{ 
         )}
       </section>
 
-      <div className="grid gap-3 lg:grid-cols-[1.2fr_1fr]">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1.2fr_1fr]">
         <section className="rounded-xl border border-line bg-white shadow-card">
           <div className="border-b border-line p-4">
             <SectionHeader title="Curated gene calls" description={`${genes.length} annotations attached to this isolate.`} />

@@ -5,6 +5,7 @@ import { Alert } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageHeader, SectionHeader, KeyValue } from "@/components/ui/page-header";
+import { Tabs } from "@/components/ui/tabs";
 import { Table, TBody, TD, TH, THead, TR } from "@/components/ui/table";
 import { getDemoDataset } from "@/server/demo/load";
 import { runAnalysis } from "@/lib/analysis/pipeline";
@@ -66,7 +67,18 @@ export default async function MethodsPage() {
         the loaded dataset; they do not validate any source database, breakpoint table or laboratory.
       </Alert>
 
-      <div className="grid gap-3 lg:grid-cols-3">
+      <Tabs
+        tabs={[
+          { id: "overview", label: "Overview" },
+          { id: "pipeline", label: "Pipeline" },
+          { id: "statistics", label: "Statistics" },
+          { id: "governance", label: "AI & governance" },
+          { id: "reproducibility", label: "Reproducibility" },
+          { id: "references", label: "References", count: CITATIONS.length },
+        ]}
+      >
+        <div className="space-y-3">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
         <div className="rounded-xl border border-line bg-white p-4 shadow-card">
           <SectionHeader title="Dataset provenance" />
           <dl className="mt-1">
@@ -101,10 +113,12 @@ export default async function MethodsPage() {
           </dl>
         </div>
       </div>
+        </div>
 
+        <div className="space-y-3">
       <section className="rounded-xl border border-line bg-white p-4 shadow-card">
         <SectionHeader title="Deterministic pipeline" description="Every stage is implemented in TypeScript without external services; the AI layer is not in this path." />
-        <ol className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {PIPELINE.map((stage, index) => (
             <li key={stage.step} className="rounded-lg border border-line bg-canvas/40 p-2.5">
               <p className="flex items-center gap-1.5 text-[11.5px] font-medium text-ink">
@@ -117,7 +131,7 @@ export default async function MethodsPage() {
         </ol>
       </section>
 
-      <div className="grid gap-3 lg:grid-cols-[1.15fr_1fr]">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1.15fr_1fr]">
         <section className="rounded-xl border border-line bg-white p-4 shadow-card">
           <SectionHeader title="Classification rules" description="Binary comparison only; all other states remain visible." />
           <Table className="mt-2">
@@ -161,8 +175,10 @@ export default async function MethodsPage() {
           </dl>
         </section>
       </div>
+        </div>
 
-      <div className="grid gap-3 lg:grid-cols-2">
+        <div className="space-y-3">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
         <section className="rounded-xl border border-line bg-white p-4 shadow-card">
           <SectionHeader title="Statistics" description="Descriptive, denominator-explicit and conservatively worded." />
           <ul className="mt-2 space-y-2 text-[11px] leading-relaxed text-slate-600">
@@ -185,8 +201,10 @@ export default async function MethodsPage() {
           </ul>
         </section>
       </div>
+        </div>
 
-      <div className="grid gap-3 lg:grid-cols-[1fr_1fr]">
+        <div className="space-y-3">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1fr_1fr]">
         <section className="rounded-xl border border-line bg-white p-4 shadow-card">
           <SectionHeader title="AI layer" description="Separate from all calculations." />
           <ul className="mt-2 space-y-2 text-[11px] leading-relaxed text-slate-600">
@@ -212,10 +230,12 @@ export default async function MethodsPage() {
           </ul>
         </section>
       </div>
+        </div>
 
+        <div className="space-y-3">
       <section className="rounded-xl border border-line bg-white p-4 shadow-card">
         <SectionHeader title="Reproduce this result" description="Deterministic inputs, versions and commands." />
-        <div className="mt-3 grid gap-2 lg:grid-cols-2">
+        <div className="mt-3 grid grid-cols-1 gap-2 lg:grid-cols-2">
           <div className="rounded-lg bg-ink p-3 font-mono text-[10.5px] leading-relaxed text-slate-200">
             <p className="text-slate-400"># regenerate the synthetic demo (fixed seed)</p>
             <p>npm run demo:data</p>
@@ -239,10 +259,12 @@ export default async function MethodsPage() {
           </div>
         </div>
       </section>
+        </div>
 
+        <div className="space-y-3">
       <section className="rounded-xl border border-line bg-white p-4 shadow-card">
         <SectionHeader title="Verified references" description="Resolved through Crossref and/or Europe PMC on 2026-11-22. Only these identifiers may be cited by the AI assistant." />
-        <div className="mt-3 grid gap-2 lg:grid-cols-2">
+        <div className="mt-3 grid grid-cols-1 gap-2 lg:grid-cols-2">
           {CITATIONS.map((citation) => (
             <div key={citation.id} className="rounded-lg border border-line p-2.5">
               <p className="text-[11px] font-medium leading-snug text-ink">{citation.title}</p>
@@ -258,6 +280,8 @@ export default async function MethodsPage() {
           ))}
         </div>
       </section>
+        </div>
+      </Tabs>
     </div>
   );
 }

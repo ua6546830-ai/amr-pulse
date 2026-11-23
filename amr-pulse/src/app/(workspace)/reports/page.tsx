@@ -49,8 +49,8 @@ export default async function ReportsPage() {
               <Badge variant="amber">Synthetic data</Badge>
             </div>
           }
-          title="Research report builder"
-          description="Assemble a STROBE-oriented report from the deterministic analysis output. Every figure carries its numerator and denominator; AI drafts can be appended only as clearly labelled, unverified material."
+          title="Research reports"
+          description="Assemble a STROBE-oriented report from the deterministic analysis output — objective, methods, exclusions, results, interpretation, data quality, limitations, reproducibility and verified references. Every figure carries its numerator and denominator."
           actions={
             <>
               <Button asChild variant="secondary" size="sm">

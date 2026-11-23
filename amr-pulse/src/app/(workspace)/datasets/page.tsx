@@ -45,14 +45,14 @@ export default async function DatasetsPage() {
         browser session; persisting them requires the Supabase research-workspace configuration described in Methods.
       </Alert>
 
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard label="Isolates" value={formatNumber(counts.isolates)} hint="E. coli 170 · K. pneumoniae 50" tone="info" icon={Microscope} />
         <StatCard label="Gene calls" value={formatNumber(counts.geneCalls)} hint="Curated AMR-panel annotations only" tone="info" icon={FlaskConical} />
         <StatCard label="AST rows" value={formatNumber(counts.astRows)} hint={`${counts.astCeftriaxoneRows} ceftriaxone rows`} tone="info" icon={FileSpreadsheet} />
         <StatCard label="Evidence mappings" value={formatNumber(counts.evidenceMappings)} hint="Organism × determinant × drug rows" tone="info" icon={Database} />
       </section>
 
-      <div className="grid gap-3 lg:grid-cols-[1.5fr_1fr]">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1.5fr_1fr]">
         <div className="rounded-xl border border-line bg-white shadow-card">
           <div className="flex items-start justify-between gap-3 border-b border-line p-4">
             <div>
@@ -67,7 +67,7 @@ export default async function DatasetsPage() {
               <Button size="sm" variant="secondary">Open <ArrowRight className="h-3.5 w-3.5" /></Button>
             </Link>
           </div>
-          <div className="grid gap-0 p-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-0 p-4 sm:grid-cols-2">
             <dl>
               <KeyValue label="Dataset ID" value="ds_demo_synthetic_v1" mono />
               <KeyValue label="Type" value="SYNTHETIC (not research evidence)" />

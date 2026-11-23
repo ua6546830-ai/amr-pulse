@@ -17,13 +17,14 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 const PALETTE = {
-  teal: "#0F9D8A",
-  blue: "#2563EB",
-  amber: "#B45309",
-  red: "#B91C1C",
-  cyan: "#0891B2",
-  slate: "#64748B",
-  light: "#CBD5E1",
+  teal: "#0E7F6B",
+  blue: "#42B8D5",
+  amber: "#E8A23B",
+  red: "#C2414A",
+  cyan: "#42B8D5",
+  violet: "#7665E8",
+  slate: "#5B6B7F",
+  light: "#D7DEE9",
 };
 
 interface TooltipProps {
@@ -49,9 +50,9 @@ function ChartTooltip({ active, payload, label }: TooltipProps) {
 }
 
 const axisProps = {
-  tick: { fill: "#64748B", fontSize: 10.5 },
+  tick: { fill: "#5B6B7F", fontSize: 11 },
   tickLine: false,
-  axisLine: { stroke: "#E5EAF0" },
+  axisLine: { stroke: "#E4E9F1" },
 } as const;
 
 export function ChartFrame({
@@ -72,16 +73,16 @@ export function ChartFrame({
   className?: string;
 }) {
   return (
-    <div className={cn("rounded-xl border border-line bg-white p-4 shadow-card", className)}>
-      <div className="mb-3 flex items-start justify-between gap-3">
+    <div className={cn("min-w-0 overflow-hidden rounded-2xl border border-line bg-white p-5 shadow-card", className)}>
+      <div className="mb-4 flex items-start justify-between gap-3">
         <div>
-          <p className="text-[12.5px] font-semibold text-ink">{title}</p>
-          {description ? <p className="mt-0.5 text-[11px] text-muted">{description}</p> : null}
+          <p className="text-[14.5px] font-semibold tracking-[-0.01em] text-ink">{title}</p>
+          {description ? <p className="mt-1 text-[12px] text-muted">{description}</p> : null}
         </div>
         {action}
       </div>
       <div style={{ height }}>{children}</div>
-      {source ? <p className="mt-2 border-t border-line pt-2 text-[10px] text-slate-400">{source}</p> : null}
+      {source ? <p className="mt-3 border-t border-line pt-2.5 text-[10.5px] leading-relaxed text-faint">{source}</p> : null}
     </div>
   );
 }
@@ -102,7 +103,7 @@ export function AgreementDonut({
     <div className="relative h-full">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
-          <Pie data={data} dataKey="value" nameKey="name" innerRadius="62%" outerRadius="88%" paddingAngle={1} stroke="#fff" strokeWidth={1}>
+          <Pie data={data} dataKey="value" nameKey="name" isAnimationActive={false} innerRadius="62%" outerRadius="88%" paddingAngle={1} stroke="#fff" strokeWidth={1}>
             {data.map((d) => (
               <Cell key={d.name} fill={d.color} />
             ))}
@@ -131,12 +132,12 @@ export function HorizontalBars({
 }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <BarChart data={data} layout="vertical" margin={{ left: 4, right: 30, top: 4, bottom: 4 }}>
-        <CartesianGrid horizontal={false} stroke="#EEF2F7" />
+      <BarChart data={data} layout="vertical" margin={{ left: 4, right: 44, top: 4, bottom: 4 }}>
+        <CartesianGrid horizontal={false} stroke="#EDF1F6" />
         <XAxis type="number" {...axisProps} />
         <YAxis type="category" dataKey="name" width={150} {...axisProps} />
-        <Tooltip content={<ChartTooltip />} cursor={{ fill: "#F7F9FC" }} />
-        <Bar dataKey={dataKey} fill={color} radius={[0, 3, 3, 0]} barSize={12} label={{ position: "right", fill: "#475569", fontSize: 10.5, formatter: (value) => `${value ?? ""}${suffix}` }} />
+        <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgba(16,36,58,0.04)" }} />
+        <Bar dataKey={dataKey} fill={color} isAnimationActive={false} radius={[0, 3, 3, 0]} barSize={12} label={{ position: "right", fill: "#5B6B7F", fontSize: 11, formatter: (value) => `${value ?? ""}${suffix}` }} />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -150,15 +151,15 @@ export function StackedAstBars({
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data} margin={{ left: -18, right: 8, top: 4, bottom: 0 }}>
-        <CartesianGrid vertical={false} stroke="#EEF2F7" />
+        <CartesianGrid vertical={false} stroke="#EDF1F6" />
         <XAxis dataKey="drug" {...axisProps} interval={0} angle={-18} textAnchor="end" height={52} />
         <YAxis {...axisProps} />
-        <Tooltip content={<ChartTooltip />} cursor={{ fill: "#F7F9FC" }} />
-        <Legend iconType="circle" iconSize={6} wrapperStyle={{ fontSize: 10.5 }} />
-        <Bar dataKey="S" stackId="a" fill={PALETTE.blue} name="Susceptible" />
-        <Bar dataKey="I" stackId="a" fill={PALETTE.amber} name="Intermediate" />
-        <Bar dataKey="R" stackId="a" fill={PALETTE.red} name="Resistant" />
-        <Bar dataKey="U" stackId="a" fill={PALETTE.light} name="Unknown" radius={[3, 3, 0, 0]} />
+        <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgba(16,36,58,0.04)" }} />
+        <Legend iconType="circle" iconSize={6} wrapperStyle={{ fontSize: 11 }} />
+        <Bar dataKey="S" stackId="a" isAnimationActive={false} fill={PALETTE.blue} name="Susceptible" />
+        <Bar dataKey="I" stackId="a" isAnimationActive={false} fill={PALETTE.amber} name="Intermediate" />
+        <Bar dataKey="R" stackId="a" isAnimationActive={false} fill={PALETTE.red} name="Resistant" />
+        <Bar dataKey="U" stackId="a" isAnimationActive={false} fill={PALETTE.light} name="Unknown" radius={[3, 3, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -177,11 +178,11 @@ export function SimpleBars({
     <div style={{ height }}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data} margin={{ left: -20, right: 8, top: 6 }}>
-          <CartesianGrid vertical={false} stroke="#EEF2F7" />
+          <CartesianGrid vertical={false} stroke="#EDF1F6" />
           <XAxis dataKey="name" {...axisProps} interval={0} angle={-15} textAnchor="end" height={46} />
           <YAxis {...axisProps} />
-          <Tooltip content={<ChartTooltip />} cursor={{ fill: "#F7F9FC" }} />
-          <Bar dataKey="value" fill={color} radius={[3, 3, 0, 0]} maxBarSize={34} label={{ position: "top", fill: "#475569", fontSize: 10 }} />
+          <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgba(16,36,58,0.04)" }} />
+          <Bar dataKey="value" fill={color} isAnimationActive={false} radius={[3, 3, 0, 0]} maxBarSize={34} label={{ position: "top", fill: "#5B6B7F", fontSize: 11 }} />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -193,13 +194,13 @@ export function OrganismSplit({ data }: { data: Array<{ name: string; value: num
   return (
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
-        <Pie data={data} dataKey="value" nameKey="name" outerRadius="82%" innerRadius="48%" paddingAngle={2} stroke="#fff">
+        <Pie data={data} dataKey="value" nameKey="name" isAnimationActive={false} outerRadius="82%" innerRadius="48%" paddingAngle={2} stroke="#fff">
           {data.map((d, i) => (
             <Cell key={d.name} fill={colors[i % colors.length]} />
           ))}
         </Pie>
         <Tooltip content={<ChartTooltip />} />
-        <Legend iconType="circle" iconSize={6} wrapperStyle={{ fontSize: 10.5 }} />
+        <Legend iconType="circle" iconSize={6} wrapperStyle={{ fontSize: 11 }} />
       </PieChart>
     </ResponsiveContainer>
   );

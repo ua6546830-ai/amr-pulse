@@ -12,6 +12,8 @@ import {
   FlaskConical,
   Loader2,
   RefreshCw,
+  ShieldCheck,
+  Sparkles,
   Upload,
 } from "lucide-react";
 import { Alert } from "@/components/ui/alert";
@@ -37,7 +39,7 @@ import { CLASSIFICATION_META, classificationCounts, validationLabel } from "@/li
 import { formatPct } from "@/lib/utils";
 import type { AstRecord, GeneCallRecord, GeneDrugEvidence, IsolateRecord } from "@/types/domain";
 
-type Phase = "upload" | "map" | "processing" | "results";
+type Phase = "upload" | "map" | "review" | "processing" | "results";
 
 interface SlotState {
   kind: TableKind;
@@ -59,16 +61,19 @@ interface SlotState {
   loading: boolean;
 }
 
-interface ImportResult {
+interface PreparedImport {
   isolates: IsolateRecord[];
   geneCalls: GeneCallRecord[];
   ast: AstRecord[];
   evidence: GeneDrugEvidence[];
-  analysis: AnalysisResult;
   validation: ValidationReport;
   matching: MatchOutcome;
   suggestions: MatchSuggestion[];
   droppedRows: Record<string, number>;
+}
+
+interface ImportResult extends PreparedImport {
+  analysis: AnalysisResult;
   completedAt: string;
 }
 
@@ -133,6 +138,10 @@ export function ImportWizard() {
   const [progress, setProgress] = useState(0);
   const [progressLabel, setProgressLabel] = useState("");
   const [result, setResult] = useState<ImportResult | null>(null);
+  const [prepared, setPrepared] = useState<PreparedImport | null>(null);
+  const [acknowledged, setAcknowledged] = useState(false);
+  const [dragKind, setDragKind] = useState<TableKind | null>(null);
+  const [loadingDemo, setLoadingDemo] = useState(false);
 
   const allRequiredLoaded = SLOT_ORDER.every((kind) => !SLOT_META[kind].required || slots[kind].table !== null);
   const mappingsValid = SLOT_ORDER.every((kind) => {
@@ -229,14 +238,15 @@ export function ImportWizard() {
     return { records, dropped };
   }
 
-  async function runImport() {
+  async function prepareImport() {
     setError(null);
+    setAcknowledged(false);
     if (!allRequiredLoaded) {
-      setError("Load isolate, gene-call, AST and evidence-map files before analysis.");
+      setError("Load isolate, gene-call, AST and evidence-map files before validation.");
       return;
     }
     if (!mappingsValid) {
-      setError("Every required canonical field must be mapped before analysis.");
+      setError("Every required canonical field must be mapped before validation.");
       return;
     }
     setPhase("processing");
@@ -251,12 +261,10 @@ export function ImportWizard() {
       const totalBatches =
         chunk(isolates.table.rows, 400).length + chunk(genes.table.rows, 400).length + chunk(ast.table.rows, 400).length + chunk(evidence.table.rows, 400).length;
       let completedBatches = 0;
-      const tick = (done: number, total: number) => {
+      const tick = () => {
         completedBatches += 1;
-        setProgress(Math.round(((completedBatches) / Math.max(1, totalBatches)) * 100));
-        setProgressLabel(`Normalising ${total} chunks (${completedBatches}/${totalBatches})`);
-        void done;
-        void total;
+        setProgress(Math.round((completedBatches / Math.max(1, totalBatches)) * 100));
+        setProgressLabel(`Normalising tables in chunks (${completedBatches}/${totalBatches})`);
       };
 
       setProgressLabel("Normalising isolate records");
@@ -268,19 +276,12 @@ export function ImportWizard() {
       setProgressLabel("Normalising evidence map");
       const evidenceResult = await sendChunks("evidence", evidence.table.rows, evidence.mapping, tick);
 
-      setProgressLabel("Running deterministic validation and analysis");
+      setProgressLabel("Running deterministic validation and matching checks");
       const isolateRecords = isoResult.records as IsolateRecord[];
       const geneRecords = geneResult.records as GeneCallRecord[];
       const astRecords = astResult.records as AstRecord[];
       const evidenceRecords = evidenceResult.records as GeneDrugEvidence[];
 
-      const analysis = runAnalysis({
-        isolates: isolateRecords,
-        geneCalls: geneRecords,
-        astResults: astRecords,
-        evidence: evidenceRecords,
-        options: { requirePanel: true },
-      });
       const validation = runValidation({
         isolates: isolateRecords,
         geneCalls: geneRecords,
@@ -289,12 +290,11 @@ export function ImportWizard() {
         requirePanel: true,
       });
       const matching = matchAstRecords(astRecords, isolateRecords);
-      const importResult: ImportResult = {
+      setPrepared({
         isolates: isolateRecords,
         geneCalls: geneRecords,
         ast: astRecords,
         evidence: evidenceRecords,
-        analysis,
         validation,
         matching,
         suggestions: suggestMatches(matching.unmatched, isolateRecords, 2),
@@ -304,6 +304,32 @@ export function ImportWizard() {
           ast: astResult.dropped,
           evidence: evidenceResult.dropped,
         },
+      });
+      setProgress(100);
+      setPhase("review");
+    } catch (caught) {
+      setError(caught instanceof Error ? caught.message : "The validation pass could not be completed.");
+      setPhase("map");
+    }
+  }
+
+  function startAnalysis() {
+    if (!prepared) return;
+    setError(null);
+    setPhase("processing");
+    setProgress(55);
+    setProgressLabel("Computing five-class genotype–phenotype comparisons");
+    try {
+      const analysis = runAnalysis({
+        isolates: prepared.isolates,
+        geneCalls: prepared.geneCalls,
+        astResults: prepared.ast,
+        evidence: prepared.evidence,
+        options: { requirePanel: true },
+      });
+      const importResult: ImportResult = {
+        ...prepared,
+        analysis,
         completedAt: new Date().toISOString(),
       };
       setResult(importResult);
@@ -325,14 +351,16 @@ export function ImportWizard() {
         // Session snapshots are optional.
       }
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "The import could not be completed.");
-      setPhase("map");
+      setError(caught instanceof Error ? caught.message : "The analysis could not be completed.");
+      setPhase("review");
     }
   }
 
   function reset() {
     setSlots(initialSlots());
     setResult(null);
+    setPrepared(null);
+    setAcknowledged(false);
     setPhase("upload");
     setError(null);
     setProgress(0);
@@ -344,6 +372,29 @@ export function ImportWizard() {
     const mappedRows = applyMapping(slot.table.rows, slot.mapping);
     const columns = Object.keys(slot.mapping).filter((key) => slot.mapping[key]);
     download(`amr-pulse-mapped-${kind}.csv`, toCsv(columns, mappedRows), "text/csv;charset=utf-8");
+  }
+
+  async function loadDemoTables() {
+    setError(null);
+    setLoadingDemo(true);
+    try {
+      const files: Array<[TableKind, string]> = [
+        ["isolates", "demo-isolates.csv"],
+        ["genes", "demo-gene-calls.csv"],
+        ["ast", "demo-ast-results.csv"],
+        ["evidence", "gene-drug-evidence.csv"],
+      ];
+      for (const [kind, name] of files) {
+        const response = await fetch(`/demo/${name}`);
+        if (!response.ok) throw new Error(`Could not load ${name}.`);
+        const text = await response.text();
+        await handleFile(kind, new File([text], name, { type: "text/csv" }));
+      }
+    } catch (caught) {
+      setError(caught instanceof Error ? caught.message : "The demo tables could not be loaded.");
+    } finally {
+      setLoadingDemo(false);
+    }
   }
 
   function downloadIssues() {
@@ -385,42 +436,107 @@ export function ImportWizard() {
     );
   }
 
+  const stepIndex =
+    phase === "upload"
+      ? allRequiredLoaded
+        ? 2
+        : slots.isolates.table && slots.genes.table
+          ? 1
+          : 0
+      : phase === "map"
+        ? 2
+        : phase === "review"
+          ? 3
+          : 4;
+
   const steps = [
-    { id: "upload", label: "Upload" },
-    { id: "map", label: "Map columns" },
-    { id: "results", label: "Validate & analyse" },
+    { id: "genomic", label: "Upload genomic data", hint: "Isolates + gene calls" },
+    { id: "ast", label: "Upload AST results", hint: "Predictions + evidence map" },
+    { id: "map", label: "Map columns", hint: "Confirm every field" },
+    { id: "review", label: "Review quality", hint: "Validation + matching" },
+    { id: "results", label: "Start analysis", hint: "Five-class comparison" },
   ];
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center gap-2">
-        {steps.map((step, index) => {
-          const active = phase === step.id || (phase === "processing" && step.id === "results");
-          return (
-            <div key={step.id} className="flex items-center gap-2">
-              <span className={`flex h-5 w-5 items-center justify-center rounded-full font-mono text-[10px] ${active ? "bg-brand-600 text-white" : "bg-line text-muted"}`}>{index + 1}</span>
-              <span className={`text-[11.5px] ${active ? "font-medium text-ink" : "text-muted"}`}>{step.label}</span>
-              {index < steps.length - 1 ? <span className="mx-1 h-px w-8 bg-line" /> : null}
-            </div>
-          );
-        })}
-        <span className="ml-auto text-[10.5px] text-muted">{totalRows > 0 ? `${totalRows.toLocaleString()} rows staged` : "No files staged"}</span>
+      <div className="rounded-2xl border border-line bg-white p-3 shadow-card">
+        <ol className="flex items-stretch gap-1 overflow-x-auto">
+          {steps.map((step, index) => {
+            const done = index < stepIndex || (index === stepIndex && phase === "results");
+            const active = index === stepIndex && phase !== "results";
+            return (
+              <li key={step.id} className="flex min-w-[150px] flex-1 items-center gap-2">
+                <div
+                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-mono text-[10.5px] ${
+                    done
+                      ? "bg-brand-600 text-white"
+                      : active
+                        ? "bg-navy-900 text-white ring-4 ring-navy-900/10"
+                        : "bg-canvas text-faint ring-1 ring-line"
+                  }`}
+                >
+                  {done ? <CheckCircle2 className="h-3.5 w-3.5" /> : index + 1}
+                </div>
+                <div className="min-w-0">
+                  <p className={`truncate text-[11px] font-medium ${done || active ? "text-ink" : "text-muted"}`}>{step.label}</p>
+                  <p className="truncate text-[9.5px] text-faint">{step.hint}</p>
+                </div>
+                {index < steps.length - 1 ? <span className={`mx-1 hidden h-px flex-1 sm:block ${done ? "bg-brand-200" : "bg-line"}`} /> : null}
+              </li>
+            );
+          })}
+        </ol>
+        <div className="mt-2.5 flex items-center justify-between border-t border-line pt-2">
+          <p className="text-[10.5px] text-muted">
+            {totalRows > 0 ? `${totalRows.toLocaleString()} rows staged across ${SLOT_ORDER.filter((kind) => slots[kind].table).length} tables` : "No files staged"}
+          </p>
+          <p className="text-[10.5px] text-faint">Step {stepIndex + 1} of 5</p>
+        </div>
       </div>
 
       {error ? <Alert variant="danger" title="Import stopped">{error}</Alert> : null}
 
       {phase === "upload" ? (
         <div className="space-y-3">
+          <div className="flex flex-col gap-3 rounded-2xl border border-line bg-white px-4 py-3.5 shadow-card sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-[12.5px] font-semibold text-ink">Bring four tables, or start with the demonstration cohort</p>
+              <p className="mt-0.5 text-[10.5px] leading-relaxed text-muted">
+                Genomic annotations and AST results are joined by exact identifier only. No sequencing or gene re-calling happens here.
+              </p>
+            </div>
+            <Button size="sm" variant="secondary" disabled={loadingDemo} onClick={() => void loadDemoTables()}>
+              {loadingDemo ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
+              Load demo tables
+            </Button>
+          </div>
+
           <Alert variant="warning" title="Do not upload identifiable patient data">
             Use isolate-level, de-identified public or research data. AMR PULSE is not a clinical system and is not
             HIPAA/ISO certified. Files are parsed for this session only; derived raw tables are not persisted server-side in demo mode.
           </Alert>
-          <div className="grid gap-3 lg:grid-cols-2">
+
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
             {SLOT_ORDER.map((kind) => {
               const meta = SLOT_META[kind];
               const slot = slots[kind];
+              const dragging = dragKind === kind;
               return (
-                <div key={kind} className="rounded-xl border border-line bg-white p-4 shadow-card">
+                <div
+                  key={kind}
+                  onDragOver={(event) => {
+                    event.preventDefault();
+                    setDragKind(kind);
+                  }}
+                  onDragLeave={() => setDragKind(null)}
+                  onDrop={(event) => {
+                    event.preventDefault();
+                    setDragKind(null);
+                    const file = event.dataTransfer.files?.[0] ?? null;
+                    void handleFile(kind, file);
+                  }}
+                  className={`rounded-2xl border bg-white p-4 shadow-card transition-colors ${dragging ? "border-brand-500 bg-brand-50/40" : "border-line"}`}
+                >
                   <div className="flex items-start justify-between gap-2">
                     <div>
                       <p className="text-[12.5px] font-semibold text-ink">{meta.title}</p>
@@ -428,23 +544,32 @@ export function ImportWizard() {
                     </div>
                     <Badge variant={slot.table ? "green" : "neutral"}>{slot.table ? "loaded" : meta.required ? "required" : "optional"}</Badge>
                   </div>
-                  <div className="mt-3 flex items-center gap-2">
-                    <label className="inline-flex cursor-pointer items-center gap-1.5 rounded-md border border-line bg-white px-2.5 py-1.5 text-[11px] font-medium text-slate-700 hover:bg-canvas">
-                      <Upload className="h-3.5 w-3.5" /> Choose file
-                      <input
-                        type="file"
-                        accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values"
-                        className="sr-only"
-                        onChange={(event) => {
-                          const file = event.target.files?.[0] ?? null;
-                          void handleFile(kind, file);
-                          event.target.value = "";
-                        }}
-                      />
-                    </label>
-                    {slot.loading ? <Loader2 className="h-4 w-4 animate-spin text-brand-600" /> : null}
-                    {slot.fileName ? <span className="min-w-0 flex-1 truncate font-mono text-[10.5px] text-muted">{slot.fileName} · {(slot.bytes / 1024).toFixed(0)} KB</span> : null}
-                  </div>
+
+                  <label
+                    className="mt-3 flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-line-strong bg-canvas/40 px-3 py-3 transition-colors hover:border-brand-500/60 hover:bg-brand-50/30"
+                  >
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white ring-1 ring-line">
+                      {slot.loading ? <Loader2 className="h-4 w-4 animate-spin text-brand-600" /> : slot.table ? <CheckCircle2 className="h-4 w-4 text-brand-600" /> : <Upload className="h-4 w-4 text-muted" />}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-[11.5px] font-medium text-ink">{slot.fileName ? "Replace file" : "Drop file here or browse"}</span>
+                      <span className="block truncate text-[10px] text-muted">
+                        {slot.fileName ? `${slot.fileName} · ${(slot.bytes / 1024).toFixed(0)} KB` : "CSV or TSV · up to 8 MB"}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-[10.5px] font-medium text-brand-700">{slot.fileName ? "Change" : "Browse"}</span>
+                    <input
+                      type="file"
+                      accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values"
+                      className="sr-only"
+                      onChange={(event) => {
+                        const file = event.target.files?.[0] ?? null;
+                        void handleFile(kind, file);
+                        event.target.value = "";
+                      }}
+                    />
+                  </label>
+
                   {slot.error ? <p className="mt-2 text-[10.5px] text-danger-600">{slot.error}</p> : null}
                   {slot.preview ? (
                     <div className="mt-2 rounded-lg border border-line bg-canvas/40 p-2.5">
@@ -466,10 +591,10 @@ export function ImportWizard() {
               );
             })}
           </div>
-          <div className="flex items-center justify-between rounded-xl border border-line bg-white px-4 py-3 shadow-card">
-            <p className="text-[11px] text-muted">CSV or TSV · up to 8 MB and 20,000 rows per table · mapped in chunks of 400 rows.</p>
+          <div className="flex flex-col gap-2 rounded-2xl border border-line bg-white px-4 py-3 shadow-card sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-[11px] text-muted">CSV or TSV · up to 8 MB and 20,000 rows per table · normalised in chunks of 400 rows.</p>
             <Button size="sm" disabled={!allRequiredLoaded} onClick={() => setPhase("map")}>
-              Review mappings <ArrowRight className="h-3.5 w-3.5" />
+              Review column mappings <ArrowRight className="h-3.5 w-3.5" />
             </Button>
           </div>
         </div>
@@ -495,7 +620,7 @@ export function ImportWizard() {
                     {SCHEMAS[kind].filter((f) => f.required).every((f) => slot.mapping[f.key]) ? "required mapped" : "required missing"}
                   </Badge>
                 </div>
-                <div className="grid gap-x-6 gap-y-2 p-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-2 p-4 md:grid-cols-2">
                   {SCHEMAS[kind].map((field) => {
                     const confidence = slot.preview?.confidence[field.key] ?? 0;
                     return (
@@ -534,22 +659,197 @@ export function ImportWizard() {
             <Button size="sm" variant="secondary" onClick={() => setPhase("upload")}>
               <ArrowLeft className="h-3.5 w-3.5" /> Back
             </Button>
-            <Button size="sm" disabled={!mappingsValid} onClick={() => void runImport()}>
-              <FlaskConical className="h-3.5 w-3.5" /> Confirm mappings & analyse
+            <Button size="sm" disabled={!mappingsValid} onClick={() => void prepareImport()}>
+              <ShieldCheck className="h-3.5 w-3.5" /> Continue to validation
+            </Button>
+          </div>
+        </div>
+      ) : null}
+
+      {phase === "review" && prepared ? (
+        <div className="space-y-3">
+          <div className="rounded-2xl border border-line bg-white p-5 shadow-card">
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-canvas ring-1 ring-line">
+                  <ShieldCheck className="h-5 w-5 text-brand-700" />
+                </span>
+                <div>
+                  <p className="text-[14px] font-semibold text-ink">Quality review before analysis</p>
+                  <p className="mt-0.5 text-[11.5px] leading-relaxed text-muted">
+                    Validation and identifier matching ran on the normalised tables. Nothing has been analysed yet.
+                  </p>
+                </div>
+              </div>
+              <Badge
+                variant={prepared.validation.bySeverity.critical > 0 ? "red" : prepared.validation.bySeverity.warning > 0 ? "amber" : "green"}
+              >
+                {prepared.validation.bySeverity.critical > 0
+                  ? `${prepared.validation.bySeverity.critical} critical`
+                  : prepared.validation.bySeverity.warning > 0
+                    ? `${prepared.validation.bySeverity.warning} warnings`
+                    : "validation passed"}
+              </Badge>
+            </div>
+
+            <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-4">
+              {SLOT_ORDER.map((kind) => {
+                const records =
+                  kind === "isolates"
+                    ? prepared.isolates.length
+                    : kind === "genes"
+                      ? prepared.geneCalls.length
+                      : kind === "ast"
+                        ? prepared.ast.length
+                        : prepared.evidence.length;
+                return (
+                  <div key={kind} className="rounded-xl border border-line bg-canvas/40 px-3 py-2.5">
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-brand-600" />
+                      <p className="truncate text-[10.5px] font-medium text-ink">{SLOT_META[kind].title}</p>
+                    </div>
+                    <p className="mt-1 font-mono text-[16px] font-semibold tabular-nums text-ink">{records.toLocaleString()}</p>
+                    <p className="text-[9.5px] text-muted">{prepared.droppedRows[kind]} rows dropped in normalisation</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-3 flex flex-wrap items-center gap-1.5">
+              <Badge variant="red">{prepared.validation.bySeverity.critical} critical</Badge>
+              <Badge variant="amber">{prepared.validation.bySeverity.warning} warning</Badge>
+              <Badge variant="neutral">{prepared.validation.bySeverity.info} info</Badge>
+              <span className="mx-1 hidden h-3 w-px bg-line sm:block" />
+              <Badge variant="green">{prepared.matching.matched.length} exact matches</Badge>
+              <Badge variant="amber">{prepared.matching.unmatched.length} unmatched</Badge>
+              <Badge variant="neutral">{prepared.matching.ambiguous.length} ambiguous</Badge>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+            <div className="rounded-2xl border border-line bg-white shadow-card">
+              <div className="border-b border-line px-4 py-3">
+                <p className="text-[12.5px] font-semibold text-ink">Most frequent validation issues</p>
+                <p className="mt-0.5 text-[10.5px] text-muted">Every issue is retained with its record and explanation.</p>
+              </div>
+              {prepared.validation.byCode.length === 0 ? (
+                <div className="px-4 py-6">
+                  <Alert variant="success" title="No validation issues detected">
+                    Required identifiers, categories and provenance fields passed the checks on these tables.
+                  </Alert>
+                </div>
+              ) : (
+                <ul className="divide-y divide-line">
+                  {prepared.validation.byCode.slice(0, 7).map((entry) => (
+                    <li key={entry.code} className="flex items-center justify-between gap-3 px-4 py-2">
+                      <span className="truncate text-[11px] text-slate-600">{validationLabel(entry.code)}</span>
+                      <span className="font-mono text-[11px] tabular-nums text-ink">{entry.count}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            <div className="rounded-2xl border border-line bg-white shadow-card">
+              <div className="border-b border-line px-4 py-3">
+                <p className="text-[12.5px] font-semibold text-ink">Identifier matching</p>
+                <p className="mt-0.5 text-[10.5px] text-muted">Exact identifiers only; suggestions require human approval.</p>
+              </div>
+              <div className="space-y-2.5 px-4 py-3">
+                {[
+                  { label: "AST rows with an exact isolate match", value: prepared.matching.matched.length, tone: "text-brand-700" },
+                  { label: "AST rows without a match", value: prepared.matching.unmatched.length, tone: "text-warn-700" },
+                  { label: "Ambiguous identifiers", value: prepared.matching.ambiguous.length, tone: "text-ink" },
+                  { label: "Near-match suggestions (not applied)", value: prepared.suggestions.length, tone: "text-muted" },
+                ].map((row) => (
+                  <div key={row.label} className="flex items-center justify-between gap-3">
+                    <span className="text-[11px] text-slate-600">{row.label}</span>
+                    <span className={`font-mono text-[12px] font-semibold tabular-nums ${row.tone}`}>{row.value.toLocaleString()}</span>
+                  </div>
+                ))}
+                <div className="rounded-lg border border-line bg-canvas/50 px-2.5 py-2 text-[10px] leading-relaxed text-muted">
+                  Unmatched AST rows cannot enter the comparison. They are reported, never force-joined by organism or
+                  approximate name.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <details className="rounded-2xl border border-line bg-white px-4 py-3 shadow-card">
+            <summary className="cursor-pointer text-[12px] font-semibold text-ink">
+              Inspect individual validation records
+              <span className="ml-2 text-[10.5px] font-normal text-faint">first 12 of {prepared.validation.issues.length}</span>
+            </summary>
+            <div className="mt-3 overflow-x-auto">
+              <table className="w-full text-left text-[10.5px]">
+                <thead className="text-[9px] uppercase tracking-[0.08em] text-muted">
+                  <tr>
+                    <th className="py-1 pr-3 font-medium">Severity</th>
+                    <th className="py-1 pr-3 font-medium">Record</th>
+                    <th className="py-1 pr-3 font-medium">Field</th>
+                    <th className="py-1 font-medium">Problem</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-line">
+                  {prepared.validation.issues.slice(0, 12).map((issue, index) => (
+                    <tr key={`${issue.recordId}-${issue.code}-${index}`}>
+                      <td className="py-1.5 pr-3">
+                        <Badge variant={issue.severity === "critical" ? "red" : issue.severity === "warning" ? "amber" : "neutral"}>{issue.severity}</Badge>
+                      </td>
+                      <td className="py-1.5 pr-3 font-mono text-[10px]">{issue.recordId}</td>
+                      <td className="py-1.5 pr-3 font-mono text-[10px] text-muted">{issue.field}</td>
+                      <td className="py-1.5 text-slate-600">{issue.problem}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          {prepared.validation.bySeverity.critical > 0 ? (
+            <Alert variant="warning" title={`${prepared.validation.bySeverity.critical} critical issue records must be acknowledged`}>
+              Critical issues exclude the affected records from analysis or prevent a valid comparison. They are never
+              hidden and this validation pass is not marked successful. Review the individual records before continuing.
+            </Alert>
+          ) : null}
+
+          <div className="flex flex-col gap-3 rounded-2xl border border-line bg-white px-4 py-3 shadow-card sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-3">
+              <Button size="sm" variant="secondary" onClick={() => setPhase("map")}>
+                <ArrowLeft className="h-3.5 w-3.5" /> Back to mapping
+              </Button>
+              {prepared.validation.bySeverity.critical > 0 ? (
+                <label className="flex items-start gap-2 text-[10.5px] leading-relaxed text-slate-600">
+                  <input
+                    type="checkbox"
+                    checked={acknowledged}
+                    onChange={(event) => setAcknowledged(event.target.checked)}
+                    className="mt-0.5 h-3.5 w-3.5 accent-[#12A985]"
+                  />
+                  I understand the critical issues and that affected records will be excluded.
+                </label>
+              ) : null}
+            </div>
+            <Button
+              size="sm"
+              disabled={prepared.validation.bySeverity.critical > 0 && !acknowledged}
+              onClick={startAnalysis}
+            >
+              <FlaskConical className="h-3.5 w-3.5" /> Start analysis
             </Button>
           </div>
         </div>
       ) : null}
 
       {phase === "processing" ? (
-        <div className="rounded-xl border border-line bg-white p-6 shadow-card">
+        <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
           <div className="flex items-center gap-2">
             <Loader2 className="h-4 w-4 animate-spin text-brand-600" />
-            <p className="text-[13px] font-medium text-ink">Importing and analysing in chunks</p>
+            <p className="text-[13px] font-medium text-ink">Validating and analysing your tables</p>
           </div>
           <p className="mt-1 text-[11px] text-muted">{progressLabel}</p>
           <div className="mt-3">
-            <Progress value={progress} label={`${progress}% · each table is normalised server-side and then analysed in the browser`} />
+            <Progress value={progress} label={`${progress}% · each table is normalised server-side; statistics run against the confirmed mapping`} />
           </div>
         </div>
       ) : null}
@@ -562,7 +862,7 @@ export function ImportWizard() {
             persistent research workspace.
           </Alert>
 
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {[
               { label: "Isolates", value: result.isolates.length },
               { label: "Gene calls", value: result.geneCalls.length },
@@ -577,7 +877,7 @@ export function ImportWizard() {
             ))}
           </div>
 
-          <div className="grid gap-3 lg:grid-cols-[1fr_1fr]">
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1fr_1fr]">
             <div className="rounded-xl border border-line bg-white p-4 shadow-card">
               <p className="text-[12.5px] font-semibold text-ink">Comparison summary</p>
               <p className="mt-0.5 text-[10.5px] text-muted">All organisms and mapped antibiotics in the imported tables.</p>

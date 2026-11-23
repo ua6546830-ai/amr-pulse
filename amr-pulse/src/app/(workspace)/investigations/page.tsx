@@ -15,25 +15,25 @@ export const metadata: Metadata = { title: "Discordance Investigation" };
 
 export default async function InvestigationsPage() {
   const demo = await getDemoDataset();
-  const primary = demo.primary;
-  const counts = classificationCounts(primary.summary);
-  const candidates = primary.discordances;
+  const analysis = demo.analysis;
+  const counts = classificationCounts(analysis.summary);
+  const candidates = analysis.discordances;
 
   return (
     <div className="space-y-5">
       <PageHeader
         eyebrow={
           <div className="flex flex-wrap items-center gap-1.5">
-            <Badge variant="outline">Investigation</Badge>
+            <Badge variant="outline">Findings</Badge>
             <Badge variant="amber">Synthetic data</Badge>
-            <span className="text-[11px] text-muted">primary pairing · E. coli × ceftriaxone</span>
+            <span className="text-[11px] text-muted">all supported pairings</span>
           </div>
         }
         title="Discordance investigation"
-        description="Triage every candidate discordant pair with a structured review. The workbench records what a reviewer checked; it does not assign blame to a laboratory or assert a mechanism."
+        description="Triage every candidate discordant pair with a structured review. Filter by organism, antibiotic, determinant, phenotype or review status. The workbench records what a reviewer checked; it does not assign blame to a laboratory or assert a mechanism."
         actions={
           <>
-            <a href="/api/analysis/export?resource=discordances&format=csv&organism=Escherichia%20coli&antibiotic=ceftriaxone" download>
+            <a href="/api/analysis/export?resource=discordances&format=csv" download>
               <Button size="sm" variant="secondary"><Download className="h-3.5 w-3.5" /> Queue CSV</Button>
             </a>
             <Link href="/ai-workspace">
@@ -43,11 +43,11 @@ export default async function InvestigationsPage() {
         }
       />
 
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard
           label="Candidate discordant pairs"
           value={formatNumber(candidates.length)}
-          denominator={`/ ${primary.summary.eligiblePairs}`}
+          denominator={`/ ${analysis.summary.eligiblePairs}`}
           hint="Counts both directions of disagreement."
           tone="warn"
           icon={AlertTriangle}
@@ -55,22 +55,22 @@ export default async function InvestigationsPage() {
         <StatCard
           label="Gene positive / phenotype S"
           value={formatNumber(counts.genePositiveSusceptible)}
-          denominator={`/ ${primary.summary.eligiblePairs}`}
-          hint={formatPct(primary.summary.candidateGenePositivePhenotypeSusceptible.proportion)}
+          denominator={`/ ${analysis.summary.eligiblePairs}`}
+          hint={formatPct(analysis.summary.candidateGenePositivePhenotypeSusceptible.proportion)}
           tone="warn"
           icon={ShieldAlert}
         />
         <StatCard
           label="Phenotype R / no determinant"
           value={formatNumber(counts.resistantNoDeterminant)}
-          denominator={`/ ${primary.summary.eligiblePairs}`}
-          hint={formatPct(primary.summary.candidatePhenotypeResistantNoKnownDeterminant.proportion)}
+          denominator={`/ ${analysis.summary.eligiblePairs}`}
+          hint={formatPct(analysis.summary.candidatePhenotypeResistantNoKnownDeterminant.proportion)}
           tone="bad"
           icon={Microscope}
         />
         <StatCard
           label="Indeterminate pairs"
-          value={formatNumber(primary.counts.indeterminatePairs)}
+          value={formatNumber(analysis.counts.indeterminatePairs)}
           hint="Intermediate, SDD/NS or unresolved determinant symbols; held outside the binary comparison."
           icon={AlertTriangle}
         />
@@ -83,7 +83,7 @@ export default async function InvestigationsPage() {
         is a hypothesis to test — not a conclusion.
       </Alert>
 
-      <div className="grid gap-3 lg:grid-cols-[1fr_320px]">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1fr_320px]">
         <div>
           <SectionHeader
             title="Triage queue"

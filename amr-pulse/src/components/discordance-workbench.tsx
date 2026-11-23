@@ -2,10 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ClipboardCheck, Download, Save } from "lucide-react";
+import { ArrowUpRight, ClipboardCheck, Download, RotateCcw, Save, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/input";
+import { Input, Select, Textarea } from "@/components/ui/input";
 import { AST_CATEGORY_META, CLASSIFICATION_META } from "@/lib/presentation";
 import { cn } from "@/lib/utils";
 import type { AnalysedPair, Classification } from "@/types/domain";
@@ -28,15 +28,45 @@ function pairKey(pair: AnalysedPair) {
 
 export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
   const [filter, setFilter] = useState<"all" | Classification>("all");
+  const [query, setQuery] = useState("");
+  const [antibiotic, setAntibiotic] = useState("all");
+  const [phenotype, setPhenotype] = useState("all");
+  const [organism, setOrganism] = useState("all");
+  const [review, setReview] = useState<"all" | "reviewed" | "open">("all");
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [notes, setNotes] = useState<NoteState>({});
   const [draft, setDraft] = useState("");
   const [checked, setChecked] = useState<number[]>([]);
 
-  const filtered = useMemo(
-    () => (filter === "all" ? pairs : pairs.filter((pair) => pair.classification === filter)),
-    [pairs, filter]
-  );
+  const filtered = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    return pairs.filter((pair) => {
+      if (filter !== "all" && pair.classification !== filter) return false;
+      if (antibiotic !== "all" && pair.antibiotic !== antibiotic) return false;
+      if (phenotype !== "all" && pair.phenotype !== phenotype) return false;
+      if (organism !== "all" && pair.organism !== organism) return false;
+      if (review === "reviewed" && !notes[pairKey(pair)]?.savedAt) return false;
+      if (review === "open" && notes[pairKey(pair)]?.savedAt) return false;
+      if (needle) {
+        const haystack = [pair.isolateId, pair.antibiotic, pair.organism, pair.astRecordId, ...pair.detectedGenes].join(" ").toLowerCase();
+        if (!haystack.includes(needle)) return false;
+      }
+      return true;
+    });
+  }, [pairs, filter, antibiotic, phenotype, organism, review, query, notes]);
+
+  const antibiotics = useMemo(() => [...new Set(pairs.map((pair) => pair.antibiotic))].sort(), [pairs]);
+  const phenotypes = useMemo(() => [...new Set(pairs.map((pair) => pair.phenotype))].sort(), [pairs]);
+  const organisms = useMemo(() => [...new Set(pairs.map((pair) => pair.organism))].sort(), [pairs]);
+  const hasFilters = filter !== "all" || query !== "" || antibiotic !== "all" || phenotype !== "all" || organism !== "all" || review !== "all";
+  const resetFilters = () => {
+    setFilter("all");
+    setQuery("");
+    setAntibiotic("all");
+    setPhenotype("all");
+    setOrganism("all");
+    setReview("all");
+  };
   const selected = pairs.find((pair) => pairKey(pair) === selectedKey) ?? null;
 
   useEffect(() => {
@@ -112,20 +142,57 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
 
   return (
     <div className="space-y-3">
-      <div className="flex flex-wrap items-center gap-1.5">
-        {options.map((option) => (
-          <button
-            key={option.value}
-            type="button"
-            onClick={() => setFilter(option.value)}
-            className={cn(
-              "rounded-md border px-2.5 py-1 text-[11px] transition-colors",
-              filter === option.value ? "border-brand-200 bg-brand-50 text-brand-700" : "border-line bg-white text-slate-600 hover:bg-canvas"
-            )}
-          >
-            {option.label} <span className="font-mono text-[10px] text-muted">({option.count})</span>
-          </button>
-        ))}
+      <div className="space-y-2.5 rounded-2xl border border-line bg-white p-3 shadow-card">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_170px_140px_150px_130px]">
+          <div className="relative md:col-span-2 xl:col-span-1">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-faint" />
+            <Input
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search isolate, gene or record"
+              aria-label="Search findings"
+              className="h-9 pl-9 text-[11.5px]"
+            />
+          </div>
+          <Select aria-label="Filter by antibiotic" value={antibiotic} onChange={(event) => setAntibiotic(event.target.value)} className="h-9 text-[11px]">
+            <option value="all">All antibiotics</option>
+            {antibiotics.map((value) => <option key={value} value={value}>{value}</option>)}
+          </Select>
+          <Select aria-label="Filter by phenotype" value={phenotype} onChange={(event) => setPhenotype(event.target.value)} className="h-9 text-[11px]">
+            <option value="all">All phenotypes</option>
+            {phenotypes.map((value) => <option key={value} value={value}>{value}</option>)}
+          </Select>
+          <Select aria-label="Filter by organism" value={organism} onChange={(event) => setOrganism(event.target.value)} className="h-9 text-[11px]">
+            <option value="all">All organisms</option>
+            {organisms.map((value) => <option key={value} value={value}>{value}</option>)}
+          </Select>
+          <Select aria-label="Filter by review status" value={review} onChange={(event) => setReview(event.target.value as "all" | "reviewed" | "open")} className="h-9 text-[11px]">
+            <option value="all">Any review status</option>
+            <option value="open">Not reviewed</option>
+            <option value="reviewed">Note saved</option>
+          </Select>
+        </div>
+        <div className="flex flex-wrap items-center gap-1.5">
+          {options.map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              onClick={() => setFilter(option.value)}
+              className={cn(
+                "rounded-full border px-2.5 py-1 text-[10.5px] transition-colors",
+                filter === option.value ? "border-brand-200 bg-brand-50 font-medium text-brand-700" : "border-line bg-white text-slate-600 hover:bg-canvas"
+              )}
+            >
+              {option.label} <span className="font-mono text-[10px] text-muted">({option.count})</span>
+            </button>
+          ))}
+          {hasFilters ? (
+            <button type="button" onClick={resetFilters} className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[10.5px] text-muted hover:text-ink">
+              <RotateCcw className="h-3 w-3" /> Reset
+            </button>
+          ) : null}
+          <span className="ml-auto text-[10.5px] text-muted">{filtered.length.toLocaleString()} of {pairs.length.toLocaleString()} shown</span>
+        </div>
       </div>
 
       <div className="rounded-xl border border-line bg-white shadow-card">
@@ -134,7 +201,8 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
             <thead className="sticky top-0 z-10 border-b border-line bg-canvas/95 backdrop-blur">
               <tr className="text-[9.5px] uppercase tracking-wide text-muted">
                 <th className="px-3 py-2 font-medium">Isolate</th>
-                <th className="px-3 py-2 font-medium">Drug</th>
+                <th className="px-3 py-2 font-medium">Organism</th>
+                <th className="px-3 py-2 font-medium">Antibiotic</th>
                 <th className="px-3 py-2 font-medium">Phenotype</th>
                 <th className="px-3 py-2 font-medium">Detected genes</th>
                 <th className="px-3 py-2 font-medium">Standard</th>
@@ -149,6 +217,7 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
                 return (
                   <tr key={key} className={cn("cursor-pointer hover:bg-canvas/60", selectedKey === key && "bg-brand-50/50")} onClick={() => setSelectedKey(key)}>
                     <td className="px-3 py-2 font-mono text-[10.5px]">{pair.isolateId}</td>
+                    <td className="max-w-[130px] truncate px-3 py-2 text-[10.5px] italic text-slate-600">{pair.organism}</td>
                     <td className="px-3 py-2 capitalize">{pair.antibiotic}</td>
                     <td className="px-3 py-2"><Badge variant={AST_CATEGORY_META[pair.phenotype].variant}>{pair.phenotype}</Badge></td>
                     <td className="px-3 py-2 font-mono text-[10.5px]">{pair.detectedGenes.join(", ") || "none"}</td>
@@ -164,7 +233,7 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
                           setSelectedKey(key);
                         }}
                       >
-                        Inspect <ArrowUpRight className="h-3 w-3" />
+                        {notes[key]?.savedAt ? "Reviewed" : "Inspect"} <ArrowUpRight className="h-3 w-3" />
                       </button>
                     </td>
                   </tr>
@@ -172,7 +241,7 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
               })}
               {filtered.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="px-3 py-8 text-center text-[11.5px] text-muted">No pairs in this filter.</td>
+                  <td colSpan={9} className="px-3 py-8 text-center text-[11.5px] text-muted">No pairs match these filters.</td>
                 </tr>
               ) : null}
             </tbody>
@@ -181,7 +250,7 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
       </div>
 
       {selected ? (
-        <div className="grid gap-3 lg:grid-cols-[1fr_1fr]">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-[1fr_1fr]">
           <div className="rounded-xl border border-line bg-white p-4 shadow-card">
             <div className="flex items-start justify-between gap-2">
               <div>
@@ -203,7 +272,7 @@ export function DiscordanceWorkbench({ pairs }: { pairs: AnalysedPair[] }) {
               {CLASSIFICATION_META[selected.classification].description}
             </p>
             <Link href={`/isolates/${encodeURIComponent(selected.isolateId)}`} className="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-brand-700 hover:text-brand-800">
-              Open isolate evidence <ArrowUpRight className="h-3 w-3" />
+              Open investigation view <ArrowUpRight className="h-3 w-3" />
             </Link>
           </div>
 
